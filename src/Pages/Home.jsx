@@ -26,10 +26,11 @@ function Home() {
                         </h1>
                         <h2 style={{ color: '#ffde59' }} className="text-4xl md:text-6xl font-bold mb-4">Entrepreneurship Cell</h2>
                         <p className="text-zinc-400 mb-8">ABES Engineering College, Ghaziabad</p>
-                        <div style={{ backgroundColor: '#0D0D0D' }} className="flex items-center justify-center rounded-lg  py-2 px-4">
-                            <input style={{ backgroundColor: '#0D0D0D' }} type="email" placeholder="example@gmail.com" className="p-3  text-white focus:outline-none sm:w-[20rem]" />
-                            <button style={{ backgroundColor: '#ffde59' }} className=" text-black font-semibold px-5 py-1 sm:py-2 rounded-lg">Let's Connect</button>
+                    <div style={{ backgroundColor: '#0D0D0D', boxShadow: '0 0 2000px 20px rgba(255, 222, 89, 0.6)' }} className="flex items-center justify-center rounded-lg py-2 px-4">
+                            <input style={{ backgroundColor: '#0D0D0D' }} type="email" placeholder="example@gmail.com" className="p-3 text-white focus:outline-none sm:w-[20rem]" />
+                            <button style={{ backgroundColor: '#ffde59' }} className="text-black font-semibold px-5 py-1 sm:py-2 rounded-lg">Let's Connect</button>
                         </div>
+
                     </Fade>
                 </div>
             </div>

@@ -20,10 +20,8 @@ const Navbar = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Hide navbar when scrolling down
         setIsVisible(false);
       } else {
-        // Show navbar when scrolling up
         setIsVisible(true);
       }
 
@@ -35,7 +33,6 @@ const Navbar = () => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', handleScroll);
 
-      // Cleanup function
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
@@ -44,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`transition-transform duration-500 ease-in-out py-4 md:rounded-[7rem] md:w-[80vw] w-[98vw] mx-auto fixed top-3 left-1/2 transform -translate-x-1/2 border-[1px] z-10 bg-black ${
+      className={`transition-transform duration-500 ease-in-out py-4 md:rounded-[70rem] rounded-md md:w-[80vw] w-[98vw] mx-auto fixed top-3 left-1/2 transform -translate-x-1/2 border-[1px] z-10 bg-black ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
       style={{
@@ -52,7 +49,7 @@ const Navbar = () => {
         boxShadow: '20px -10px 100px #282410',
         backdropFilter: 'blur(10px)',
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
-        height: '5rem', // Adjust the height here
+        height: '5rem',
       }}
     >
       <div className="container mx-auto px-[2rem] flex max-md:flex-col max-md:gap-5 justify-between">
@@ -102,7 +99,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        <div className={`lg:flex lg:items-center lg:space-x-20 ${isOpen ? 'block' : 'hidden'} lg:block`}>
+        <div className={`lg:flex lg:items-center lg:space-x-20 ${isOpen ? 'block bg-black p-4 rounded-md' : 'hidden'} lg:block`}>
           <Link
             to="/"
             className="text-11 block mt-4 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200"
@@ -126,7 +123,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/contactus"
-            className="text- block mt-4 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200"
+            className="text-11 block mt-4 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200"
             onClick={closeNav}
           >
             Contact Us

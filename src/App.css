@@ -16,3 +16,51 @@
         -ms-transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
 }
+/* Fade-out effect on the sides */
+
+
+.fade-area::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.fade-area::before {
+    left: 0;
+}
+
+/* Marquee container for first column (scrolls up) */
+.marquee-up {
+    display: flex;
+    flex-direction: column;
+    animation: marqueeScrollUp 3s linear infinite;
+}
+
+/* Marquee container for second column (scrolls down) */
+.marquee-down {
+    display: flex;
+    flex-direction: column;
+    animation: marqueeScrollDown 3s linear infinite;
+}
+
+/* Marquee content styling */
+
+
+/* Continuous vertical scroll animation - First column (Up) */
+@keyframes marqueeScrollDown {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* Continuous vertical scroll animation - Second column (Down) */
+@keyframes marqueeScrollUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}

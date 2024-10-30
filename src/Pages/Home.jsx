@@ -9,6 +9,7 @@ import { Fade, Slide } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
 import Idea from '../components/Idea'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { MdMargin } from 'react-icons/md'
 
 
 function Home() {

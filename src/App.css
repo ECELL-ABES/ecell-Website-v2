@@ -32,14 +32,14 @@
 .marquee-up {
     display: flex;
     flex-direction: column;
-    animation: marqueeScrollUp 3s linear infinite;
+    animation: marqueeScrollUp 90s linear infinite;
 }
 
 /* Marquee container for second column (scrolls down) */
 .marquee-down {
     display: flex;
     flex-direction: column;
-    animation: marqueeScrollDown 3s linear infinite;
+    animation: marqueeScrollDown 90s linear infinite;
 }
 
 /* Marquee content styling */
@@ -48,7 +48,7 @@
 /* Continuous vertical scroll animation - First column (Up) */
 @keyframes marqueeScrollDown {
     0% {
-        transform: translateY(-50%);
+        transform: translateY(-60%);
     }
     100% {
         transform: translateY(0%);
@@ -61,6 +61,6 @@
         transform: translateY(0%);
     }
     100% {
-        transform: translateY(-50%);
+        transform: translateY(-80%);
     }
 }

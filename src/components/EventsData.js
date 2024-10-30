@@ -1,11 +1,12 @@
 // Import images
 import entrepreneurshipShow from '../assets/sa.jpg';
 import navyVisit from '../assets/sa.jpg';
-import foundersCapTraining from '../assets/sa.jpg';
 import gameOfDrones from '../assets/sa.jpg';
 import eSummitTechpravaah from '../assets/sa.jpg';
-import bidwiserMockIpl from '../assets/sa.jpg';
-import achieversTalk from '../assets/sa.jpg';
+import bidwiserMockIpl from '../assets/at.png';
+import achieversTalk from '../assets/at.png';
+import fc from "../assets/fc.jpg"
+import tes from "../assets/tes2.jpg"
 
 // Sample event data with imported images
 const events = [
@@ -14,7 +15,7 @@ const events = [
         title: "The Entrepreneurship Show 2023", 
         date: "February 27th '23", 
         description: "The Entrepreneurship Show, organized by E-Cell ABESEC, aimed to inspire and educate participants about the startup mindset and culture. TES 1.0 featured Karandeep Singh Vohra, who shared his journey and principles that guided his success, focusing on the foundational aspects of starting a business, overcoming challenges, and effective strategies. TES 2.0 featured Sandeep Jain, the renowned founder of Geeks for Geeks (GFG), as the guest of honor.He also shared their experience of building Geeks for Geeks, offering practical insights and advice for aspiring entrepreneurs. The event followed a talk show with a skilled moderator facilitating an engaging conversation with Speaker. Participants actively engaged in the discussion, asking questions to Speaker, who provided advice, addressing queries related to entrepreneurship and leadership.It promotes a direct exchange of ideas. The Entrepreneurship Show by E-Cell ABESEC not only met its vision but go beyond expectations by delivering an event rich in content, interaction, and inspiration", 
-        image: entrepreneurshipShow 
+        image: tes
     },
     { 
         id: 2, 
@@ -28,7 +29,7 @@ const events = [
         title: "FOUNDER'S CAP TRAINING", 
         date: "April 10th '22", 
         description: "A dynamic and empowering event designed to inspire female students with the knowledge and tools needed for entrepreneurial success. The program aimed to enhance women's power within the college by guiding them towards entrepreneurship. It focused on educating participants about Intellectual Property Rights (IPR), ensuring they understand how to protect their innovative ideas with patents, trademarks, and copyrights. It was an engaging experience designed to empower young minds to confidently navigate the startup journey. The session was filled with valuable knowledge and practical advice on protecting intellectual property.Participants praised the event for its engaging format and the invaluable knowledge gained about IPR. Many expressed their confidence in pursuing their entrepreneurial dreams", 
-        image: foundersCapTraining 
+        image: fc
     },
     { 
         id: 4, 

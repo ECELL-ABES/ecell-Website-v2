@@ -8,10 +8,32 @@ import ScrollProgress from '../components/ScrollProgress'
 import { Fade, Slide } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
 import Idea from '../components/Idea'
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
+    const [email, setEmail] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        
+        toast.success("Thank you for connecting with us!");
+
+        setTimeout(() => {
+            setSubmitted(true);
+            setEmail(''); 
+        }, 500); 
+    };
     return (
         <div>
+             <ToastContainer />
             {/* <ScrollProgress /> */}
             <div className=" bg-black text-white flex flex-col" style={{ minHeight: '80vh' }}>
                 <div className="flex-grow flex flex-col justify-center items-center text-center px-4">
@@ -20,16 +42,30 @@ function Home() {
                             <span className='flex items-center gap-2'><GiPolarStar /> From Ideas to Imprint</span>
                         </Fade>
                     </div>
+                   
                     <Fade cascade="true">
                         <h1 className="text-4xl md:text-6xl font-bold mb-2">
                             <span style={{ color: '#FFDE59' }}>Welcome</span> <span>To</span>
                         </h1>
                         <h2 style={{ color: '#ffde59' }} className="text-4xl md:text-6xl font-bold mb-4">Entrepreneurship Cell</h2>
                         <p className="text-zinc-400 mb-8">ABES Engineering College, Ghaziabad</p>
-                        <div style={{ backgroundColor: '#0D0D0D' }} className="flex items-center justify-center rounded-lg  py-2 px-4">
-                            <input style={{ backgroundColor: '#0D0D0D' }} type="email" placeholder="example@gmail.com" className="p-3  text-white focus:outline-none sm:w-[20rem]" />
-                            <button style={{ backgroundColor: '#ffde59' }} className=" text-black font-semibold px-5 py-1 sm:py-2 rounded-lg">Let's Connect</button>
-                        </div>
+                        <form onSubmit={handleFormSubmit} style={{ backgroundColor: '#0D0D0D' }} className="flex items-center justify-center rounded-lg py-2 px-4">
+                            <input 
+                                type="email"
+                                value={email}
+                                onChange={handleEmailChange}
+                                placeholder="example@gmail.com"
+                                required
+                                className="p-3 text-white focus:outline-none sm:w-[20rem]"
+                                style={{ backgroundColor: '#0D0D0D' }}
+                            />
+                            <button type="submit" style={{ backgroundColor: '#ffde59' }} className="text-black font-semibold px-5 py-1 sm:py-2 rounded-lg">
+                                Let's Connect
+                            </button>
+                        </form>
+                        {submitted && (
+                            <p className="text-zinc-400 mt-4">Thank you for connecting with us!</p>
+                        )}
                     </Fade>
                 </div>
             </div>

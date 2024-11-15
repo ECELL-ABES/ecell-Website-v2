@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react';
 import Activities from '../components/Activities'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -9,9 +8,11 @@ import ScrollProgress from '../components/ScrollProgress'
 import { Fade, Slide } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
 import Idea from '../components/Idea'
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
-
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
@@ -21,16 +22,18 @@ function Home() {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-      
+
+        
+        toast.success("Thank you for connecting with us!");
+
         setTimeout(() => {
             setSubmitted(true);
-            setEmail('');  // Reset email field
-        }, 500);  // Mock delay for submission
+            setEmail(''); 
+        }, 500); 
     };
-
-
     return (
         <div>
+             <ToastContainer />
             {/* <ScrollProgress /> */}
             <div className=" bg-black text-white flex flex-col" style={{ minHeight: '80vh' }}>
                 <div className="flex-grow flex flex-col justify-center items-center text-center px-4">
@@ -39,6 +42,7 @@ function Home() {
                             <span className='flex items-center gap-2'><GiPolarStar /> From Ideas to Imprint</span>
                         </Fade>
                     </div>
+                   
                     <Fade cascade="true">
                         <h1 className="text-4xl md:text-6xl font-bold mb-2">
                             <span style={{ color: '#FFDE59' }}>Welcome</span> <span>To</span>

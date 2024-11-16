@@ -1,5 +1,5 @@
 import React from 'react'
-import {NetworkCards,NetworkCards1,NetworkCards2,NetworkCards3,NetworkCards4,NetworkCards5} from './NetworkCards'
+import {NetworkCards,NetworkCards1,NetworkCards2,NetworkCards3,NetworkCards4,NetworkCards5,NetworkCards6,NetworkCards7,NetworkCards8,NetworkCards9,NetworkCards10} from './NetworkCards'
 import { Slide, Fade } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
 
@@ -33,11 +33,16 @@ function Networking() {
                             <NetworkCards/>
                             <NetworkCards1/>
                             <NetworkCards2/>
+                            <NetworkCards6/>
+                            <NetworkCards7/>
                         </div>
                         <div className='flex flex-col'>
                             <NetworkCards3/>
                             <NetworkCards4/>
                             <NetworkCards5/>
+                            <NetworkCards8/>
+                            <NetworkCards9/>
+                            <NetworkCards10/>
                         </div>
                     </div>
                 </div>

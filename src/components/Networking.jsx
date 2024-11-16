@@ -1,11 +1,11 @@
 import React from 'react'
-import NetworkCards from './NetworkCards'
+import {NetworkCards,NetworkCards1,NetworkCards2,NetworkCards3,NetworkCards4,NetworkCards5} from './NetworkCards'
 import { Slide, Fade } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
 
 function Networking() {
     return (
-        <div>
+        <div> 
             <div className="bg-black text-white p-8">
                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10" style={{ alignItems: 'center' }}>
                     <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -31,13 +31,13 @@ function Networking() {
                     <div className='flex flex-wrap gap-5 justify-center'>
                         <div className='flex flex-col '>
                             <NetworkCards/>
-                            <NetworkCards/>
-                            <NetworkCards/>
+                            <NetworkCards1/>
+                            <NetworkCards2/>
                         </div>
                         <div className='flex flex-col'>
-                            <NetworkCards/>
-                            <NetworkCards/>
-                            <NetworkCards/>
+                            <NetworkCards3/>
+                            <NetworkCards4/>
+                            <NetworkCards5/>
                         </div>
                     </div>
                 </div>

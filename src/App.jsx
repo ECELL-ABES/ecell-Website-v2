@@ -1,13 +1,14 @@
-import React from "react"
-import './App.css'
-import Home from "./Pages/Home"
-import Teams from "./Pages/Teams"
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import Cursor from  './components/Cursor'
-import Events from  './components/EventsPage'
-import ContactUs from "./components/ContactUs"
+import React from "react";
+import './App.css';
+import Home from "./Pages/Home";
+import Teams from "./Pages/Teams";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Cursor from './components/Cursor';
+import Events from './components/EventsPage';
+import EventDetail from './components/EventDetails'; // Import EventDetail component
+import ContactUs from "./components/ContactUs";
 
 function App() {
 
@@ -18,15 +19,18 @@ function App() {
         <Cursor />
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/teams' element={<Teams/>} />
-          <Route exact path='/events' element={<Events/>} />
-          <Route exact path='/contactus' element={<ContactUs/>} />
+          <Route exact path='/teams' element={<Teams />} />
+          <Route exact path='/events' element={<Events />} />
           
+          {/* Dynamic route for event details */}
+          <Route exact path='/events/:slug' element={<EventDetail />} />
+
+          <Route exact path='/contactus' element={<ContactUs />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

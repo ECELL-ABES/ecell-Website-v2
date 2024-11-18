@@ -22,3 +22,7 @@ button {
     padding: 0;
     font-family: "Inter";
 }
+.slick-prev:before,.slick-next:before{
+    display: none;
+    cursor: none;
+}

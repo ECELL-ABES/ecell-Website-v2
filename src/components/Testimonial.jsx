@@ -2,8 +2,21 @@ import React from 'react'
 import Card from './Card'
 import { Slide, Fade } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 function Testimonial() {
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 5000,
+        autoplaySpeed: 2000,
+        cssEase: "linear"
+      };
     return (
         <div>
             <div className="bg-black text-white py-12">
@@ -19,13 +32,18 @@ function Testimonial() {
                     </div>
 
                     <div className="mt-10 grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
+  <div className="slider-container w-[90vw] md:w-[85vw] lg:w-[80vw]">
+    <Slider {...settings}>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </Slider>
+  </div>
+</div>
+
                 </div>
             </div>
         </div>

@@ -49,6 +49,7 @@ import ys from '../assets/ys.jpg'
 import ssy from '../assets/ssy.jpg'
 import as from '../assets/as.jpg'
 
+//create a single component for all the cards.
 
 
 function Teams() {

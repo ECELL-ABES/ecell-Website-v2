@@ -26,13 +26,13 @@ function Activities() {
                         </p>
                     </div>
                     <Slide direction="right">
-                        <div className="bg-gradient-to-b from-green-700 to-green-900 rounded-lg h-full"></div>
+                        <div><img src="src\assets\NEC23.JPG" alt="" srcset="" style={{ borderRadius: '0.5rem' }} /></div>
                     </Slide>
                 </div>
                 <hr style={{ color: 'black' }} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                     <Slide direction="left">
-                        <div className="bg-gradient-to-b from-green-700 to-green-900 rounded-lg h-full"></div>
+                        <div><img src="src\assets\ETCI.jpg" alt="" srcset="" style={{ borderRadius: '0.5rem' }} /></div>
                     </Slide>
                     <div className="flex flex-col justify-center">
                         <div style={{ backgroundColor: '#141412', color: '#ffde59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4 w-fit">
@@ -100,7 +100,7 @@ function Activities() {
                         </ul>
                     </div>
                     <Slide direction="right">
-                        <div className="bg-gradient-to-b from-green-700 to-green-900 rounded-lg h-full"></div>
+                        <div><img src="src\assets\VisitsTo.JPG" alt="" srcset="" style={{ borderRadius: '0.5rem', width: "42rem",height:"25rem" }} /></div>
                     </Slide>
                 </div>
             </div>

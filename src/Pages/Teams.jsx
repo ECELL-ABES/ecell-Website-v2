@@ -18,6 +18,7 @@ import t from '../assets/t.png'
 import to from '../assets/to.png'
 import ec from '../assets/ec.png'
 import md from '../assets/md.jpg'
+import dhr from '../assets/dga.jpg'
 
 import pt from '../assets/pt.jpg'
 import ag from '../assets/ag2.png'
@@ -48,6 +49,7 @@ import ys from '../assets/ys.jpg'
 import ssy from '../assets/ssy.jpg'
 import as from '../assets/as.jpg'
 
+//create a single component for all the cards.
 
 
 function Teams() {
@@ -149,7 +151,7 @@ function Teams() {
                         <p className="text-[#ffed59]">TechOps Coordinator</p>
                         <div className="flex space-x-2 mt-4 justify-center">
                             <a target='_blank' href="https://www.instagram.com/anuj_mishra_05/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
+                                <FaInstagram/> 
                             </a>
                             <a target='_blank' href="https://www.linkedin.com/in/anujmishra05/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
                                 <PiLinkedinLogoBold/>
@@ -347,7 +349,11 @@ function Teams() {
                         </div>
                     </div>
                     <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
+
                         <img src="/src/assets/dga.jpg" alt="example" className="mb-4 rounded-full w-[15rem]" />
+
+                        <img src={dhr} alt="example" className="mb-4 rounded-full w-[15rem]" />
+
                         <h3 className="text-3xl font-semibold">Dhruv Ghangwani</h3>
                         <p className="text-[#ffed59]">Social Media Coordinator</p>
                         <div className="flex space-x-2 mt-4 justify-center">

@@ -4,7 +4,14 @@ import Map from '../assets/map.png'
 function ContactUs() {
     return (
         <div className="min-h-screen flex items-center flex-col gap-20 justify-center bg-background text-foreground bg-black text-white">
-            <div className="max-w-4xl w-full flex flex-col md:flex-row items-center justify-between p-6 mt-[6rem] sm:my-[6rem]">
+            <div className="max-w-4xl w-full flex flex-col md:flex-row items-center justify-between p-6 mt-[6rem] sm:my-[6rem]"
+            style={{
+                border: '1px solid #322d22',
+                boxShadow: '100px -10px 100px #282410',
+                backdropFilter: 'blur(10px)',
+               
+               
+              }}>
                 <div className="mb-8 md:mb-0 md:mr-8">
                     <h1 className="text-6xl font-bold mb-4">Contact Us</h1>
                     <p className="text-muted-foreground">Need assistance or have questions? Don't hesitate to reach out to us. Our dedicated team is here to help.</p>

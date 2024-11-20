@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-function NetworkCards() {
+function NetworkCards({ name, image, info }) {
     return (
         <div>
             <div style={{backgroundColor:'#131412'}} className="p-4 rounded-lg flex flex-col justify-center items-center my-3 w-72">
+
                 <img src="kiet.jpg" alt="Asana" className="" />
                 <div className='text-center my-2'>
                     <h2 className="text-2xl mb-1 font-semibold">KIET </h2>
@@ -135,10 +136,20 @@ function NetworkCards10() {
                 <div className='text-center my-2'>
                     <h2 className="text-2xl mb-1 font-semibold">JSS Academy</h2>
                     <p className="text-l text-zinc-400">Empowering students, enriching lives, and shaping a brighter future through quality education</p>
+
+                <img src={image} alt={name} className="" />
+                <div className='text-center my-2'>
+                    <h2 className="text-2xl mb-1 font-semibold">{name}</h2>
+                    <p className="text-l text-zinc-400">{info}</p>
+
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
+
 export {NetworkCards,NetworkCards1,NetworkCards2,NetworkCards3,NetworkCards4,NetworkCards5,NetworkCards6,NetworkCards7,NetworkCards8,NetworkCards9,NetworkCards10};
+
+export default NetworkCards;
+

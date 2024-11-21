@@ -349,7 +349,11 @@ function Teams() {
                         </div>
                     </div>
                     <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
+
+                        <img src="/src/assets/dga.jpg" alt="example" className="mb-4 rounded-full w-[15rem]" />
+
                         <img src={dhr} alt="example" className="mb-4 rounded-full w-[15rem]" />
+
                         <h3 className="text-3xl font-semibold">Dhruv Ghangwani</h3>
                         <p className="text-[#ffed59]">Social Media Coordinator</p>
                         <div className="flex space-x-2 mt-4 justify-center">

@@ -1,20 +1,26 @@
-import React from 'react'
-
-function Card() {
+import React from "react";
+function Card({ description, imgSrc, name, role }) {
     return (
-        <div>
-            <div style={{backgroundColor:'#0C0D0B'}} className="p-6 rounded-lg">
-                <p className="mb-4">"As an IT manager, security is a top priority for me. Saasta's robust security measures and compliance standards give me peace of mind knowing that our undefined is safe and protected."</p>
-                <div className="flex items-center">
-                    <img className="w-10 h-10 rounded-full mr-4" src="https://placehold.co/40x40" alt="David Johnson" />
-                    <div>
-                        <p className="text-sm font-semibold">David Johnson</p>
-                        <p className="text-sm text-zinc-400">Marketing Director, Sparkle Brands</p>
-                    </div>
-                </div>
+      <div className="w-full flex-shrink-0">
+        <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B] mx-2 h-full flex flex-col justify-between shadow-lg">
+          <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+            {description}
+          </p>
+          <div className="flex items-center">
+            <img
+              className="w-12 h-12 rounded-full mr-3"
+              src={imgSrc}
+              alt={`Profile image of ${name}`}
+            />
+            <div>
+              <p className="text-base font-medium text-white">{name}</p>
+              <p className="text-sm text-gray-400">{role}</p>
             </div>
+          </div>
         </div>
-    )
-}
-
-export default Card
+      </div>
+    );
+  }
+  
+  export default Card;
+  

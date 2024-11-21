@@ -58,15 +58,14 @@ function Testimonial() {
     {
       id: 1,
       description:
-        "E-Cell ABESEC will always hold a special place in my heart. From a chaotic first event to conducting the first-ever drone show and reaching NEC 2023 finals, the journey was rewarding. Grateful for the support of my team and invaluable guidance from Mahendra Sir and Prabansh Sir. These experiences taught me resilience and teamwork, essential for future success.",
-      imgSrc: dg,
+      "E-Cell ABESEC holds a special place in my heart, from chaotic first events to conducting a drone show and reaching NEC 2023 finals. Guided by Mahendra Sir and Prabansh Sir, it fostered growth, teamwork, and unforgettable memories.",      imgSrc: dg,
       name: "Divyanshyu gupta",
       role: "Mentor",
     },
     {
       id: 2,
       description:
-        "E-Cell ABESEC shaped my journey from volunteer to Tech-Ops Coordinator. Launching the first live website for the cell was a proud moment. Guided by Mahendra Sir and Prabansh Sir, this experience was transformative, helping me grow professionally and personally, while creating lasting memories with an exceptional team.",
+"E-Cell ABESEC guided my growth from volunteer to Tech-Ops Coordinator, highlighted by launching the first live website, fostering professional and personal development under inspiring mentorship.",      
       imgSrc: np,
       name: "Neelansh Pandey",
       role: "Former Tech-Ops Coordinator, E-CELL ABESEC",
@@ -74,7 +73,7 @@ function Testimonial() {
     {
       id: 3,
       description:
-        "E-Cell ABESEC helped me grow from volunteer to Social Media Coordinator. Key events, like collaborating with Sandeep Sir from GeeksforGeeks, shaped our journey. Guided by Mahendra Sir and Prabansh Sir, I built lifelong memories and relationships, contributing to both personal and professional development.",
+        "E-Cell ABESEC guided my growth from volunteer to Social Media Coordinator, fostering personal and professional development through impactful events and lasting relationships under inspiring mentorship.",
       imgSrc: sa,
       name: "Shoaib Ahmad",
       role: "Former Social Media Coordinator, E-CELL ABESEC",
@@ -82,7 +81,7 @@ function Testimonial() {
     {
       id: 4,
       description:
-        "E-Cell ABESEC defined my college journey from Events Volunteer to Vice President. Guided by Mahendra Sir and Prabansh Bhaiya, I led impactful events and increased female participation by 30%. This journey built my confidence, honed leadership skills, and gave me a clear purpose for the future. I am proud of the legacy we've built.",
+      "E-Cell ABESEC shaped my journey from volunteer to Vice President, boosting female participation by 30%, enhancing leadership skills, and building confidence while leaving a lasting legacy. fostering personal and professional growth.",
       imgSrc: ka,
       name: "Kamakshi Agarwal",
       role: "Former Vice president",
@@ -90,7 +89,7 @@ function Testimonial() {
     {
       id: 5,
       description:
-        "E-Cell ABESEC transformed my college experience. From being Treasurer to mentoring, it shaped my leadership. As the co-founder of Know Your Colleges, I attribute much of my growth to E-Cell's ecosystem. It fosters innovation and teamwork, laying a strong foundation for success in future endeavors. I encourage students to embrace this opportunity.",
+      "E-Cell ABESEC has been a transformative experience, fostering resilience, leadership, and innovation. It shaped my journey as co-founder of Know Your Colleges and continues to empower students networks that drive success in entrepreneurship.", 
       imgSrc: t,
       name: "Sarthak Gupta",
       role: "Former Treasurer",
@@ -119,10 +118,10 @@ function Testimonial() {
           <h2 className="text-4xl sm:text-5xl font-semibold text-center">Testimonials About Us</h2>
         </div>
 
-        <div className="slider-container -mx-4 sm:mx-0 md:ml-10 overflow-visible">
+        <div className="slider-container mx-0  sm:mx-0 md:ml-2 overflow-visible">
           <Slider {...settings}>
             {data.map((item) => (
-              <div key={item.id} className="px-2 sm:px-4">
+              <div key={item.id} className="px-1 sm:px-2">
                 <Card
                   description={item.description}
                   imgSrc={item.imgSrc}
@@ -132,10 +131,10 @@ function Testimonial() {
               </div>
             ))}
           </Slider>
-          <div className="mt-4">
+          <div className="mt-2">
             <Slider {...reverse}>
               {data.map((item) => (
-                <div key={item.id} className="px-2 sm:px-4">
+                <div key={item.id} className="px-1 sm:px-2">
                   <Card
                     description={item.description}
                     imgSrc={item.imgSrc}

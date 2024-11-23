@@ -8,7 +8,9 @@ import TEC from "../assets/tes.png";
 import GOD from "../assets/god.png";
 import Tech from "../assets/techpravah.png";
 import At from "../assets/at.png";
-
+import fc from "../assets/fc.jpg";
+import bid from "../assets/bid.png"
+import nv from '../assets/nv.jpg';  
 // Utility function to generate a URL-friendly slug from event title
 const createSlug = (title) => title.toLowerCase().replace(/ /g, '-');
 
@@ -18,10 +20,11 @@ const placeholderImage = "https://via.placeholder.com/300x200?text=No+Image";
 // Sample event data
 const events = [
     { id: 1, title: "The Entrepreneurship Show 2023", date: "February 27th '23", imgSrc: TEC },
-    { id: 3, title: "FOUNDER'S CAP TRAINING", date: "April 10th '22", imgSrc: "" },
+    { id: 2, title: "Navy Visit-2023", date: "March 15th '23", imgSrc: nv },
+    { id: 3, title: "FOUNDER'S CAP TRAINING", date: "April 10th '22", imgSrc: fc },
     { id: 4, title: "Game of Drones", date: "April 10th '22", imgSrc: GOD },
     { id: 5, title: "E-SUMMIT (TECHPRAVAAH)", date: "April 10th '22", imgSrc: Tech },
-    { id: 6, title: "BIDWISER (THE MOCK IPL AUCTION)", date: "", imgSrc: "" },
+    { id: 6, title: "BIDWISER (THE MOCK IPL AUCTION)", date: "", imgSrc: bid },
     { id: 7, title: "ACHIEVER’S TALK", date: "April 10th '22", imgSrc: At },
 ];
 

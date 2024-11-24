@@ -5,8 +5,10 @@ import gameOfDrones from '../assets/sa.jpg';
 import eSummitTechpravaah from '../assets/sa.jpg';
 import bidwiserMockIpl from '../assets/at.png';
 import achieversTalk from '../assets/at.png';
-import fc from "../assets/fc.jpg"
-import tes from "../assets/tes2.jpg"
+import fc from "../assets/fc.jpg";
+import tes from "../assets/tes2.jpg";
+import eureka from "../assets/eureka.jpg";
+
 
 // Sample event data with imported images
 const events = [
@@ -58,6 +60,13 @@ const events = [
         date: "April 10th '22", 
         description: "E-Cell ABES-EC's newest event, The Achiever's Talk, structures one-on-one interactions with well-recognized organizations like GST Noida, Jain shikanji waale, and Anubhav Jain, among others, as well as motivational anecdotes and insights from successful entrepreneurs. The attendees acquired valuable information about overcoming challenges, business strategies, and individual development. Aspiring business owners had the opportunity to interact with industry privileged and network at the event. It came to a close with a Q&A session, which allowed for a lively discussion of ideas and useful advice. In general, Achievers Talk inspired participants and provided real-world advice for achieving entrepreneurial success.", 
         image: achieversTalk 
+    },
+     { 
+        id: 8, 
+        title: "Eureka!", 
+        date: "September 28th '24", 
+        description: "E-Cell ABES-EC's newest event, The Achiever's Talk, structures one-on-one interactions with well-recognized organizations like GST Noida, Jain shikanji waale, and Anubhav Jain, among others, as well as motivational anecdotes and insights from successful entrepreneurs. The attendees acquired valuable information about overcoming challenges, business strategies, and individual development. Aspiring business owners had the opportunity to interact with industry privileged and network at the event. It came to a close with a Q&A session, which allowed for a lively discussion of ideas and useful advice. In general, Achievers Talk inspired participants and provided real-world advice for achieving entrepreneurial success.", 
+        image: eureka
     },
 ];
 

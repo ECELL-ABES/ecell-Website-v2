@@ -5,8 +5,10 @@ import gameOfDrones from '../assets/sa.jpg';
 import eSummitTechpravaah from '../assets/sa.jpg';
 import bidwiserMockIpl from '../assets/at.png';
 import achieversTalk from '../assets/at.png';
-import fc from "../assets/fc.jpg"
-import tes from "../assets/tes2.jpg"
+import fc from "../assets/fc.jpg";
+import tes from "../assets/tes2.jpg";
+import eureka from "../assets/eureka.jpg";
+
 
 // Sample event data with imported images
 const events = [
@@ -14,7 +16,7 @@ const events = [
         id: 1, 
         title: "The Entrepreneurship Show 2023", 
         date: "February 27th '23", 
-        description: "The Entrepreneurship Show, organized by E-Cell ABESEC, aimed to inspire and educate participants about the startup mindset and culture. TES 1.0 featured Karandeep Singh Vohra, who shared his journey and principles that guided his success, focusing on the foundational aspects of starting a business, overcoming challenges, and effective strategies. TES 2.0 featured Sandeep Jain, the renowned founder of Geeks for Geeks (GFG), as the guest of honor.He also shared their experience of building Geeks for Geeks, offering practical insights and advice for aspiring entrepreneurs. The event followed a talk show with a skilled moderator facilitating an engaging conversation with Speaker. Participants actively engaged in the discussion, asking questions to Speaker, who provided advice, addressing queries related to entrepreneurship and leadership.It promotes a direct exchange of ideas. The Entrepreneurship Show by E-Cell ABESEC not only met its vision but go beyond expectations by delivering an event rich in content, interaction, and inspiration", 
+        description: "The Entrepreneurship Show, the flagship event of E-Cell ABESEC, is a vibrant platform designed to ignite entrepreneurial passion and educate a startup mindset among participants. TES has become synonymous with inspiration, innovation, and invaluable insights, creating an atmosphere where ideas thrive and future leaders are born.TES 1.0 marked an incredible beginning with “Karandeep Singh Vohra” gracing the stage. His captivating story of turning ideas into reality resonated deeply with the audience. Karandeep explored into the essential principles of starting a business, tackling challenges head-on, and crafting effective strategies for a stable success. His insights left attendees motivated and better equipped to take their first entrepreneurial steps.TES 2.0 took the excitement to the next level by featuring the legendary “Sandeep Jain”, founder of Geeks for Geeks (GFG), as the guest of honor. He shared the journey of building one of the most influential platforms for coders and tech enthusiasts. His talk was a perfect guide on turning ideas into reality, filled with useful advice, lessons from his own experiences, and practical tips for future entrepreneurs.Each edition of TES unfolded as an engaging talk show, with a skilled moderator guiding thought-provoking conversations with the speakers. The interactive format encouraged active participation, with attendees asking pressing questions and receiving personalized advice from these accomplished leaders. This direct exchange of ideas and perspectives made the event dynamic and impactful.TES didn’t just meet expectations—it surpassed them, delivering an extraordinary experience brimming with inspiration, knowledge, and meaningful connections. The event created a ripple effect of innovation, empowering students to think big and chase their entrepreneurial dreams.Missed the show this time? Don't worry—TES will be back, bigger and better, with more stories, insights, and opportunities to fuel your entrepreneurial spirit! ", 
         image: tes
     },
     { 
@@ -58,6 +60,13 @@ const events = [
         date: "April 10th '22", 
         description: " E-Cell recently hosted The Achiever's Talk, a distinguished event designed to facilitate meaningful one-on-one interactions with esteemed organizations, including GST Noida, Jain Shikanji Waale, and Anubhav Jain. This interactive platform gave attendees invaluable insights into the entrepreneurial landscape and allowed them to engage with successful business leaders who shared their motivational narratives. Participants gained a deeper understanding of common challenges faced in the industry and explored effective strategies for overcoming these obstacles. The event featured an interactive Q&A session that ignited thoughtful discussions among participants. This format encouraged engagement and provided practical advice tailored to their unique circumstances and aspirations. The exchange of ideas enriched the overall learning experience and fostered intellectual growth. Attendees were inspired and gained essential knowledge, boosting their confidence for their entrepreneurial journeys. Valuable connections were made with participating organizations, offering insights and motivational stories from successful entrepreneurs. Overall, the event underscored the importance of community engagement and knowledge-sharing in supporting emerging entrepreneurs and fostering future collaborations.", 
         image: achieversTalk 
+    },
+     { 
+        id: 8, 
+        title: "Eureka!", 
+        date: "September 28th '24", 
+        description: "E-Cell ABES-EC's newest event, The Achiever's Talk, structures one-on-one interactions with well-recognized organizations like GST Noida, Jain shikanji waale, and Anubhav Jain, among others, as well as motivational anecdotes and insights from successful entrepreneurs. The attendees acquired valuable information about overcoming challenges, business strategies, and individual development. Aspiring business owners had the opportunity to interact with industry privileged and network at the event. It came to a close with a Q&A session, which allowed for a lively discussion of ideas and useful advice. In general, Achievers Talk inspired participants and provided real-world advice for achieving entrepreneurial success.", 
+        image: eureka
     },
 ];
 

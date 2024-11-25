@@ -5,10 +5,8 @@ import gameOfDrones from '../assets/sa.jpg';
 import eSummitTechpravaah from '../assets/sa.jpg';
 import bidwiserMockIpl from '../assets/at.png';
 import achieversTalk from '../assets/at.png';
-import fc from "../assets/fc.jpg";
-import tes from "../assets/tes2.jpg";
-import eureka from "../assets/eureka.jpg";
-
+import fc from "../assets/fc.jpg"
+import tes from "../assets/tes2.jpg"
 
 // Sample event data with imported images
 const events = [
@@ -60,13 +58,6 @@ const events = [
         date: "April 10th '22", 
         description: " E-Cell recently hosted The Achiever's Talk, a distinguished event designed to facilitate meaningful one-on-one interactions with esteemed organizations, including GST Noida, Jain Shikanji Waale, and Anubhav Jain. This interactive platform gave attendees invaluable insights into the entrepreneurial landscape and allowed them to engage with successful business leaders who shared their motivational narratives. Participants gained a deeper understanding of common challenges faced in the industry and explored effective strategies for overcoming these obstacles. The event featured an interactive Q&A session that ignited thoughtful discussions among participants. This format encouraged engagement and provided practical advice tailored to their unique circumstances and aspirations. The exchange of ideas enriched the overall learning experience and fostered intellectual growth. Attendees were inspired and gained essential knowledge, boosting their confidence for their entrepreneurial journeys. Valuable connections were made with participating organizations, offering insights and motivational stories from successful entrepreneurs. Overall, the event underscored the importance of community engagement and knowledge-sharing in supporting emerging entrepreneurs and fostering future collaborations.", 
         image: achieversTalk 
-    },
-     { 
-        id: 8, 
-        title: "Eureka!", 
-        date: "September 28th '24", 
-        description: "E-Cell ABES-EC's newest event, The Achiever's Talk, structures one-on-one interactions with well-recognized organizations like GST Noida, Jain shikanji waale, and Anubhav Jain, among others, as well as motivational anecdotes and insights from successful entrepreneurs. The attendees acquired valuable information about overcoming challenges, business strategies, and individual development. Aspiring business owners had the opportunity to interact with industry privileged and network at the event. It came to a close with a Q&A session, which allowed for a lively discussion of ideas and useful advice. In general, Achievers Talk inspired participants and provided real-world advice for achieving entrepreneurial success.", 
-        image: eureka
     },
 ];
 

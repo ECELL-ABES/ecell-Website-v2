@@ -1,66 +1,142 @@
 .center-diamond {
-    background: aqua;
+  background: aqua;
 }
-.center-diamond::before{
-    content: "";
-        width: 6px;
-        height: 6px;
-        background: aqua;
-        display: inline-block;
-        border: 2px solid aqua;
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        margin: 0 0 0 -3px;
-        transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
+.center-diamond::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: aqua;
+  display: inline-block;
+  border: 2px solid aqua;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin: 0 0 0 -3px;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 /* Fade-out effect on the sides */
 
-
 .fade-area::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .fade-area::before {
-    left: 0;
+  left: 0;
 }
 
 /* Marquee container for first column (scrolls up) */
 .marquee-up {
-    display: flex;
-    flex-direction: column;
-    animation: marqueeScrollUp 90s linear infinite;
+  display: flex;
+  flex-direction: column;
+  animation: marqueeScrollUp 90s linear infinite;
 }
 
 /* Marquee container for second column (scrolls down) */
 .marquee-down {
-    display: flex;
-    flex-direction: column;
-    animation: marqueeScrollDown 90s linear infinite;
+  display: flex;
+  flex-direction: column;
+  animation: marqueeScrollDown 90s linear infinite;
 }
 
 /* Marquee content styling */
 
-
 /* Continuous vertical scroll animation - First column (Up) */
 @keyframes marqueeScrollDown {
-    0% {
-        transform: translateY(-60%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
+  0% {
+    transform: translateY(-60%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 /* Continuous vertical scroll animation - Second column (Down) */
 @keyframes marqueeScrollUp {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(-80%);
-    }
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
 }
+
+.slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+ mask-image: radial-gradient(circle at center, white 87%, transparent 100%);
+-webkit-mask-image: radial-gradient(circle at center, white 87%, transparent 100%);
+}
+.reverse-slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+ mask-image: radial-gradient(circle at center, white 87%, transparent 100%);
+-webkit-mask-image: radial-gradient(circle at center, white 87%, transparent 100%);
+}
+
+.slider .list {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.reverse-slider{
+    display: flex;
+    width: 100%;
+    position: relative;
+  
+}
+
+
+.slider .list .item {
+  margin: 0 10px;
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 40s linear infinite;
+  animation-delay: calc((40s / var(--quantity)) * (var(--position) - 1));
+}
+
+.reverse-slider .list .item {
+  margin: 0 10px;
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  right: 100%;
+  animation: autoRunReverse 40s linear infinite;
+  animation-delay: calc((40s / var(--quantity)) * (var(--position) - 1));
+}
+
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -60%;
+  }
+}
+
+@keyframes autoRunReverse {
+  from {
+    right: 100%;
+  }
+  to {
+    right: -60%;
+  }
+}
+
+
+.slider:hover .item {
+  animation-play-state: paused;
+}
+
+.reverse-slider:hover .item {
+  animation-play-state: paused;
+}
+

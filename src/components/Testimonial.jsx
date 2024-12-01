@@ -4,68 +4,29 @@ import { Fade } from "react-awesome-reveal";
 import { GiPolarStar } from "react-icons/gi";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import dg from "../assets/dg.png";
 import np from "../assets/np.jpg";
 import sa from "../assets/sa.jpg";
 import ka from "../assets/ka.jpg";
 import t from "../assets/t.png";
+import { DiGithubAlt } from "react-icons/di";
 
 function Testimonial() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1.5,
-          centerMode: true,
-          centerPadding: "15px",
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1.2,
-          centerMode: true,
-          centerPadding: "10px",
-        },
-      },
-    ],
-  };
   
-
-  const reverse = {
-    ...settings,
-    rtl: true,
-  };
 
   const data = [
     {
       id: 1,
       description:
-      "E-Cell ABESEC holds a special place in my heart, from chaotic first events to conducting a drone show and reaching NEC 2023 finals. Guided by Mahendra Sir and Prabansh Sir, it fostered growth, teamwork, and unforgettable memories.",      imgSrc: dg,
+        "E-Cell ABESEC holds a special place in my heart, from chaotic first events to conducting a drone show and reaching NEC 2023 finals. Guided by Mahendra Sir and Prabansh Sir, it fostered growth, teamwork, and unforgettable memories.",
+      imgSrc: dg,
       name: "Divyanshyu gupta",
       role: "Mentor",
     },
     {
       id: 2,
       description:
-"E-Cell ABESEC guided my growth from volunteer to Tech-Ops Coordinator, highlighted by launching the first live website, fostering professional and personal development under inspiring mentorship.",      
+        "E-Cell ABESEC guided my growth from volunteer to Tech-Ops Coordinator, highlighted by launching the first live website, fostering professional and personal development under inspiring mentorship.",
       imgSrc: np,
       name: "Neelansh Pandey",
       role: "Former Tech-Ops Coordinator, E-CELL ABESEC",
@@ -81,7 +42,7 @@ function Testimonial() {
     {
       id: 4,
       description:
-      "E-Cell ABESEC shaped my journey from volunteer to Vice President, boosting female participation by 30%, enhancing leadership skills, and building confidence while leaving a lasting legacy. fostering personal and professional growth.",
+        "E-Cell ABESEC shaped my journey from volunteer to Vice President, boosting female participation by 30%, enhancing leadership skills, and building confidence while leaving a lasting legacy. fostering personal and professional growth.",
       imgSrc: ka,
       name: "Kamakshi Agarwal",
       role: "Former Vice president",
@@ -89,7 +50,7 @@ function Testimonial() {
     {
       id: 5,
       description:
-      "E-Cell ABESEC has been a transformative experience, fostering resilience, leadership, and innovation. It shaped my journey as co-founder of Know Your Colleges and continues to empower students networks that drive success in entrepreneurship.", 
+        "E-Cell ABESEC has been a transformative experience, fostering resilience, leadership, and innovation. It shaped my journey as co-founder of Know Your Colleges and continues to empower students networks that drive success in entrepreneurship.",
       imgSrc: t,
       name: "Sarthak Gupta",
       role: "Former Treasurer",
@@ -115,10 +76,12 @@ function Testimonial() {
               </span>
             </Fade>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-semibold text-center">Testimonials About Us</h2>
+          <h2 className="text-4xl sm:text-5xl font-semibold text-center">
+            Testimonials About Us
+          </h2>
         </div>
 
-        <div className="slider-container mx-0  sm:mx-0 md:ml-2 overflow-visible">
+        {/* <div className="slider-container mx-0  sm:mx-0 md:ml-2 overflow-visible">
           <Slider {...settings}>
             {data.map((item) => (
               <div key={item.id} className="px-1 sm:px-2">
@@ -145,7 +108,96 @@ function Testimonial() {
               ))}
             </Slider>
           </div>
+        </div> */}
+
+        {/*  ---------- forward slider starts here --------- */}
+        <div
+          className="slider"
+          style={{
+            "--width": "300px",
+            "--height": "320px",
+            "--quantity": data.length,
+          }}
+        >
+          <div className="list">
+            {data.map((testimonial, index) => (
+              <div
+                className="item"
+                style={{ "--position": index + 1 }}
+                key={testimonial.id}
+              >
+                <div className="w-[350px] mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B] h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {testimonial.description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={testimonial.imgSrc}
+                        alt={`Profile image of ${testimonial.name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          {testimonial.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+        {/*  ---------- forward  slider closes here --------- */}
+
+        {/*  ---------- reverse slider starts here --------- */}
+        <div
+          className="reverse-slider"
+          style={{
+            "--width": "300px",
+            "--height": "320px",
+            "--quantity": data.length,
+          }}
+        >
+          <div className="list">
+            {data.map((testimonial, index) => (
+              <div
+                className="item"
+                style={{ "--position": index + 1 }}
+                key={testimonial.id}
+              >
+                <div className="w-[350px] mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B] h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {testimonial.description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={testimonial.imgSrc}
+                        alt={`Profile image of ${testimonial.name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          {testimonial.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ----------- reverse slider ends here ----------- */}
       </div>
     </div>
   );

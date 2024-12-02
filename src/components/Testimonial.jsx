@@ -12,8 +12,6 @@ import t from "../assets/t.png";
 import { DiGithubAlt } from "react-icons/di";
 
 function Testimonial() {
-  
-
   const data = [
     {
       id: 1,
@@ -80,124 +78,263 @@ function Testimonial() {
             Testimonials About Us
           </h2>
         </div>
-
-        {/* <div className="slider-container mx-0  sm:mx-0 md:ml-2 overflow-visible">
-          <Slider {...settings}>
-            {data.map((item) => (
-              <div key={item.id} className="px-1 sm:px-2">
-                <Card
-                  description={item.description}
-                  imgSrc={item.imgSrc}
-                  name={item.name}
-                  role={item.role}
-                />
-              </div>
-            ))}
-          </Slider>
-          <div className="mt-2">
-            <Slider {...reverse}>
-              {data.map((item) => (
-                <div key={item.id} className="px-1 sm:px-2">
-                  <Card
-                    description={item.description}
-                    imgSrc={item.imgSrc}
-                    name={item.name}
-                    role={item.role}
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div> */}
-
-        {/*  ---------- forward slider starts here --------- */}
-        <div
-          className="slider"
-          style={{
-            "--width": "300px",
-            "--height": "320px",
-            "--quantity": data.length,
+        <div className="main">
+          <div
+            className="slider"
+            style={{  
+            "--width": "350px",
+            "--height": "300px",
+            "--quantity": "5",
           }}
-        >
-          <div className="list">
-            {data.map((testimonial, index) => (
-              <div
-                className="item"
-                style={{ "--position": index + 1 }}
-                key={testimonial.id}
-              >
-                <div className="w-[350px] mx-0 flex-shrink-0">
-                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B] h-full flex flex-col justify-between shadow-lg">
+          >
+            <div className="list">
+              <div className="item" style={{"--position": "1"}}>
+                <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
                     <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
-                      {testimonial.description}
+                      {data[0].description}
                     </p>
                     <div className="flex items-center">
                       <img
                         className="w-12 h-12 rounded-full mr-3"
-                        src={testimonial.imgSrc}
-                        alt={`Profile image of ${testimonial.name}`}
+                        src={data[0].imgSrc}
+                        alt={`Profile image of ${data[0].name}`}
                       />
                       <div>
                         <p className="text-base font-medium text-white">
-                          {testimonial.name}
+                          {data[0].name}
                         </p>
-                        <p className="text-sm text-gray-400">
-                          {testimonial.role}
-                        </p>
+                        <p className="text-sm text-gray-400">{data[0].role}</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-        {/*  ---------- forward  slider closes here --------- */}
-
-        {/*  ---------- reverse slider starts here --------- */}
-        <div
-          className="reverse-slider"
-          style={{
-            "--width": "300px",
-            "--height": "320px",
-            "--quantity": data.length,
-          }}
-        >
-          <div className="list">
-            {data.map((testimonial, index) => (
-              <div
-                className="item"
-                style={{ "--position": index + 1 }}
-                key={testimonial.id}
-              >
-                <div className="w-[350px] mx-0 flex-shrink-0">
-                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B] h-full flex flex-col justify-between shadow-lg">
+              <div className="item" style={{"--position": "2"}}>
+              <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
                     <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
-                      {testimonial.description}
+                      {data[1].description}
                     </p>
                     <div className="flex items-center">
                       <img
                         className="w-12 h-12 rounded-full mr-3"
-                        src={testimonial.imgSrc}
-                        alt={`Profile image of ${testimonial.name}`}
+                        src={data[1].imgSrc}
+                        alt={`Profile image of ${data[1].name}`}
                       />
                       <div>
                         <p className="text-base font-medium text-white">
-                          {testimonial.name}
+                          {data[1].name}
                         </p>
-                        <p className="text-sm text-gray-400">
-                          {testimonial.role}
-                        </p>
+                        <p className="text-sm text-gray-400">{data[1].role}</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+              <div className="item" style={{"--position": "3"}}>
+              <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[2].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[2].imgSrc}
+                        alt={`Profile image of ${data[2].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[2].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[2].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="item" style={{"--position": "4"}}>
+              <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[3].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[3].imgSrc}
+                        alt={`Profile image of ${data[3].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[3].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[3].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="item" style={{"--position": "5"}}>
+              <div className="w-full mx-0 flex-shrink-0 ">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[4].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[4].imgSrc}
+                        alt={`Profile image of ${data[0].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[4].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[4].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>{/* the list div closess here */}
+          </div> {/** the slider div closes here  */}
+          {/*  forward slider ends here  */}
 
-        {/* ----------- reverse slider ends here ----------- */}
+
+          {/* the reverse slider starts here . */}
+          <div
+            className="reverse-slider"
+            style={{  
+            "--width": "350px",
+            "--height": "300px",
+            "--reverse": "true",
+            "--quantity": "5",
+          }}
+          reverse = {true} 
+          >
+            <div className="list">
+              <div className="item" style={{"--position": "1"}}>
+                <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[0].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[0].imgSrc}
+                        alt={`Profile image of ${data[0].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[0].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[0].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="item" style={{"--position": "2"}}>
+              <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[1].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[1].imgSrc}
+                        alt={`Profile image of ${data[1].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[1].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[1].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="item" style={{"--position": "3"}}>
+              <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[2].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[2].imgSrc}
+                        alt={`Profile image of ${data[2].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[2].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[2].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="item" style={{"--position": "4"}}>
+              <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[3].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[3].imgSrc}
+                        alt={`Profile image of ${data[3].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[3].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[3].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="item" style={{"--position": "5"}}>
+              <div className="w-full mx-0 flex-shrink-0 ">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[4].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[4].imgSrc}
+                        alt={`Profile image of ${data[0].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[4].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[4].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>{/* the list div  of reverse slider  closess here */}
+          </div> {/** the reverse slider div closes here  */}
+
+
+
+
+
+
+        </div> {/* main class ends here*/}
+
       </div>
     </div>
   );

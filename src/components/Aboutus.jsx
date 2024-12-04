@@ -23,7 +23,7 @@ function Aboutus() {
                     </div>
                     <Slide direction='right'>
 
-                        <div><img src="src\assets\FastTracking.jpg" alt="" srcset="" style={{ borderRadius: '0.5rem',height: '25rem',width: "42rem" }} /></div>      {/* first image */}
+                        <div><img src="src\assets\312.jpg" alt="" srcset="" style={{ borderRadius: '0.5rem',height: '25rem',width: "42rem" }} /></div>      {/* first image */}
                     </Slide>
                 </div>
 
@@ -64,7 +64,7 @@ function Aboutus() {
                     </div>
                     <Slide direction='right'>
 
-                    <div><img src="src\assets\HighAchive.JPG" alt="" srcset="" style={{ borderRadius: '0.5rem',width: "42rem",height:"25rem" }} /></div>
+                    <div><img src="src\assets\ims.jpg" alt="" srcset="" style={{ borderRadius: '0.5rem',width: "42rem",height:"25rem" }} /></div>
                     </Slide>
                 </div>
             </div>

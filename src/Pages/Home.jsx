@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Activities from '../components/Activities'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -14,7 +14,7 @@ import { MdMargin } from 'react-icons/md'
 
 function Home() {
     return (
-        <div>
+      <div>
             {/* <ScrollProgress /> */}
             <div className=" bg-black text-white flex flex-col" style={{ minHeight: '80vh' }}>
                 <div className="flex-grow flex flex-col justify-center items-center text-center px-4">

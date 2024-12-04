@@ -18,9 +18,9 @@ function Home() {
             {/* <ScrollProgress /> */}
             <div className=" bg-black text-white flex flex-col" style={{ minHeight: '80vh' }}>
                 <div className="flex-grow flex flex-col justify-center items-center text-center px-4">
-                    <div style={{ backgroundColor: '#141412', color: '#FFDE59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4">
+                    <div style={{ backgroundColor: '#141412', color: '#FFDE59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4 mt-10">
                         <Fade cascade>
-                            <span className='flex items-center gap-2'><GiPolarStar /> From Ideas to Imprint</span>
+                            <span className='flex items-center gap-2 '><GiPolarStar /> From Ideas to Imprint</span>
                         </Fade>
                     </div>
                     <Fade cascade="true">

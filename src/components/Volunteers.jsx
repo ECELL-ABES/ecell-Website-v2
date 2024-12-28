@@ -1,5 +1,4 @@
 import React from "react";
-import "./Volunteers.css";
 
 const volunteers = [
   { name: "Sahil Kuma Sahu", role: "EVENTS AND PLANNING" },
@@ -54,20 +53,23 @@ const volunteers = [
   { name: "Akash Yadav", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
   { name: "Harsh Kumar", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
   { name: "Amit Kumar", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
-  { name: "Nandini", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
-  { name: "Pratibha", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Nandini Goel", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Pratibha Maurya", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
   { name: "Jahanvi Pratap", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
 ];
 
 const Volunteers = () => {
   return (
-    <div className="volunteers-container">
-      <h1 className="volunteers-title">Volunteers 2023-24</h1>
-      <div className="volunteers-grid">
+    <div className="bg-black text-white min-h-screen py-5 px-20 text-center mx-4">
+      <h1 className="text-4xl mb-5 font-bold">Volunteers 2023-24</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto">
         {volunteers.map((volunteer, index) => (
-          <div key={index} className="volunteer-card">
-            <h2>{volunteer.name}</h2>
-            <p className="role">{volunteer.role}</p>
+          <div
+            key={index}
+            className="bg-gray-800 h-[120px] w-[320px] rounded-lg shadow-lg flex flex-col justify-center items-center mx-auto"
+          >
+            <h2 className="text-xl font-semibold mb-2">{volunteer.name}</h2>
+            <p className="text-yellow-400">{volunteer.role}</p>
           </div>
         ))}
       </div>

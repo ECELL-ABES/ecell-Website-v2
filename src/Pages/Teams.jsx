@@ -50,7 +50,7 @@ import ssy from '../assets/ssy.jpg'
 import as from '../assets/as.jpg'
 
 //create a single component for all the cards.
-
+import Volunteers from "../components/Volunteers";
 
 function Teams() {
     const [currentTeam, setCurrentTeam] = useState('2024-2025'); // Default to current executives
@@ -830,6 +830,11 @@ function Teams() {
 
 
             </div>
+
+
+            
+            <Volunteers />
+            
 
 
 

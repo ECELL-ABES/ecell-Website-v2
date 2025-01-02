@@ -159,3 +159,12 @@ main{
       left: 100%;
   }
 }
+
+
+.Footerdiv{
+  background-image: url(/public/inif\ image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}

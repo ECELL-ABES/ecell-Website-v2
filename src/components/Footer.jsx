@@ -9,6 +9,17 @@ function Footer() {
         <div>
             <div className="bg-black text-white py-8 px-4">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div>
+                        <h3 className="text-lg font-bold mb-4">Page</h3>
+                        <ul className="space-y-2">
+                            <li><Link to="/" style={{ color: '#ffde59' }}>Home</Link></li>
+                            <li><Link to="/events" className="text-zinc-400 hover:text-[#ffde59]">Events</Link></li>
+                            <li><Link to="/contactus" className="text-zinc-400 hover:text-[#ffde59]">Contact</Link></li>
+                            <li><Link to="/teams" className="text-zinc-400 hover:text-[#ffde59]">Team</Link></li>
+                        </ul>
+                    </div>
+
                     <div>
                         <Link to='/'>
                             <div className="flex items-center mb-4">
@@ -27,17 +38,10 @@ function Footer() {
 
                         </div>
                     </div>
-                    <div>
-                        <h3 className="text-lg font-bold mb-4">Page</h3>
-                        <ul className="space-y-2">
-                            <li><Link to="/" style={{ color: '#ffde59' }}>Home</Link></li>
-                            <li><Link to="/events" className="text-zinc-400 hover:text-[#ffde59]">Events</Link></li>
-                            <li><Link to="/contactus" className="text-zinc-400 hover:text-[#ffde59]">Contact</Link></li>
-                            <li><Link to="/teams" className="text-zinc-400 hover:text-[#ffde59]">Team</Link></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="text-lg font-bold mb-4">Let's Connect</h3>
+
+
+                    <div className='Footerdiv'>
+                        {/* <h3 className="text-lg font-bold mb-4">Let's Connect</h3>
                         <form>
                             <input type="email" placeholder="name@email.com" className="w-full p-2 mb-4 bg-zinc-300 text-zinc-800 rounded-md hover:outline-none outline-none" />
                             <button
@@ -47,7 +51,7 @@ function Footer() {
                                 Subscribe
                             </button>
 
-                        </form>
+                        </form> */}
                     </div>
                 </div>
                 <hr style={{ width: '20rem', margin: '2rem auto 10px auto' }} />

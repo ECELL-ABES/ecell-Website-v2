@@ -159,3 +159,32 @@ main{
       left: 100%;
   }
 }
+
+
+.Footerdiv{
+  background-image: url(/public/inif\ image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* margin-left: 40px; */
+  
+}
+
+@media(max-width: 768px) and (min-width:480px){
+  .Footerdiv{
+    width: 100%; 
+        height: 150px; 
+        margin-left: 0px;
+
+  }
+}
+
+@media(max-width: 480px){
+  .Footerdiv{
+    width: 100%; 
+    height: 100px; 
+    margin-left: 0;
+    
+  }
+}

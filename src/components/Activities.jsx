@@ -26,7 +26,7 @@ function Activities() {
                         </p>
                     </div>
                     <Slide direction="right">
-                        <div><img src="src\assets\NEC23.JPG" alt="" srcset="" style={{ borderRadius: '0.5rem' }} /></div>
+                        <div><img src="src\assets\iitb.JPG" alt="" srcset="" style={{ borderRadius: '0.5rem' }} /></div>
                     </Slide>
                 </div>
                 <hr style={{ color: 'black' }} />

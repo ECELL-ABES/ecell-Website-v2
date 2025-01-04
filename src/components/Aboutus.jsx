@@ -18,7 +18,7 @@ function Aboutus() {
                             <span style={{ color: '#ffde59' }}>Fast Tracking </span>the idea into reality with E-Cell ABESEC
                         </h1>
                         <p className="mt-4 text-zinc-400">
-                            At E-Cell ABESEC, our journey began with a simple but powerful idea: to fast track and nuture the ideas devlopming in the mind of young brains. Frustrated by the complexities and limitations of existing solutions, we set out to create a platform that would empower teams to collaborate more effectively, streamline workflows, and drive success.</p>
+                            At E-Cell ABESEC, our journey began with a simple but powerful idea: to fast track and nuture the ideas devloping in the mind of young brains. Frustrated by the complexities and limitations of existing solutions, we set out to create a platform that would empower teams to collaborate more effectively, streamline workflows, and drive success.</p>
                         <p className="mt-4 text-zinc-400">With a team of passionate developers and project management experts, we embarked on a journey of innovation and iteration. We listened to the needs of our users, gathered feedback, and continuously refined our platform to meet the evolving demands of modern businesses.</p>
                     </div>
                     <Slide direction='right'>

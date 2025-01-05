@@ -13,7 +13,6 @@ const volunteers = [
   { name: "Nishat", role: "EVENTS AND PLANNING" },
   { name: "Satyam Raj Singh", role: "EVENTS AND PLANNING" },
   { name: "Tamanna Garg", role: "EVENTS AND PLANNING" },
-  { name: "Ishan Arora", role: "EVENTS AND PLANNING" },
   { name: "Himanya Malik", role: "EVENTS AND PLANNING" },
   { name: "Ayan Pandey", role: "EVENTS AND PLANNING" },
   { name: "Shreya Vishwakarma", role: "EVENTS AND PLANNING" },
@@ -56,6 +55,7 @@ const volunteers = [
   { name: "Nandini Goel", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
   { name: "Pratibha Maurya", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
   { name: "Jahanvi Pratap", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Ishan Arora", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
 ];
 
 const Volunteers = () => {

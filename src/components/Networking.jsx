@@ -12,29 +12,74 @@ const networkData = [
     },
     { 
         name: "KIET", 
-        image: "https://www.collegegyani.com/upload/kiet_logo.png", 
+        image: "src/assets/MOU clg/KIET.jpg", 
         info: "KIET is known for its advanced research programs and collaborations in engineering." 
     },
     { 
         name: "RLAC", 
-        image: "https://via.placeholder.com/150", 
+        image: "src/assets/MOU clg/RLAC.jpg", 
         info: "A leading college in Delhi with a vibrant student entrepreneurship community." 
     },
     { 
         name: "IMS Ghaziabad", 
-        image: "https://via.placeholder.com/150", 
+        image: "src/assets/MOU clg/IMS.jpg", 
         info: "One of the oldest management institutes in India, known for its diverse alumni network." 
     },
     { 
         name: "IIT Bombay", 
-        image: "https://via.placeholder.com/150", 
+        image: "src/assets/MOU clg/Indian_Institute_of_Technology_Bombay_Logo.svg.png", 
         info: "India's leading institute fostering groundbreaking research and industry partnerships." 
     },
-    { 
-        name: "BITS Pilani", 
-        image: "https://via.placeholder.com/150", 
-        info: "A premier institute with a strong emphasis on startups and innovation." 
-    },
+    // { 
+    //     name: "BITS Pilani", 
+    //     image: "https://via.placeholder.com/150", 
+    //     info: "A premier institute with a strong emphasis on startups and innovation." 
+    // },
+    
+   {
+        name: "Aryabhatta College, DU",
+        image: "src/assets/MOU clg/ARYABHATTA.jpg",
+        info: "A distinguished college of the University of Delhi, fostering academic excellence and innovation."
+   },
+   {
+        name: "Bennett University",
+        image: "src/assets/MOU clg/BENNET UNI.jpg",
+        info: "A modern university fostering entrepreneurship and innovation."
+   },
+   {
+        name: "Delhi Technological University (DTU)",
+        image: "src/assets/MOU clg/DTU.jpg",
+        info: "A premier engineering institution excelling in technology and innovation."
+   },
+   {
+        name: "JSS Academy of Technical Education",
+        image: "src/assets/MOU clg/jss.jpg",
+        info: "A renowned institution known for academic excellence and technical innovation."
+   },
+   {
+        name: "Kirori Mal College, DU",
+        image: "src/assets/MOU clg/kmc.jpg",
+        info: "A prestigious college of the University of Delhi, nurturing talent and innovation."
+   },
+   {
+        name: "KIT, IMR Kolhapur",
+            image: "src/assets/MOU clg/kolhapur.jpg",
+        info: "A reputed institute focused on developing skilled leaders in management and technology."
+   },
+   {
+    name: "MSIT",
+    image: "src/assets/MOU clg/MSIT.jpg",
+    info: "An institution known for its strong focus on innovation, entrepreneurship, and technical excellence."
+   },
+
+   {
+    name: "Shivaji College, DU",
+    image: "src/assets/MOU clg/SHIVAJI.jpg",
+    info: "A prominent college of the University of Delhi, nurturing entrepreneurship and fostering innovation."
+   },
+      
+
+   
 ];
 
 function Networking() {

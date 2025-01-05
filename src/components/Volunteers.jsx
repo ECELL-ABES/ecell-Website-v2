@@ -13,7 +13,6 @@ const volunteers = [
   { name: "Nishat", role: "EVENTS AND PLANNING" },
   { name: "Satyam Raj Singh", role: "EVENTS AND PLANNING" },
   { name: "Tamanna Garg", role: "EVENTS AND PLANNING" },
-  { name: "Ishan Arora", role: "EVENTS AND PLANNING" },
   { name: "Himanya Malik", role: "EVENTS AND PLANNING" },
   { name: "Ayan Pandey", role: "EVENTS AND PLANNING" },
   { name: "Shreya Vishwakarma", role: "EVENTS AND PLANNING" },
@@ -56,17 +55,18 @@ const volunteers = [
   { name: "Nandini Goel", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
   { name: "Pratibha Maurya", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
   { name: "Jahanvi Pratap", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Ishan Arora", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
 ];
 
 const Volunteers = () => {
   return (
-    <div className="bg-black text-white min-h-screen py-5 px-20 text-center mx-4">
-      <h1 className="text-4xl mb-5 font-bold">Volunteers 2023-24</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto">
+    <div className="bg-black text-white min-h-screen py-10 px-20 text-center mx-4">
+      <h1 className="text-4xl mb-10 font-bold text-center">Volunteers 2023-24</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {volunteers.map((volunteer, index) => (
           <div
             key={index}
-            className="bg-gray-800 h-[120px] w-[320px] rounded-lg shadow-lg flex flex-col justify-center items-center mx-auto"
+            className="bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col justify-center items-center text-center"
           >
             <h2 className="text-xl font-semibold mb-2">{volunteer.name}</h2>
             <p className="text-yellow-400">{volunteer.role}</p>

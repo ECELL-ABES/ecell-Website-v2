@@ -106,32 +106,57 @@ function Teams() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-2 bg-background">
                         {/* Add the details of the 2022-2023 team here */}
                         <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                            <img src={ec} alt="Team Member" className="mb-4 rounded-full w-[15rem] " />
-                            <h3 className="text-3xl font-semibold">Aditya Pandey</h3>
+                            <img src={dk} alt="Team Member" className="mb-4 rounded-full w-[15rem] " />
+                            <h3 className="text-3xl font-semibold">Divyam Kumar</h3>
                             <p className="text-[#ffed59]">President</p>
                             <div className="flex space-x-2 mt-4 justify-center">
-                                <a target='_blank' href="https://www.instagram.com/adityapandey0502/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <a target='_blank' href="https://www.instagram.com/divyam.kumar._/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
                                     <FaInstagram/>
                                 </a>
-                                <a target='_blank' href="https://www.linkedin.com/in/aditya-pandey0502/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <a target='_blank' href="https://www.linkedin.com/in/divyam-kumar-b7406a258/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
                                     <PiLinkedinLogoBold/>
                                 </a>
                             </div>
                         </div>
-                        <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={sg} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Suyash Gupta</h3>
-                        <p className="text-[#ffed59]">Vice President</p>
+                         <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
+                        <img src={ak} alt="example" className="mb-4 rounded-full w-[15rem]" />
+                        <h3 className="text-3xl font-semibold">Ashish Kumar</h3>
+                        <p className="text-[#ffed59]">Co-President</p>
                         <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/isuyash.g/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                            <a target='_blank' href="https://www.instagram.com/ashishkumar0407/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
                                 <FaInstagram/>
                             </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/isuyashgupta/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                            <a target='_blank' href="https://www.linkedin.com/in/ashish-kumar-406245237/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
                                 <PiLinkedinLogoBold/>
                             </a>
                         </div>
                     </div>
-                    
+                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
+                        <img src={am2} alt="example" className="mb-4 rounded-full w-[15rem]" />
+                        <h3 className="text-3xl font-semibold">Aadya </h3>
+                        <p className="text-[#ffed59]">Co-President(Leading SHE-CELL Department)</p>
+                        <div className="flex space-x-2 mt-4 justify-center">
+                            <a target='_blank' href="https://www.instagram.com/anshika_mishra_0190/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <FaInstagram/>
+                            </a>
+                            <a target='_blank' href="https://www.linkedin.com/in/anshika-mishra-252849259/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <PiLinkedinLogoBold/>
+                            </a>
+                        </div>
+                    </div>
+                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
+                        <img src={sd} alt="example" className="mb-4 rounded-full w-[15rem]" />
+                        <h3 className="text-3xl font-semibold">Sona Poddar</h3>
+                        <p className="text-[#ffed59]">HR Lead </p>
+                        <div className="flex space-x-2 mt-4 justify-center">
+                            <a target='_blank' href="https://www.instagram.com/sonaa.30_/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <FaInstagram/>
+                            </a>
+                            <a target='_blank' href="https://www.linkedin.com/in/sona-poddar-087812282/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <PiLinkedinLogoBold/>
+                            </a>
+                        </div>
+                    </div>
                     <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
                         <img src={sf} alt="example" className="mb-4 rounded-full w-[15rem]" />
                         <h3 className="text-3xl font-semibold">Sayed Haneef</h3>
@@ -146,18 +171,37 @@ function Teams() {
                         </div>
                     </div>
                     <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={am} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Anuj Mishra</h3>
-                        <p className="text-[#ffed59]">TechOps Coordinator</p>
+                        <img src={ig} alt="example" className="mb-4 rounded-full w-[15rem]" />
+                        <h3 className="text-3xl font-semibold">Ishan Garg</h3>
+                        <p className="text-[#ffed59]">Vice-President (Manages Events and Operations)
+                            
+                        </p>
                         <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/anuj_mishra_05/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/> 
+                            <a target='_blank' href="https://www.instagram.com/gargishan_15/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <FaInstagram/>
                             </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/anujmishra05/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                            <a target='_blank' href="https://www.linkedin.com/in/ishan-garg-19a622257/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
                                 <PiLinkedinLogoBold/>
                             </a>
                         </div>
                     </div>
+                        
+                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
+                        <img src={ts} alt="example" className="mb-4 rounded-full w-[15rem]" />
+                        <h3 className="text-3xl font-semibold">Tanishka Saharawat</h3>
+                        <p className="text-[#ffed59]">Vice President (Manages social media , marketing and technical )</p>
+                        <div className="flex space-x-2 mt-4 justify-center">
+                            <a target='_blank' href="https://www.instagram.com/saharawat_tanishka/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <FaInstagram/>
+                            </a>
+                            <a target='_blank' href="https://www.linkedin.com/in/tanishka-saharawat-88251a238/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
+                                <PiLinkedinLogoBold/>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                   
                     <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
                         <img src={sk} alt="example" className="mb-4 rounded-full w-[15rem]" />
                         <h3 className="text-3xl font-semibold">Sohail Khan</h3>
@@ -171,110 +215,12 @@ function Teams() {
                             </a>
                         </div>
                     </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={vb} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Vinit Baishkiyar</h3>
-                        <p className="text-[#ffed59]">Events Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/vini.t281/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/vinit-baishkiyar-220627202/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={am2} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Anshika Mishra</h3>
-                        <p className="text-[#ffed59]">Events Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/anshika_mishra_0190/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/anshika-mishra-252849259/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={ts} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Tanishka Saharawat</h3>
-                        <p className="text-[#ffed59]">Social Media Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/saharawat_tanishka/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/tanishka-saharawat-88251a238/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={ig} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Ishan Garg</h3>
-                        <p className="text-[#ffed59]">Marketing Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/gargishan_15/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/ishan-garg-19a622257/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={ak} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Ashish Kumar</h3>
-                        <p className="text-[#ffed59]">Marketing Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/ashishkumar0407/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/ashish-kumar-406245237/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={dk} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Divyam Kumar</h3>
-                        <p className="text-[#ffed59]">Filmography Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/divyam.kumar._/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/divyam-kumar-b7406a258/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={rk} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Rajnish Kumar</h3>
-                        <p className="text-[#ffed59]">Filmography Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/_originality_matters_/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/rajnish-kumarom/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={sd} alt="example" className="mb-4 rounded-full w-[15rem]" />
-                        <h3 className="text-3xl font-semibold">Sona Poddar</h3>
-                        <p className="text-[#ffed59]">Student Coordinator</p>
-                        <div className="flex space-x-2 mt-4 justify-center">
-                            <a target='_blank' href="https://www.instagram.com/sonaa.30_/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <FaInstagram/>
-                            </a>
-                            <a target='_blank' href="https://www.linkedin.com/in/sona-poddar-087812282/" className="text-[#ffde59] text-xl hover:text-primary-foreground">
-                                <PiLinkedinLogoBold/>
-                            </a>
-                        </div>
-                    </div>
+                   
+                    
+                   
+                   
+                    
+                   
                     
                         {/* Add other team members from 2022-2023 here */}
                         

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { GiPolarStar } from "react-icons/gi";
+import { Fade } from "react-awesome-reveal";
+
 
 const volunteers = [
   { name: "Sahil Kuma Sahu", role: "EVENTS AND PLANNING" },
@@ -60,7 +63,18 @@ const Volunteers = () => {
 
   return (
     <div className="bg-black text-white min-h-screen py-10 px-20 text-center mx-4">
-      <h1 className="text-4xl mb-10 font-bold text-center">Volunteers 2023-24</h1>
+
+      <div className="text-center mb-8">
+        <div
+          style={{ backgroundColor: '#141412', color: '#ffde59', border: '1px solid #26250F' }}
+          className="rounded-full px-4 py-1 mb-4 w-fit m-auto"
+        >
+          <Fade cascade>
+            <span className='flex items-center gap-2 text-xl'><GiPolarStar />VOLUNTEERS</span>
+          </Fade>
+        </div>
+        <h1 className="text-5xl font-bold">Volunteers <span className='text-[#ffed59]'>2023-24</span></h1>
+      </div>
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         {roles.map((role, index) => (
           <button

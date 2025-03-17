@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import dg from "../assets/dg.png";
 import np from "../assets/np.jpg";
 import sa from "../assets/sa.jpg";
-import ka from "../assets/ka.jpg";
+import kaa from "../assets/kaa.jpg";
 import t from "../assets/t.png";
 import { DiGithubAlt } from "react-icons/di";
 
@@ -41,7 +41,7 @@ function Testimonial() {
       id: 4,
       description:
         "E-Cell ABESEC shaped my journey from volunteer to Vice President, boosting female participation by 30%, enhancing leadership skills, and building confidence while leaving a lasting legacy. fostering personal and professional growth.",
-      imgSrc: ka,
+      imgSrc: kaa,
       name: "Kamakshi Agarwal",
       role: "Former Vice president",
     },

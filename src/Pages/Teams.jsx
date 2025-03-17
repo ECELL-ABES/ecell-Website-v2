@@ -27,7 +27,7 @@ import dg from '../assets/dg.png'
 import np from '../assets/np.jpg'
 import sa from '../assets/sa.jpg'
 import sm from '../assets/sm.jpg'
-//import ka from '../assets/Ka.jpg'
+import kaa from '../assets/kaa.jpg'
 
 
 import sf from '../assets/sf.jpg'
@@ -569,7 +569,7 @@ function Teams() {
                         </div>
                     </div>
                     <div className=" flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={ka} alt="example" className="mb-4 rounded-full w-[15rem]" />
+                        <img src={kaa} alt="example" className="mb-4 rounded-full w-[15rem]" />
                         <h3 className="text-3xl font-semibold">Kamakshi Agarwal</h3>
                         <p className="text-[#ffed59]">Former Vice President</p>
                         <div className="flex space-x-2 mt-4 justify-center">
@@ -768,7 +768,7 @@ function Teams() {
                         </div>
                     </div>
                     <div className="flex flex-col justify-center items-center px-[1rem] text-center bg-card py-10 rounded-lg shadow-md">
-                        <img src={ka} alt="Alumni" className="mb-4 rounded-full w-[15rem]" />
+                        <img src={kaa} alt="Alumni" className="mb-4 rounded-full w-[15rem]" />
                         <h3 className="text-3xl font-semibold">Kamakshi Agarwal</h3>
                         <p className="text-[#ffed59]">Business Analyst  at Gemini Solutions <br></br> (Former Vice President)</p>
                         <div className="flex space-x-2 mt-4 justify-center">

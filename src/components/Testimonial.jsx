@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import dg from "../assets/dg.png";
 import np from "../assets/np.jpg";
 import sa from "../assets/sa.jpg";
-//import ka from "../assets/ka.jpg";
+import ka from "../assets/ka.jpg";
 import t from "../assets/t.png";
 import { DiGithubAlt } from "react-icons/di";
 

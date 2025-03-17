@@ -27,7 +27,7 @@ import dg from '../assets/dg.png'
 import np from '../assets/np.jpg'
 import sa from '../assets/sa.jpg'
 import sm from '../assets/sm.jpg'
-import ka from '../assets/Ka.jpg'
+//import ka from '../assets/Ka.jpg'
 
 
 import sf from '../assets/sf.jpg'

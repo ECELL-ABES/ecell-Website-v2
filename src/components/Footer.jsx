@@ -14,9 +14,9 @@ function Footer() {
                         <h3 className="text-lg font-bold mb-4">Page</h3>
                         <ul className="space-y-2">
                             <li><NavLink to="/" className={({ isActive }) => isActive ? "text-[#ffde59] font-bold" : "text-zinc-400 hover:text-[#ffde59]"}>Home</NavLink></li>
+                            <li><NavLink to="/teams" className={({ isActive }) => isActive ? "text-[#ffde59] font-bold" : "text-zinc-400 hover:text-[#ffde59]"}>Team</NavLink></li>
                             <li><NavLink to="/events" className={({ isActive }) => isActive ? "text-[#ffde59] font-bold" : "text-zinc-400 hover:text-[#ffde59]"}>Events</NavLink></li>
                             <li><NavLink to="/contactus" className={({ isActive }) => isActive ? "text-[#ffde59] font-bold" : "text-zinc-400 hover:text-[#ffde59]"}>Contact</NavLink></li>
-                            <li><NavLink to="/teams" className={({ isActive }) => isActive ? "text-[#ffde59] font-bold" : "text-zinc-400 hover:text-[#ffde59]"}>Team</NavLink></li>
                         </ul>
                     </div>
 

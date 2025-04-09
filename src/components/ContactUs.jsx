@@ -4,12 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import {
-  AiOutlineInstagram,
-  AiOutlineMail,
-  AiOutlineWhatsApp,
-  AiOutlineYoutube,
-} from "react-icons/ai"; // Import white icons
+import { AiOutlineInstagram, AiOutlineMail, AiOutlineWhatsApp, AiOutlineYoutube } from "react-icons/ai"; // Import white icons
 
 const customIcon = new L.Icon({
   iconUrl: "https://cdn-icons-png.flaticon.com/128/684/684908.png",
@@ -36,13 +31,6 @@ function ContactUs() {
       e.preventDefault();
       console.log("Form Submitted:", formData);
       setFormStatus("Your message has been sent successfully!"); // Success message
-
-      // Reset the form after submission
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
     },
     [formData]
   );
@@ -141,29 +129,17 @@ function ContactUs() {
       <div className="flex flex-col md:flex-row gap-12 items-center mt-16 w-full max-w-5xl px-5">
         <div className="flex-1 space-y-6">
           <div className="flex items-center space-x-5">
-            <AiOutlineMail className="text-5xl text-white" />
+          <AiOutlineMail className="text-5xl text-white" />
             <div>
               <p className="text-lg font-semibold">Email</p>
-              <a
-                href="mailto:ecell@abes.ac.in"
-                className="text-gray-400 hover:text-blue-500"
-              >
-                ecell@abes.ac.in
-              </a>
+              <a href="mailto:ecell@abes.ac.in" className="text-gray-400 hover:text-blue-500">ecell@abes.ac.in</a>
             </div>
           </div>
           <div className="flex items-center space-x-5">
-            <AiOutlineInstagram className="text-5xl text-white" />
+          <AiOutlineInstagram className="text-5xl text-white" />
             <div>
               <p className="text-lg font-semibold">Instagram</p>
-              <a
-                href="https://www.instagram.com/ecell_abesec"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-pink-500"
-              >
-                @ecell_absec
-              </a>
+              <a href="https://www.instagram.com/ecell_abesec" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500">@ecell_absec</a>
             </div>
           </div>
           <div className="flex items-center space-x-5">

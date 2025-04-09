@@ -21,7 +21,7 @@ const events = [
         id: 2, 
         title: "Navy Visit-2023", 
         date: "March 15th '23", 
-        description: "The session began with senior naval officers giving a presentation on the Indian Navy’s history, missions, and strategic role. They explained different career opportunities, including direct entry for engineering, logistics, and aviation. The officers also shared their experiences, highlighting leadership, teamwork, and decision-making skills essential for both naval careers and entrepreneurship. A key part of the visit was the display of naval technology, where students saw modern warfare systems, surveillance tools, and maritime security operations up close. During an interactive Q&A session, students got their doubts cleared about naval careers, defense technology, and innovation in maritime security. This event was both inspiring and motivating, emphasizing discipline, perseverance, and strategic thinking—qualities that are also valuable for entrepreneurs.", 
+        description: "", 
         image: navyVisit 
     },
     { 

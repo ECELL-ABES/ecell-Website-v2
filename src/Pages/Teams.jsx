@@ -3,12 +3,9 @@ import { Fade } from "react-awesome-reveal"
 import Testimonial from "../components/Testimonial"
 import Aboutus from "../components/Aboutus"
 import Volunteers from "../components/Volunteers"
-// import { SectionHeader } from "./SectionHeader"
-// import TeamSection from "./TeamSection"
-import { teamData , sectionData } from "../components/TeamData"
+import {teamData , sectionData} from "../components/DataTeam"
 import { FaInstagram } from "react-icons/fa6"
 import { PiLinkedinLogoBold } from "react-icons/pi"
-// import { Fade } from "react-awesome-reveal"
 import { GiPolarStar } from "react-icons/gi"
 
 

@@ -5,9 +5,11 @@ import { GiPolarStar } from "react-icons/gi";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import dg from "../assets/dg.png";
+import founder from "../assets/founder.jpg";
+import president from "../assets/president.png";
 import np from "../assets/np.jpg";
 import sa from "../assets/sa.jpg";
-import kaa from "../assets/kaa.jpg";
+import kaa from "../assets/kaa.jpg"; 
 import t from "../assets/t.png";
 import { DiGithubAlt } from "react-icons/di";
 
@@ -18,7 +20,7 @@ function Testimonial() {
       description:
         "E-Cell ABESEC holds a special place in my heart, from chaotic first events to conducting a drone show and reaching NEC 2023 finals. Guided by Mahendra Sir and Prabansh Sir, it fostered growth, teamwork, and unforgettable memories.",
       imgSrc: dg,
-      name: "Divyanshyu gupta",
+      name: "Divyanshyu Gupta",
       role: "Mentor",
     },
     {
@@ -48,10 +50,18 @@ function Testimonial() {
     {
       id: 5,
       description:
-        "E-Cell ABESEC has been a transformative experience, fostering resilience, leadership, and innovation. It shaped my journey as co-founder of Know Your Colleges and continues to empower students networks that drive success in entrepreneurship.",
-      imgSrc: t,
-      name: "Sarthak Gupta",
-      role: "Former Treasurer",
+        "E-Cell ABESEC holds a special place in my heart, from chaotic first events to conducting an E-SUMMIT, reaching NEC 2023 finals, and achieving AIR 27. Guided by Mahendra Sir and Prabhansh Sir, it fostered growth and teamwork.",
+      imgSrc: president,
+      name: "Yash Mishra",
+      role: "Former NEC Lead and President E-CELL ABESEC",
+    },
+    {
+      id: 6,
+      description:
+        "Founding E-CELL ABESESC was a journey of vision, perseverance, and teamwork. With Mahendra Sir's guidance, we built a platform to foster innovation and inspire future entrepreneurs.",
+      imgSrc: founder,
+      name: "Prabhansh Tripathi",
+      role: "Founder",
     },
   ];
 
@@ -84,7 +94,7 @@ function Testimonial() {
             style={{  
             "--width": "350px",
             "--height": "300px",
-            "--quantity": "5",
+            "--quantity": "6",
           }}
           >
             <div className="list">
@@ -110,6 +120,7 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
               <div className="item" style={{"--position": "2"}}>
               <div className="w-full mx-0 flex-shrink-0">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -132,6 +143,7 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
               <div className="item" style={{"--position": "3"}}>
               <div className="w-full mx-0 flex-shrink-0">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -154,6 +166,9 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+
+
               <div className="item" style={{"--position": "4"}}>
               <div className="w-full mx-0 flex-shrink-0">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -176,6 +191,9 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+
+
               <div className="item" style={{"--position": "5"}}>
               <div className="w-full mx-0 flex-shrink-0 ">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -198,6 +216,32 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+
+              <div className="item" style={{"--position": "6"}}>
+                <div className="w-full mx-0 flex-shrink-0">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[5].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[5].imgSrc}
+                        alt={`Profile image of ${data[5].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[5].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[5].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>{/* the list div closess here */}
           </div> {/** the slider div closes here  */}
           {/*  forward slider ends here  */}
@@ -210,7 +254,7 @@ function Testimonial() {
             "--width": "350px",
             "--height": "300px",
             "--reverse": "true",
-            "--quantity": "5",
+            "--quantity": "6",
           }}
           reverse = {true} 
           >
@@ -237,6 +281,8 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+
               <div className="item" style={{"--position": "2"}}>
               <div className="w-full mx-0 flex-shrink-0">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -259,6 +305,8 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+
               <div className="item" style={{"--position": "3"}}>
               <div className="w-full mx-0 flex-shrink-0">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -281,6 +329,8 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+
               <div className="item" style={{"--position": "4"}}>
               <div className="w-full mx-0 flex-shrink-0">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -303,6 +353,8 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+
               <div className="item" style={{"--position": "5"}}>
               <div className="w-full mx-0 flex-shrink-0 ">
                   <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
@@ -325,14 +377,32 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+
+              <div className="item" style={{"--position": "6"}}>
+              <div className="w-full mx-0 flex-shrink-0 ">
+                  <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-[#0C0D0B]  h-full flex flex-col justify-between shadow-lg">
+                    <p className="mb-6 text-sm sm:text-base line-clamp-6 sm:line-clamp-none leading-relaxed text-gray-300">
+                      {data[5].description}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        className="w-12 h-12 rounded-full mr-3"
+                        src={data[5].imgSrc}
+                        alt={`Profile image of ${data[5].name}`}
+                      />
+                      <div>
+                        <p className="text-base font-medium text-white">
+                          {data[5].name}
+                        </p>
+                        <p className="text-sm text-gray-400">{data[5].role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>{/* the list div  of reverse slider  closess here */}
           </div> {/** the reverse slider div closes here  */}
-
-
-
-
-
-
         </div> {/* main class ends here*/}
 
       </div>

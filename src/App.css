@@ -162,7 +162,7 @@ main{
 
 
 .Footerdiv{
-  background-image: url(/public/inif\ image.png);
+  background-image: url('/inif image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

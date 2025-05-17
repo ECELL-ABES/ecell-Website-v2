@@ -17,12 +17,12 @@ function Activities() {
                         <h1 className="text-2xl sm:text-5xl font-bold leading-tight">
                             <Fade cascade>
                                 <span>National</span> <span style={{ color: '#ffde59' }} >Entrepreneurship</span> <span>
-                                    Challenge 2023
+                                    Challenge
                                 </span>
                             </Fade>
                         </h1>
                         <p className="mt-4 text-zinc-400">
-                            The team's dedication to nurturing aspiring entrepreneurs has translated into a remarkable accomplishment: a 27th place at prestigious <span style={{ color: '#ffde59' }} >National Entrepreneurship Challenge 2023</span>
+                            The team's dedication to nurturing aspiring entrepreneurs has translated into a remarkable accomplishment: a 27th  and 29th place at prestigious <span style={{ color: '#ffde59' }} >National Entrepreneurship Challenge 2023 & 2024 </span> respectively .
                         </p>
                     </div>
                     <Slide direction="right">

@@ -45,7 +45,7 @@ function Footer() {
                 </div>
                 <hr style={{ width: '20rem', margin: '2rem auto 10px auto' }} />
                 <div className="text-center text-zinc-500">
-                    © 2024 E-Cell. All rights reserved.
+                    © 2025 E-Cell. All rights reserved.
                 </div>
             </div>
         </div>

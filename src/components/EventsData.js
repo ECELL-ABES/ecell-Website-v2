@@ -8,7 +8,7 @@ import achieversTalk from '../assets/at.png';
 import fc from "../assets/fc.jpg"
 import erk from '../assets/eureka.png';
 import tes from "../assets/tes2.jpg"
-import tes3 from "../assets/tes3.svg"
+import tes3 from "../assets/tes3.svg";
 
 // Sample event data with imported images
 const events = [

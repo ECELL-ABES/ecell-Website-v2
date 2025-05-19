@@ -69,7 +69,7 @@ function Home() {
         <h2 className="text-xl font-semibold">Mindset</h2>
       </div>
       <p>
-        Inspire and motivate students to pursue their entrepreneurial dreams.
+        Creating a dynamic ecosystem where young minds challenge limits and build tomorrow’s enterprises.
       </p>
     </div>
                     </Slide>

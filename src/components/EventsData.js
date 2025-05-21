@@ -1,12 +1,12 @@
 // Import images
 import entrepreneurshipShow from '../assets/sa.jpg';
-import navyVisit from '../assets/nv.png';
-import gameOfDrones from '../assets/god.png';
-import eSummitTechpravaah from '../assets/techpravaah.png';
-import bidwiserMockIpl from '../assets/at.png';
-import achieversTalk from '../assets/at.png';
-import fc from "../assets/fc.jpg"
-import erk from '../assets/eureka.png';
+import navyVisit from '../assets/nv.webp';
+import gameOfDrones from '../assets/god.webp';
+import eSummitTechpravaah from '../assets/techpravaah.webp';
+import bidwiserMockIpl from '../assets/at.webp';
+import achieversTalk from '../assets/at.webp';
+import fc from "../assets/fc.webp"
+import erk from '../assets/eureka.webp';
 import tes from "../assets/tes2.jpg"
 import tes3 from "../assets/tes3.svg";
 

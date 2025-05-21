@@ -107,7 +107,7 @@ function Activities() {
                         </ul>
                     </div>
                     <Slide direction="right">
-                        <div><img src="src\assets\VisitsTo.JPG" alt="" srcset="" style={{ borderRadius: '0.5rem', width: "42rem",height:"25rem" }} /></div>
+                        <div><img src="src\assets\VisitsTo.webp" alt="" srcset="" style={{ borderRadius: '0.5rem', width: "42rem",height:"25rem" }} /></div>
                     </Slide>
                 </div>
             </div>

@@ -22,7 +22,7 @@ const networkData = [
     },
     { 
         name: "IMS Ghaziabad", 
-        image: "src/assets/MOU clg/IMS.jpg", 
+        image: "src/assets/MOU clg/ims.webp", 
         info: "One of the oldest management institutes in India, known for its diverse alumni network." 
     },
     { 

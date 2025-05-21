@@ -5,14 +5,14 @@ import { GiPolarStar } from "react-icons/gi";
 import Idea from './Idea';
 
 import TEC from "../assets/tes.png";
-import GOD from "../assets/god.png";
-import Tech from "../assets/techpravaah.png";
-import At from "../assets/at.png";
-import fc from "../assets/fc.jpg";
-import bid from "../assets/bid.png"
-import nv from '../assets/nv.png';  
-import erk from '../assets/eureka.png';
-import tes3 from '../assets/tes3.0.jpg';
+import GOD from "../assets/god.webp";
+import Tech from "../assets/techpravaah.webp";
+import At from "../assets/at.webp";
+import fc from "../assets/fc.webp";
+import bid from "../assets/bid.webp"
+import nv from '../assets/nv.webp';  
+import erk from '../assets/eureka.webp';
+import tes3 from '../assets/tes3.0.webp';
 
 // Utility function to generate a URL-friendly slug from event title
 const createSlug = (title) => title.toLowerCase().replace(/ /g, '-');

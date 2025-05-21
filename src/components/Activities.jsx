@@ -80,22 +80,29 @@ function Activities() {
                             </Fade>
                         </h1>
                         <p className="mt-4 text-zinc-400">
-                            The team's dedication to nurturing aspiring entrepreneurs has translated into a remarkable accomplishment: a 27th place at prestigious <span style={{ color: '#ffde59' }} >National Entrepreneurship Challenge 2023</span>
+                Our recent visits to some of the most dynamic startups gave our members a unique opportunity to:
+<span style={{ color: '#ffde59' }} >Witness the startup grind up close,
+
+</span>
                         </p>
                         <ul className="mt-4 space-y-2 text-zinc-400">
                             <Fade cascade>
                                 <li className="flex items-center">
-                                    <span className="mr-2 text-[#ffde59]">✔</span> E-Summit
+                                    <span className="mr-2 text-[#ffde59]">✔</span> Interact with founders and industry leaders,
+
+
                                 </li>
                                 <li className="flex items-center">
-                                    <span className="mr-2 text-[#ffde59]">✔</span> Achiever Talk
+                                    <span className="mr-2 text-[#ffde59]">✔</span> Understand the challenges and thrills of building from scratch, and
+
+
                                 </li>
                                 <li className="flex items-center">
-                                    <span className="mr-2 text-[#ffde59]">✔</span> The Entrepreneurship Show
+                                    <span className="mr-2 text-[#ffde59]">✔</span> Absorb the energy of teams solving real-world problems with passion and purpose
                                 </li>
-                                <li className="flex items-center">
+                                {/* <li className="flex items-center">
                                     <span className="mr-2 text-[#ffde59]">✔</span> Mock IPL Auction
-                                </li>
+                                </li> */}
                             </Fade>
                         </ul>
                     </div>

@@ -12,6 +12,8 @@ import fc from "../assets/fc.jpg";
 import bid from "../assets/bid.png"
 import nv from '../assets/nv.png';  
 import erk from '../assets/eureka.png';
+import tes3 from '../assets/tes3.0.jpg';
+
 // Utility function to generate a URL-friendly slug from event title
 const createSlug = (title) => title.toLowerCase().replace(/ /g, '-');
 
@@ -20,7 +22,7 @@ const placeholderImage = "https://via.placeholder.com/300x200?text=No+Image";
 
 // Sample event data
 const events = [
-    { id: 9 , title:"The Entrepreneurship Show 2024", date: "November 30th '24", imgSrc: TEC },
+    { id: 9 , title:"The Entrepreneurship Show 2024", date: "November 30th '24", imgSrc: tes3 },
     { id: 8, title: "Eureka", date: "September 10th '22", imgSrc: erk },
     { id: 1, title: "The Entrepreneurship Show 2023", date: "February 27th '23", imgSrc: TEC },
     { id: 2, title: "Navy Visit-2023", date: "March 15th '23", imgSrc: nv },

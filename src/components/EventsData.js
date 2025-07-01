@@ -3,7 +3,7 @@ import entrepreneurshipShow from '../assets/sa.jpg';
 import navyVisit from '../assets/nv.webp';
 import gameOfDrones from '../assets/god.webp';
 import eSummitTechpravaah from '../assets/techpravaah.webp';
-import bidwiserMockIpl from '../assets/at.webp';
+import bidwiserMockIpl from '../assets/bid.webp';
 import achieversTalk from '../assets/at.webp';
 import fc from "../assets/fc.webp"
 import erk from '../assets/eureka.webp';
@@ -55,7 +55,7 @@ const events = [
     {
         id: 4,
         title: "Game of Drones",
-        date: "April 10th '22",
+        date: "November 18th '22",
         descriptionSections: {
             about: "At Tech Pravaah, ABESEC’s annual tech fest, the 'Game of Drones' event was a thrilling display of top-notch drone technology and high-speed racing. It drew in both tech fans and students, giving them an exciting look at the world of drones and the amazing progress being made. With intense races and impressive aerial tricks, 'Game of Drones' brought innovation to life in a really engaging way.",
             callout:"",
@@ -68,7 +68,7 @@ const events = [
     {
         id: 5,
         title: "E-SUMMIT (TECHPRAVAAH)",
-        date: "April 10th '22",
+        date: "November 19th '22",
         descriptionSections: {
             about: "E-Cell's flagship annual event, the E-Summit, successfully convened a diverse assembly of academics, venture capitalists, and business leaders, all united in their mission to cultivate a robust entrepreneurial mindset among attendees.",
             callout:"",
@@ -81,7 +81,7 @@ const events = [
     {
         id: 6,
         title: "BIDWISER (THE MOCK IPL AUCTION)",
-        date: "April 10th '22",
+        date: "January 18th '24",
         descriptionSections: {
             about: "The Bid-wiser (Mock IPL Auction) is a prestigious event organized by E-Cell, offering students an insightful glimpse into the IPL auction process. Participants will form teams representing various IPL franchises and strategically bid on simulated players based on real athletes, all within a predetermined budget.",
             vision: "This event aims to enhance participants' strategic thinking, negotiation skills, and understanding of cricket team management, while also exploring the dynamics of sports business, teamwork, and financial management.",
@@ -94,7 +94,7 @@ const events = [
     {
         id: 7,
         title: "ACHIEVER’S TALK",
-        date: "April 10th '22",
+        date: "November 19th '22",
         descriptionSections: {
             about: "E-Cell recently hosted The Achiever's Talk, a distinguished event designed to facilitate meaningful one-on-one interactions with esteemed organizations, including GST Noida, Jain Shikanji Waale, and Anubhav Jain. This interactive platform gave attendees invaluable insights into the entrepreneurial landscape and allowed them to engage with successful business leaders who shared their motivational narratives.",
             vision: "Participants gained a deeper understanding of common challenges faced in the industry and explored effective strategies for overcoming these obstacles.",

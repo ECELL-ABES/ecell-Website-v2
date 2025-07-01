@@ -4,13 +4,13 @@ import { Fade } from "react-awesome-reveal";
 import { GiPolarStar } from "react-icons/gi";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import dg from "../assets/dg.png";
+import dg from "../assets/dg.webp";
 import founder from "../assets/founder.jpg";
-import president from "../assets/president.png";
+import president from "../assets/president.webp";
 import np from "../assets/np.jpg";
 import sa from "../assets/sa.jpg";
-import kaa from "../assets/kaa.jpg"; 
-import t from "../assets/t.png";
+import kaa from "../assets/kaa.webp"; 
+import t from "../assets/t.webp";
 import { DiGithubAlt } from "react-icons/di";
 
 function Testimonial() {

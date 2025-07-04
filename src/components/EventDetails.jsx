@@ -1,30 +1,33 @@
-import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
-import { ArrowLeft, Calendar, Share2, Star, Sparkles } from "lucide-react"
-import events from "./EventsData"
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft, Calendar, Share2, Star, Sparkles } from "lucide-react";
+import events from "./EventsData";
+import AchievementCarousel from "./AchievementCarousel";
 
 // Utility function to generate slug from event title
-const createSlug = (title) => title.toLowerCase().replace(/ /g, "-")
+const createSlug = (title) => title.toLowerCase().replace(/ /g, "-");
 
 const EventDetail = () => {
-  const { slug } = useParams() // Get the slug from the route
-  const [activeTab, setActiveTab] = useState("about")
-  const [isLoaded, setIsLoaded] = useState(false)
+  const { slug } = useParams(); // Get the slug from the route
+  const [activeTab, setActiveTab] = useState("about");
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // Find event based on the slug
-  const event = events.find((event) => createSlug(event.title) === slug)
+  const event = events.find((event) => createSlug(event.title) === slug);
 
   useEffect(() => {
     // Set loaded state after component mounts for animations
-    setIsLoaded(true)
-  }, [])
+    setIsLoaded(true);
+  }, []);
 
   if (!event) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center text-white p-8 bg-zinc-900 rounded-lg shadow-xl border border-zinc-800">
           <h2 className="text-2xl font-bold mb-4">Event Not Found</h2>
-          <p className="mb-6">The event you're looking for doesn't exist or has been removed.</p>
+          <p className="mb-6">
+            The event you're looking for doesn't exist or has been removed.
+          </p>
           <Link
             to="/"
             className="inline-flex items-center px-4 py-2 bg-yellow-500 text-black rounded-md hover:bg-yellow-400 transition-colors font-medium"
@@ -34,7 +37,7 @@ const EventDetail = () => {
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   // Get description sections from the event data
@@ -44,7 +47,7 @@ const EventDetail = () => {
     callout: "",
     review: "",
     conclusion: "",
-  }
+  };
 
   const handleShare = () => {
     if (navigator.share) {
@@ -54,15 +57,15 @@ const EventDetail = () => {
           text: `Check out this event: ${event.title}`,
           url: window.location.href,
         })
-        .catch((error) => console.log("Error sharing", error))
+        .catch((error) => console.log("Error sharing", error));
     } else {
       // Fallback for browsers that don't support the Web Share API
       navigator.clipboard
         .writeText(window.location.href)
         .then(() => alert("Link copied to clipboard!"))
-        .catch((err) => console.error("Could not copy text: ", err))
+        .catch((err) => console.error("Could not copy text: ", err));
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-black py-12 px-4 sm:px-6">
@@ -91,12 +94,18 @@ const EventDetail = () => {
             <div>
               <div className="inline-flex items-center px-3 py-1 bg-black/60 rounded-full border border-zinc-800 mb-4">
                 <Sparkles className="h-3 w-3 text-yellow-500 mr-2" />
-                <span className="text-yellow-500 font-medium text-xs">FEATURED EVENT</span>
+                <span className="text-yellow-500 font-medium text-xs">
+                  FEATURED EVENT
+                </span>
               </div>
 
               <h1 className="text-3xl font-bold mb-3">
-                <span className="text-yellow-500">{event.title.split(" ").slice(0, 2).join(" ")} </span>
-                <span className="text-white">{event.title.split(" ").slice(2).join(" ")}</span>
+                <span className="text-yellow-500">
+                  {event.title.split(" ").slice(0, 2).join(" ")}{" "}
+                </span>
+                <span className="text-white">
+                  {event.title.split(" ").slice(2).join(" ")}
+                </span>
               </h1>
 
               <div className="flex items-center text-zinc-400 mb-4">
@@ -104,7 +113,9 @@ const EventDetail = () => {
                 <span>{event.date}</span>
               </div>
 
-              <p className="text-zinc-400 text-sm line-clamp-3">{descriptionSections.about.substring(0, 120)}...</p>
+              <p className="text-zinc-400 text-sm line-clamp-3">
+                {descriptionSections.about.substring(0, 120)}...
+              </p>
             </div>
 
             <button
@@ -123,11 +134,20 @@ const EventDetail = () => {
             }`}
             style={{ animationDelay: "0.3s" }}
           >
-            <img
+            {/* <img
               src={event.image || "/placeholder.svg"}
               alt={event.title}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            />
+            /> */}
+            {event.images && event.images.length > 0 ? (
+              <AchievementCarousel images={event.images} />
+            ) : (
+              <img
+                src={event.image || "/placeholder.svg"}
+                alt={event.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            )}
           </div>
         </div>
 
@@ -186,46 +206,67 @@ const EventDetail = () => {
           <div className="p-6 sm:p-8">
             {activeTab === "about" && (
               <div className="animate-fadeIn">
-                <h2 className="text-2xl font-bold text-yellow-500 mb-4">About The Event</h2>
-                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">{descriptionSections.about}</p>
+                <h2 className="text-2xl font-bold text-yellow-500 mb-4">
+                  About The Event
+                </h2>
+                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">
+                  {descriptionSections.about}
+                </p>
               </div>
             )}
 
             {activeTab === "vision" && (
               <div className="animate-fadeIn">
-                <h2 className="text-2xl font-bold text-yellow-500 mb-4">Our Vision</h2>
+                <h2 className="text-2xl font-bold text-yellow-500 mb-4">
+                  Our Vision
+                </h2>
                 <div className="bg-black/40 p-6 rounded-lg border-l-4 border-yellow-500 mb-6">
                   <p className="text-zinc-300 leading-relaxed italic">
                     {descriptionSections.callout}
                   </p>
                 </div>
-                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">{descriptionSections.vision}</p>
+                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">
+                  {descriptionSections.vision}
+                </p>
               </div>
             )}
 
             {activeTab === "review" && (
               <div className="animate-fadeIn">
-                <h2 className="text-2xl font-bold text-yellow-500 mb-4">Event Review</h2>
+                <h2 className="text-2xl font-bold text-yellow-500 mb-4">
+                  Event Review
+                </h2>
                 <div className="flex items-center mb-6">
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
+                      <Star
+                        key={star}
+                        className="h-5 w-5 text-yellow-500 fill-yellow-500"
+                      />
                     ))}
                   </div>
-                  <span className="ml-2 text-zinc-300">Outstanding Experience</span>
+                  <span className="ml-2 text-zinc-300">
+                    Outstanding Experience
+                  </span>
                 </div>
-                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">{descriptionSections.review}</p>
+                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">
+                  {descriptionSections.review}
+                </p>
               </div>
             )}
 
             {activeTab === "conclusion" && (
               <div className="animate-fadeIn">
-                <h2 className="text-2xl font-bold text-yellow-500 mb-4">Conclusion</h2>
-                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">{descriptionSections.conclusion}</p>
+                <h2 className="text-2xl font-bold text-yellow-500 mb-4">
+                  Conclusion
+                </h2>
+                <p className="text-zinc-300 leading-relaxed whitespace-pre-line">
+                  {descriptionSections.conclusion}
+                </p>
                 <div className="mt-8 p-4 bg-black/40 rounded-lg border border-zinc-800">
                   <p className="text-white font-medium">
-                    <span className="text-yellow-500">Stay tuned</span> for our next event! Follow us on social media
-                    for updates.
+                    <span className="text-yellow-500">Stay tuned</span> for our
+                    next event! Follow us on social media for updates.
                   </p>
                 </div>
               </div>
@@ -234,7 +275,7 @@ const EventDetail = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EventDetail
+export default EventDetail;

@@ -5,24 +5,25 @@ import { Fade } from 'react-awesome-reveal';
 
 // Dummy data for the cards
 const networkData = [
+    
+    {
+        name: "IIT Delhi",
+        image: "src/assets/MOU clg/iitDelhi.png",
+        info: "A hub of intellectual curiosity,  creativity, and innovation, nurturing the next generation of leaders, visionaries and entrepreneurs." 
+        },
     { 
         name: "IIIT Delhi", 
         image: "http://iiitd.ac.in/sites/default/files/images/logo/logo.jpg", 
         info: "Premier institute in Delhi with a strong focus on innovation and entrepreneurship." 
     },
-    { 
-        name: "KIET", 
-        image: "src/assets/MOU clg/KIET.jpg", 
-        info: "KIET is known for its advanced research programs and collaborations in engineering." 
-    },
-    { 
+   { 
         name: "RLAC", 
         image: "src/assets/MOU clg/RLAC.jpg", 
         info: "A leading college in Delhi with a vibrant student entrepreneurship community." 
     },
     { 
         name: "IMS Ghaziabad", 
-        image: "src/assets/MOU clg/ims.webp", 
+        image: "src/assets/MOU clg/imsG.jpg", 
         info: "One of the oldest management institutes in India, known for its diverse alumni network." 
     },
     { 
@@ -30,11 +31,6 @@ const networkData = [
         image: "src/assets/MOU clg/Indian_Institute_of_Technology_Bombay_Logo.svg.png", 
         info: "India's leading institute fostering groundbreaking research and industry partnerships." 
     },
-    // { 
-    //     name: "BITS Pilani", 
-    //     image: "https://via.placeholder.com/150", 
-    //     info: "A premier institute with a strong emphasis on startups and innovation." 
-    // },
     
    {
         name: "Aryabhatta College, DU",
@@ -63,7 +59,7 @@ const networkData = [
    },
    {
         name: "KIT, IMR Kolhapur",
-            image: "src/assets/MOU clg/kolhapur.jpg",
+        image: "src/assets/MOU clg/kolhapur.jpg",
         info: "A reputed institute focused on developing skilled leaders in management and technology."
    },
    {
@@ -76,10 +72,7 @@ const networkData = [
     name: "Shivaji College, DU",
     image: "src/assets/MOU clg/SHIVAJI.jpg",
     info: "A prominent college of the University of Delhi, nurturing entrepreneurship and fostering innovation."
-   },
-      
-
-   
+   },  
 ];
 
 function Networking() {
@@ -100,7 +93,7 @@ function Networking() {
             </div>
             <h1 className="text-4xl font-semibold mb-4">Strategic Partnerships</h1>
             <p className="text-lg">
-                Recognizing the power of synergy, E-Cell has forged strategic partnerships with premier institutes like IIIT Delhi, KIET, RLAC, and IMS Ghaziabad.
+                Recognizing the power of synergy, E-Cell has forged strategic partnerships with premier institutes like IIT Delhi , KMC , RLAC , IIIT Delhi , and IMS Ghaziabad.
             </p>
         </div>
 

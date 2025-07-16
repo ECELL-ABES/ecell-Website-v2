@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node backend/server.js",
+    "client": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -13,10 +15,15 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.8.4",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
     "firebase": "^10.13.2",
     "framer-motion": "^12.11.3",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.510.0",
+    "nodemailer": "^7.0.4",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.13",
     "react-dom": "^18.2.0",
@@ -32,6 +39,7 @@
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "concurrently": "^9.2.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -39,5 +47,18 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
     "vite": "^5.4.14"
-  }
+  },
+  "description": "Welcome to the official repository for the **Entrepreneurship Cell (E-Cell) of ABES Engineering College**. This project hosts the code for the official website of E-Cell ABESEC, which showcases our activities, events, and opportunities for aspiring entrepreneurs.",
+  "main": "firebase.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pratibha-Maurya23/ecell-Website-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pratibha-Maurya23/ecell-Website-v2/issues"
+  },
+  "homepage": "https://github.com/Pratibha-Maurya23/ecell-Website-v2#readme"
 }

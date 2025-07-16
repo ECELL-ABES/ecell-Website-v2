@@ -3,12 +3,22 @@ import entrepreneurshipShow from '../assets/sa.jpg';
 import navyVisit from '../assets/nv.webp';
 import gameOfDrones from '../assets/god.webp';
 import eSummitTechpravaah from '../assets/techpravaah.webp';
-import bidwiserMockIpl from '../assets/at.webp';
+import bidwiserMockIpl from '../assets/bid.webp';
 import achieversTalk from '../assets/at.webp';
 import fc from "../assets/fc.webp"
 import erk from '../assets/eureka.webp';
 import tes from "../assets/tes2.jpg"
 import tes3 from "../assets/tes3.svg";
+import tes3a from "../assets/tes3a.png";
+import tes3b from "../assets/tes3b.png";
+import tes3c from "../assets/tes3c.png";
+import tes3d from "../assets/tes3d.png";
+import tes3e from "../assets/tes3e.png";
+import bizz25 from "../assets/bizz25.png";
+import bizz25a from "../assets/bizz25a.png";
+import bizz25b from "../assets/bizz25b.png";
+import bizz25c from "../assets/bizz25c.png";
+
 
 // Sample event data with imported images
 const events = [
@@ -55,7 +65,7 @@ const events = [
     {
         id: 4,
         title: "Game of Drones",
-        date: "April 10th '22",
+        date: "November 18th '22",
         descriptionSections: {
             about: "At Tech Pravaah, ABESEC’s annual tech fest, the 'Game of Drones' event was a thrilling display of top-notch drone technology and high-speed racing. It drew in both tech fans and students, giving them an exciting look at the world of drones and the amazing progress being made. With intense races and impressive aerial tricks, 'Game of Drones' brought innovation to life in a really engaging way.",
             callout:"",
@@ -68,7 +78,7 @@ const events = [
     {
         id: 5,
         title: "E-SUMMIT (TECHPRAVAAH)",
-        date: "April 10th '22",
+        date: "November 19th '22",
         descriptionSections: {
             about: "E-Cell's flagship annual event, the E-Summit, successfully convened a diverse assembly of academics, venture capitalists, and business leaders, all united in their mission to cultivate a robust entrepreneurial mindset among attendees.",
             callout:"",
@@ -81,7 +91,7 @@ const events = [
     {
         id: 6,
         title: "BIDWISER (THE MOCK IPL AUCTION)",
-        date: "April 10th '22",
+        date: "January 18th '24",
         descriptionSections: {
             about: "The Bid-wiser (Mock IPL Auction) is a prestigious event organized by E-Cell, offering students an insightful glimpse into the IPL auction process. Participants will form teams representing various IPL franchises and strategically bid on simulated players based on real athletes, all within a predetermined budget.",
             vision: "This event aims to enhance participants' strategic thinking, negotiation skills, and understanding of cricket team management, while also exploring the dynamics of sports business, teamwork, and financial management.",
@@ -94,7 +104,7 @@ const events = [
     {
         id: 7,
         title: "ACHIEVER’S TALK",
-        date: "April 10th '22",
+        date: "November 19th '22",
         descriptionSections: {
             about: "E-Cell recently hosted The Achiever's Talk, a distinguished event designed to facilitate meaningful one-on-one interactions with esteemed organizations, including GST Noida, Jain Shikanji Waale, and Anubhav Jain. This interactive platform gave attendees invaluable insights into the entrepreneurial landscape and allowed them to engage with successful business leaders who shared their motivational narratives.",
             vision: "Participants gained a deeper understanding of common challenges faced in the industry and explored effective strategies for overcoming these obstacles.",
@@ -128,7 +138,22 @@ const events = [
             vision: "The Entrepreneurship Show (TES), the flagship event of E-CELL ABESEC, is designed to bring together a diverse audience with interests spanning various fields . The event features three distinct sub-events, each tailored to engage and inspire participants : \n 1. The speaker session engages the audience with real-world examples and practical takeaways. It encourages interaction, leaving participants with useful ideas and a better understanding of key topics. \n 2. The business quiz tests participants' knowledge of the corporate world through engaging and challenging questions. It promotes healthy competition and enhances learning in a fun, interactive way. \n 3. The panel discussion brings together experts to share their diverse perspectives. It encourages thoughtful dialogue and provides valuable insights for the audience. ",
             conclusion: "The Entrepreneurship Show was a highly impactful event that provided valuable insights and inspiration for aspiring entrepreneurs. It successfully created an environment conducive to learning, networking, and engagement, allowing participants to deepen their understanding of entrepreneurship. The event offered attendees the opportunity to connect with industry experts and like-minded individuals, gaining new perspectives and knowledge. By the end, participants were empowered and motivated, leaving with the confidence and tools to pursue their entrepreneurial ambitions and navigate future challenges.",
         },
-        image: tes3
+           image: tes3, // cover image (optional fallback)
+           images: [tes3a,tes3b, tes3c, tes3d, tes3e],
+    },
+    {
+        id: 10,
+        title: "BizzMantra 2025",
+        date: "May 30th '25",
+        descriptionSections: {
+            about: "Bizz-Mantra 2025 brought the thrill of boardroom decisions to the student stage. Through  auctions, negotiation battles, and intense strategy building  , students lived through the challenges of business leadership — learning how to do more with less. The event saw participation from over  100+ bright minds  who showed brilliant teamwork and creative business thinking. The team that managed to  complete their product with the least virtual money spent emerged as the winner — proving that success isn't about spending more, but thinking smarter. With a remarkable  4.8/5 participant rating  , Bizz-Mantra 2025 truly set a new benchmark for interactive, impactful learning. ",
+            review: "Bizz-Mantra 2025 received an overwhelming response from all participants, earning an impressive 4.8/5 rating. Participants appreciated the event’s realistic structure, high energy, and engaging format. The auction and negotiation rounds were specifically praised for giving them a taste of how real business works — from handling limited resources to forming strategic alliances.",
+            callout: "Bizz-Mantra 2025 brought together aspiring entrepreneurs and strategic thinkers to experience the fast-paced world of business through immersive simulations, high-stakes decisions, and collaborative problem-solving.",
+            vision: "Through Bizz-Mantra, our vision is to provide a practical, engaging, and experiential learning platform that goes beyond theoretical knowledge. We aim to prepare students for real-world entrepreneurship by simulating business challenges that develop their critical thinking, communication, and decision-making skills. E-Cell ABES EC believes in learning by doing — and Bizz-Mantra is a living example of this philosophy.",
+            conclusion: "Bizz-Mantra 2025 marked yet another successful milestone in E-Cell ABES EC’s journey to promote innovation and entrepreneurship on campus. The event witnessed enthusiastic participation from aspiring student entrepreneurs who showcased sharp business acumen, strategic thinking, and collaborative spirit. With multiple rounds designed to simulate real-world challenges, the event went beyond competition — it became a space for learning, growth, and real-time decision-making. We are committed to continuing our journey of empowering young innovators through more such enriching events. Bizz-Mantra 2025 was just one chapter in our larger mission —  to cultivate the next generation of entrepreneurs who will lead with vision, integrity, and innovation. "
+},
+           image: bizz25, // cover image (optional fallback)
+           images: [ bizz25a, bizz25b, bizz25c],
     }
 ];
 

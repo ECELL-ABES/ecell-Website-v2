@@ -52,12 +52,6 @@ function Teams() {
           >
             Team 2024-2025
           </button>
-          <button
-            className={`px-4 py-2 mx-2 rounded-full transition-all duration-300 ${currentTeam === "2022-2023" ? "bg-[#ffed59] text-black" : "bg-gray-700 text-white hover:bg-gray-600"}`}
-            onClick={() => setCurrentTeam("2022-2023")}
-          >
-            Team 2022-2023
-          </button>
         </div>
 
         {/* Team Members */}

@@ -27,11 +27,30 @@ function ContactUs() {
   };
 
   const handleSubmit = useCallback(
-    (e) => {
+    async (e) => {
       e.preventDefault();
-      console.log("Form Submitted:", formData);
-      setFormStatus("Your message has been sent successfully!"); // Success message
-    },
+      // console.log("Form Submitted:", formData);
+      // setFormStatus("Your message has been sent successfully!"); // Success message
+        try {
+      const res = await fetch('/contactus', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setFormStatus("Your message has been sent successfully!");
+        setFormData({ name: "", email: "", message: "" }); // Clear form
+      } else {
+        setFormStatus("Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setFormStatus("Server error. Try again later.");
+    }
+  },
     [formData]
   );
 

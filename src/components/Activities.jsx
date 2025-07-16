@@ -2,6 +2,20 @@ import React from 'react'
 import '../App.css'
 import { Slide, Fade } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
+import AchievementCarousel from "./AchievementCarousel";
+import tes3 from "../assets/tes3.webp";
+import tes2 from "../assets/tes2.jpg";
+import yugantra25 from "../assets/yugantra25.jpg";
+import iiitD25 from "../assets/iiitD25.jpg";
+import nec25 from "../assets/nec25.jpg";
+import tes3a from "../assets/tes3a.png";
+import tes3b from "../assets/tes3b.png";
+import tes3c from "../assets/tes3c.png";
+
+
+const images1 = [tes3, tes3a, tes3b, tes3c, tes2];
+const images2 = [yugantra25, iiitD25];
+
 
 function Activities() {
     return (
@@ -25,14 +39,12 @@ function Activities() {
                             The team's dedication to nurturing aspiring entrepreneurs has translated into a remarkable accomplishment: a 27th  and 29th place at prestigious <span style={{ color: '#ffde59' }} >National Entrepreneurship Challenge 2023 & 2024 </span> respectively .
                         </p>
                     </div>
-                    <Slide direction="right">
-                        <div><img src="src\assets\iitb.JPG" alt="" srcset="" style={{ borderRadius: '0.5rem' }} /></div>
-                    </Slide>
+                        <div direction="right"><img src={nec25}  style={{ borderRadius: '0.5rem' }} /></div>
                 </div>
                 <hr style={{ color: 'black' }} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                     <Slide direction="left">
-                        <div><img src="src\assets\ETCI.jpg" alt="" srcset="" style={{ borderRadius: '0.5rem' }} /></div>
+                        <div><AchievementCarousel images={images1}/></div>
                     </Slide>
                     <div className="flex flex-col justify-center">
                         <div style={{ backgroundColor: '#141412', color: '#ffde59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4 w-fit">
@@ -50,17 +62,17 @@ function Activities() {
                         </p>
                         <ul className="mt-4 space-y-2 text-zinc-400">
                             <Fade cascade>
+                                  <li className="flex items-center">
+                                    <span className="mr-2 text-[#ffde59]">✔</span> The Entrepreneurship Show
+                                </li>
+                                <li className="flex items-center">
+                                    <span className="mr-2 text-[#ffde59]">✔</span> BizzMantra
+                                </li>
                                 <li className="flex items-center">
                                     <span className="mr-2 text-[#ffde59]">✔</span> E-Summit
                                 </li>
                                 <li className="flex items-center">
                                     <span className="mr-2 text-[#ffde59]">✔</span> Achiever Talk
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="mr-2 text-[#ffde59]">✔</span> The Entrepreneurship Show
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="mr-2 text-[#ffde59]">✔</span> Mock IPL Auction
                                 </li>
                             </Fade>
                         </ul>
@@ -106,9 +118,7 @@ function Activities() {
                             </Fade>
                         </ul>
                     </div>
-                    <Slide direction="right">
-                        <div><img src="src\assets\VisitsTo.webp" alt="" srcset="" style={{ borderRadius: '0.5rem', width: "42rem",height:"25rem" }} /></div>
-                    </Slide>
+                        <div><AchievementCarousel images={images2}/></div>
                 </div>
             </div>
         </div>

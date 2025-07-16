@@ -63,6 +63,10 @@
   }
 }
 
+/* When cursor is moved it stop */
+.marquee:hover {
+  animation-play-state: paused;
+}
 
 .main{
   width: min(1200px, 90vw);

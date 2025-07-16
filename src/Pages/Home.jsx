@@ -47,7 +47,7 @@ function Home() {
                     </div>
                     <h1 className="text-4xl font-bold">Who We Are</h1>
                     <p className="mt-4 max-w-6xl mx-auto">
-                        We are the Entrepreneurship Cell ABES Engineering College, a group run by students with the mission of promoting entrepreneurship among students and the general public. We think that being an entrepreneur involves more than just starting a firm; it also involves adding value, resolving issues, and having a good influence.
+                        At the Entrepreneurship Cell (e‑Cell) of ABES Engineering College, we’re a vibrant community of student innovators driven by curiosity, ambition, and a shared passion for turning ideas into impact. Founded and run entirely by students, our core belief is that entrepreneurship isn't just a career—it’s a way of thinking that empowers individuals to identify opportunities, take thoughtful risks, and continuously learn. From casual brainstorming sessions in campus cafes to organizing large-scale pitching events, we grow stronger together. Through mentorship programs, hands-on workshops, and speaker sessions, we foster an environment where every member is encouraged to be bold, collaborative, and proactive. 🌱
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-10 ">

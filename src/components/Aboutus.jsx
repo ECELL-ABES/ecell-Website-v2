@@ -1,9 +1,20 @@
-import React from 'react'
+import AchievementCarousel from "./AchievementCarousel";
 import '../App.css'
 import { Fade, Slide } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
+import ach1 from "../assets/achievements1.jpg"
+import ach2 from "../assets/achievements2.jpg"
+import ach3 from "../assets/achievements3.jpg"
+import au1 from "../assets/aboutUs1.jpg"
+import au2 from "../assets/aboutUs2.jpg"
+import nt25 from "../assets/nationalTechDay25.jpg"
+
+
+const images1 = [ach1, ach2, ach3];
+const images2 = [au1, au2 ,nt25];
 
 function Aboutus() {
+
     return (
         <div>
             <div className="bg-black text-white p-5 sm:p-20">
@@ -21,10 +32,9 @@ function Aboutus() {
                             At E-Cell ABESEC, our journey began with a simple but powerful idea: to fast track and nuture the ideas devloping in the mind of young brains. Frustrated by the complexities and limitations of existing solutions, we set out to create a platform that would empower teams to collaborate more effectively, streamline workflows, and drive success.</p>
                         <p className="mt-4 text-zinc-400">With a team of passionate developers and project management experts, we embarked on a journey of innovation and iteration. We listened to the needs of our users, gathered feedback, and continuously refined our platform to meet the evolving demands of modern businesses.</p>
                     </div>
-                    <Slide direction='right'>
-
-                        <div><img src="src\assets\312.webp" alt="" srcset="" style={{ borderRadius: '0.5rem',height: '25rem',width: "42rem" }} /></div>      {/* first image */}
-                    </Slide>
+                    <div className="container mx-auto" direction='right'>
+                                <AchievementCarousel images={images2} />
+                             </div>
                 </div>
 
                 <hr style={{ color: 'black' }} />
@@ -43,29 +53,30 @@ function Aboutus() {
 
                         <div class="mt-4 grid grid-cols-2 gap-4">
                             <div class="flex flex-col text-white p-4 rounded-lg">
-                                <p class="text-2xl font-bold mb-2">500+</p>
-                                <p>Project Completed</p>
+                                <p class="text-2xl font-bold mb-2">AIR Rank 29</p>
+                                <h3>& AIR Ranks 27</h3>
+                                <h3>National Entrepreneurship Challenge</h3>
                             </div>
 
                             <div class="flex flex-col text-white p-4 rounded-lg">
-                                <p class="text-2xl font-bold mb-2">500+</p>
-                                <p>Project Completed</p>
+                                <p class="text-2xl font-bold mb-2">AIR Rank 9</p>
+                                <h3>Western Entrepreneurship Challenge</h3>
                             </div>
                             <div class="flex flex-col text-white p-4 rounded-lg ">
-                                <p class="text-2xl font-bold mb-2">500+</p>
-                                <p>Project Completed</p>
+                                <p class="text-2xl font-bold mb-2">20+</p>
+                                <h3>MOUs Different Colleges</h3>
+                                <p>All Over India</p>
                             </div>
 
                             <div class="flex flex-col text-white p-4 rounded-lg ">
-                                <p class="text-2xl font-bold mb-2">500+</p>
-                                <p>Project Completed</p>
+                                <p class="text-2xl font-bold mb-2">20+</p>
+                                <p>StartUp Incubated</p>
                             </div>
                         </div>
                     </div>
-                    <Slide direction='right'>
-
-                    <div><img src="src\assets\ims.webp" alt="" srcset="" style={{ borderRadius: '0.5rem',width: "42rem",height:"25rem" }} /></div>
-                    </Slide>
+                            <div className="container mx-auto" direction='right'>
+                                <AchievementCarousel images={images1} />
+                             </div>
                 </div>
             </div>
         </div>

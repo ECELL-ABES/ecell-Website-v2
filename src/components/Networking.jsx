@@ -2,6 +2,20 @@ import { useEffect, useRef } from "react"
 import NetworkCards from "./NetworkCards"
 import { GiPolarStar } from "react-icons/gi"
 import { Fade } from "react-awesome-reveal"
+import kiet from "../assets/MOU_clg/KIET.jpg"
+import rlac from "../assets/MOU_clg/RLAC.jpg"
+import ims from "../assets/MOU_clg/IMS.jpg"
+import iitb from "../assets/MOU_clg/iitb.webp"
+import aryabhatta from "../assets/MOU_clg/ARYABHATTA.jpg"
+import bennet from "../assets/MOU_clg/bennet.jpg"
+import dtu from "../assets/MOU_clg/DTU.jpg"
+import jss from "../assets/MOU_clg/jss.jpg"
+import kmc from "../assets/MOU_clg/kmc.jpg"
+import kolhapur from "../assets/MOU_clg/kolhapur.jpg"
+import msit from "../assets/MOU_clg/MSIT.jpg"
+import shivaji from "../assets/MOU_clg/SHIVAJI.jpg"
+
+
 
 // Dummy data for the cards
 const networkData = [
@@ -12,65 +26,66 @@ const networkData = [
   },
   {
     name: "KIET",
-    image: "src/assets/MOU_clg/KIET.jpg",
+    image: kiet,
     info: "KIET is known for its advanced research programs and collaborations in engineering.",
   },
   {
     name: "RLAC",
-    image: "src/assets/MOU_clg/RLAC.jpg",
+    image: rlac,
     info: "A leading college in Delhi with a vibrant student entrepreneurship community.",
   },
   {
     name: "IMS Ghaziabad",
-    image: "src/assets/MOU_clg/IMS.jpg",
+    image: ims,
     info: "One of the oldest management institutes in India, known for its diverse alumni network.",
   },
   {
     name: "IIT Bombay",
-    image: "src/assets/MOU_clg/Indian_Institute_of_Technology_Bombay_Logo.svg.png",
+    image: iitb,
     info: "India's leading institute fostering groundbreaking research and industry partnerships.",
   },
   {
     name: "Aryabhatta College, DU",
-    image: "src/assets/MOU_clg/ARYABHATTA.jpg",
+    image: aryabhatta,
     info: "A distinguished college of the University of Delhi, fostering academic excellence and innovation.",
   },
   {
     name: "Bennett University",
-    image: "src/assets/MOU_clg/BENNET UNI.jpg",
+    image: bennet,
     info: "A modern university fostering entrepreneurship and innovation.",
   },
   {
     name: "Delhi Technological University (DTU)",
-    image: "src/assets/MOU_clg/DTU.jpg",
+    image: dtu,
     info: "A premier engineering institution excelling in technology and innovation.",
   },
   {
     name: "JSS Academy of Technical Education",
-    image: "src/assets/MOU_clg/jss.jpg",
+    image: jss,
     info: "A renowned institution known for academic excellence and technical innovation.",
   },
   {
     name: "Kirori Mal College, DU",
-    image: "src/assets/MOU_clg/kmc.jpg",
+    image: kmc,
     info: "A prestigious college of the University of Delhi, nurturing talent and innovation.",
   },
   {
     name: "KIT, IMR Kolhapur",
-    image: "src/assets/MOU_clg/kolhapur.jpg",
+    image: kolhapur,
     info: "A reputed institute focused on developing skilled leaders in management and technology.",
   },
   {
     name: "MSIT",
-    image: "src/assets/MOU_clg/MSIT.jpg",
+    image: msit,
     info: "An institution known for its strong focus on innovation, entrepreneurship, and technical excellence.",
   },
   {
     name: "Shivaji College, DU",
-    image: "src/assets/MOU_clg/SHIVAJI.jpg",
+    image: shivaji,
     info: "A prominent college of the University of Delhi, nurturing entrepreneurship and fostering innovation.",
   },
 ]
+
 
 function Networking() {
   // Split the data for the two columns

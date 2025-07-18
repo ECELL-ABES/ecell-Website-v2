@@ -11,7 +11,7 @@ import Idea from '../components/Idea'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MdMargin } from 'react-icons/md'
 
-
+ 
 function Home() {
   return (
     <div>

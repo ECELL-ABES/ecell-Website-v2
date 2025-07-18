@@ -7,16 +7,16 @@ import bidwiserMockIpl from '../assets/bid.webp';
 import achieversTalk from '../assets/at.webp';
 import fc from "../assets/fc.webp"
 import erk from '../assets/eureka.webp';
-import tes from "../assets/tes2.jpg"
-import tes3 from "../assets/tes3.svg";
-import tes3a from "../assets/tes3a.png";
-import tes3b from "../assets/tes3b.png";
-import tes3c from "../assets/tes3c.png";
-import tes3d from "../assets/tes3d.png";
-import tes3e from "../assets/tes3e.png";
+import tes from "../assets/tes2.webp"
+import tes3 from "../assets/tes3convrted.webp";
+import tes3a from "../assets/tes3a.webp";
+import tes3b from "../assets/tes3b.webp";
+import tes3c from "../assets/tes3c.webp";
+import tes3d from "../assets/tes3d.webp";
+import tes3e from "../assets/tes3e.webp";
 import bizz25 from "../assets/bizz25.png";
 import bizz25b from "../assets/bizz25b.png";
-import bizz25c from "../assets/bizz25c.png";
+import bizz25c from "../assets/bizz1.jpg";
 
 
 // Sample event data with imported images

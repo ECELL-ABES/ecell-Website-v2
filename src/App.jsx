@@ -9,6 +9,7 @@ import Cursor from './components/Cursor';
 import Events from './components/EventsPage';
 import EventDetail from './components/EventDetails'; // Import EventDetail component
 import ContactUs from "./components/ContactUs";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 
@@ -17,7 +18,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Cursor />
+        <ScrollToTop />
         <Routes>
+          
           <Route exact path='/' element={<Home />} />
           <Route exact path='/teams' element={<Teams />} />
           <Route exact path='/events' element={<Events />} />

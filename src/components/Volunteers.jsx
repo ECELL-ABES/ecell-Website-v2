@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 
 
 const volunteers = [
+  { name: "Satyam Raj Singh", role: "EVENTS AND PLANNING" },//
   { name: "Sahil Kumar Sahu", role: "EVENTS AND PLANNING" },//
   { name: "Ayush Aggarwal", role: "EVENTS AND PLANNING" },//
   { name: "Srishti Yadav", role: "EVENTS AND PLANNING" },//
@@ -11,7 +12,6 @@ const volunteers = [
   { name: "Ayush Gautam", role: "EVENTS AND PLANNING" },//
   { name: "Ayush Katiyar", role: "EVENTS AND PLANNING" },//
   { name: "Nishat", role: "EVENTS AND PLANNING" },//
-  { name: "Satyam Raj Singh", role: "EVENTS AND PLANNING" },//
   { name: "Shreya Vishwakarma", role: "EVENTS AND PLANNING" },//
   { name: "Divyanka Pandey", role: "EVENTS AND PLANNING" },
   { name: "Asad Khan", role: "MARKETING AND OUTREACH" },//
@@ -34,9 +34,9 @@ const volunteers = [
   { name: "Suyash Khare", role: "VISUAL MEDIA AND PRODUCTION" },//
   { name: "Ankush Kumar", role: "VISUAL MEDIA AND PRODUCTION" },//
   { name: "Preetam Ray", role: "VISUAL MEDIA AND PRODUCTION" },//
+  { name: "Amit Kumar Gupta", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },//
   { name: "Devendra Pratap Singh", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },//
   { name: "Harsh Kumar", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },//
-  { name: "Amit Kumar", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },//
   { name: "Nandini Goel", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },//
   { name: "Pratibha Maurya", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },//
   { name: "Jahanvi Pratap", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },//

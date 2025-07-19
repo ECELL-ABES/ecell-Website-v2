@@ -2,12 +2,12 @@ import AchievementCarousel from "./AchievementCarousel";
 import '../App.css'
 import { Fade, Slide } from 'react-awesome-reveal'
 import { GiPolarStar } from "react-icons/gi";
-import ach1 from "../assets/achievements1.jpg"
+import ach1 from "../assets/achievements1.webp";
 import ach2 from "../assets/achievements2.jpg"
-import ach3 from "../assets/achievements3.jpg"
+import ach3 from "../assets/nec25.webp"
 import au1 from "../assets/aboutUs1.jpg"
-import au2 from "../assets/aboutUs2.jpg"
-import nt25 from "../assets/nationalTechDay25.jpg"
+import au2 from "../assets/aboutUs2.webp"
+import nt25 from "../assets/nationalTechDay25.webp"
 
 
 const images1 = [ach1, ach2, ach3];

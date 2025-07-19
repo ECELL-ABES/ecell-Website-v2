@@ -69,7 +69,7 @@ const EventDetail = () => {
 
   return (
     <div className="min-h-screen bg-black py-12 px-4 sm:px-6">
-      <div className="max-w-7xl  mx-auto">
+      <div className="max-w-7xl mt-6  mx-auto">
         {/* Back Button */}
         <Link
           to="/events"
@@ -220,11 +220,11 @@ const EventDetail = () => {
                 <h2 className="text-2xl font-bold text-yellow-500 mb-4">
                   Our Vision
                 </h2>
-                <div className="bg-black/40 p-6 rounded-lg border-l-4 border-yellow-500 mb-6">
+                {/* <div className="bg-black/40 p-6 rounded-lg border-l-4 border-yellow-500 mb-6">
                   <p className="text-zinc-300 leading-relaxed italic">
                     {descriptionSections.callout}
                   </p>
-                </div>
+                </div> */}
                 <p className="text-zinc-300 leading-relaxed whitespace-pre-line">
                   {descriptionSections.vision}
                 </p>

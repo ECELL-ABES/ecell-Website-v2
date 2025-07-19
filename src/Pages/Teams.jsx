@@ -20,7 +20,7 @@ function Teams() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-black text-white flex flex-col" style={{ minHeight: "70vh" }}>
+      <div className="bg-black text-white mt-40 flex flex-col" >
         <div className="flex-grow flex flex-col justify-center items-center text-center px-4">
           <Fade cascade="true">
             <h1 className="text-4xl md:text-6xl font-bold mb-2">

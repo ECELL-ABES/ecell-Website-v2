@@ -1,17 +1,26 @@
 import React from 'react';
 
 function NetworkCards({ name, image, info }) {
-    return (
-        <div>
-            <div style={{backgroundColor:'#131412'}} className="p-4 rounded-lg flex flex-col justify-center items-center my-3 w-72">
-                <img src={image} alt={name} className="" />
-                <div className='text-center my-2'>
-                    <h2 className="text-2xl mb-1 font-semibold">{name}</h2>
-                    <p className="text-l text-zinc-400">{info}</p>
-                </div>
-            </div>
+  return (
+    <div className="bg-[#141412] border border-[#26250F] rounded-lg p-4 mb-4 shadow-lg hover:border-[#ffde59] transition-all duration-300">
+      <div className="flex items-center mb-3">
+        <div className="w-12 h-12 mr-3 overflow-hidden rounded-md flex items-center justify-center bg-white">
+          <img
+            src={image || "/placeholder.svg"}
+            alt={name}
+            className="w-full h-auto object-contain"
+            onError={(e) => {
+              e.currentTarget.src = "/placeholder.svg?height=48&width=48"
+              e.currentTarget.alt = "Logo placeholder"
+            }}
+          />
         </div>
-    );
+        <h3 className="text-lg font-semibold text-[#ffde59]">{name}</h3>
+      </div>
+      <p className="text-sm text-gray-300">{info}</p>
+    </div>
+  )
 }
 
-export default NetworkCards;
+export default NetworkCards
+

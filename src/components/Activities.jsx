@@ -16,7 +16,7 @@ import eurekamb from "../assets/eurekamb.jpg";
 
 
 const images3 = [nec25, nec24];
-const images1 = [tes3, tes2, tes3a, tes3b, tes3c];
+const images1 = [tes3, tes2, tes3a , tes3b, tes3c];
 const images2 = [yugantra25, iiitD25];
 
 
@@ -93,7 +93,7 @@ function Activities() {
 
                 <hr style={{ color: 'black' }} />
 
-                {/* Activity - 3 */}}
+                {/* Activity - 3 */}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                     <div className="flex flex-col justify-center">

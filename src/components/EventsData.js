@@ -1,6 +1,7 @@
 // Import images
 import entrepreneurshipShow from '../assets/sa.jpg';
 import navyVisit from '../assets/nv.webp';
+import nv from '../assets/nv.jpg';
 import gameOfDrones from '../assets/god.webp';
 import eSummitTechpravaah from '../assets/techpravaah.webp';
 import bidwiserMockIpl from '../assets/bid.webp';
@@ -9,6 +10,7 @@ import fc from "../assets/fc.webp"
 import erk from '../assets/eureka.webp';
 import tes from "../assets/tes2.webp"
 import tes3 from "../assets/tes3convrted.webp";
+import tec from "../assets/tes.png";
 import tes3a from "../assets/tes3a.webp";
 import tes3b from "../assets/tes3b.webp";
 import tes3c from "../assets/tes3c.webp";
@@ -16,7 +18,12 @@ import tes3d from "../assets/tes3d.webp";
 import tes3e from "../assets/tes3e.webp";
 import bizz25 from "../assets/bizz25.png";
 import bizz25b from "../assets/bizz25b.png";
+import eurekamb from "../assets/eurekamb.jpg";
 import bizz25c from "../assets/bizz1.jpg";
+import tes23 from "../assets/visit1.webp";
+import bizz2 from "../assets/bizz2.webp";
+import bizz3 from "../assets/bizz3.webp";
+import bizz4 from "../assets/bizz4.webp";
 
 
 // Sample event data with imported images
@@ -33,7 +40,8 @@ const events = [
             review: `TES 1.0 marked an incredible beginning with "Karandeep Singh Vohra" gracing the stage. His captivating story of turning ideas into reality resonated deeply with the audience. Karandeep explored into the essential principles of starting a business, tackling challenges head-on, and crafting effective strategies for a stable success. His insights left attendees motivated and better equipped to take their first entrepreneurial steps.TES 2.0 took the excitement to the next level by featuring the legendary "Sandeep Jain", founder of Geeks for Geeks (GFG), as the guest of honor. He shared the journey of building one of the most influential platforms for coders and tech enthusiasts. His talk was a perfect guide on turning ideas into reality, filled with useful advice, lessons from his own experiences, and practical tips for future entrepreneurs.`,
             conclusion: "Each edition of TES unfolded as an engaging talk show, with a skilled moderator guiding thought-provoking conversations with the speakers. The interactive format encouraged active participation, with attendees asking pressing questions and receiving personalized advice from these accomplished leaders. This direct exchange of ideas and perspectives made the event dynamic and impactful. Missed the show this time? Don't worry—TES will be back, bigger and better, with more stories, insights, and opportunities to fuel your entrepreneurial spirit!",
         },
-        image: tes
+        image: tes,
+        images:[tes23]
     },
     {
         id: 2,
@@ -46,7 +54,8 @@ const events = [
             review: "Attendees found the visit insightful, remarking on the operational precision, strategic planning, and the professionalism of naval personnel. Engaging Q&A sessions offered actionable takeaways on leadership and technology integration.",
             conclusion: "The Navy Visit successfully combined education with inspiration, revealing how large-scale operations maintain efficiency. It reinforced the value of teamwork, discipline, and technical excellence. Participants left equipped with a new perspective on organizational execution.",
         },
-        image: navyVisit
+        image: navyVisit,
+        images: [nv]
     },
     {
         id: 3,
@@ -124,7 +133,8 @@ const events = [
             review: "Participants of the Eureka conducted at ABES Engineering College expressed a highly positive experience, highlighting the event's role in fostering innovation and entrepreneurship. Many attendees appreciated the structured mentorship provided by industry experts, which helped them refine their business ideas and develop practical skills.",
             conclusion: "It encouraged networking among peers and established connections with potential investors, enhancing their entrepreneurial journey. Participants also valued the competitive aspect of the initiative, as it motivated them to push their limits and think creatively. Overall, Eureka! was seen as a significant opportunity for personal and professional growth, inspiring many to pursue their entrepreneurial ambitions with renewed confidence.",
         },
-        image: erk
+        image: erk,
+        images: [eurekamb, erk]
     },
     {
         id: 9,
@@ -138,12 +148,12 @@ const events = [
             conclusion: "The Entrepreneurship Show was a highly impactful event that provided valuable insights and inspiration for aspiring entrepreneurs. It successfully created an environment conducive to learning, networking, and engagement, allowing participants to deepen their understanding of entrepreneurship. The event offered attendees the opportunity to connect with industry experts and like-minded individuals, gaining new perspectives and knowledge. By the end, participants were empowered and motivated, leaving with the confidence and tools to pursue their entrepreneurial ambitions and navigate future challenges.",
         },
         image: tes3, // cover image (optional fallback)
-        images: [tes3a, tes3b, tes3c, tes3d, tes3e],
+        images: [tes3b, tes3c, tes3a, tes3d, tes3e],
     },
     {
         id: 10,
         title: "BizzMantra 2025",
-        date: "May 30th '25",
+        date: "May 31st '25",
         descriptionSections: {
             about: "Bizz-Mantra 2025 brought the thrill of boardroom decisions to the student stage. Through  auctions, negotiation battles, and intense strategy building  , students lived through the challenges of business leadership — learning how to do more with less. The event saw participation from over  100+ bright minds  who showed brilliant teamwork and creative business thinking. The team that managed to  complete their product with the least virtual money spent emerged as the winner — proving that success isn't about spending more, but thinking smarter. With a remarkable  4.8/5 participant rating  , Bizz-Mantra 2025 truly set a new benchmark for interactive, impactful learning. ",
             review: "Bizz-Mantra 2025 received an overwhelming response from all participants, earning an impressive 4.8/5 rating. Participants appreciated the event’s realistic structure, high energy, and engaging format. The auction and negotiation rounds were specifically praised for giving them a taste of how real business works — from handling limited resources to forming strategic alliances.",
@@ -152,7 +162,7 @@ const events = [
             conclusion: "Bizz-Mantra 2025 marked yet another successful milestone in E-Cell ABES EC’s journey to promote innovation and entrepreneurship on campus. The event witnessed enthusiastic participation from aspiring student entrepreneurs who showcased sharp business acumen, strategic thinking, and collaborative spirit. With multiple rounds designed to simulate real-world challenges, the event went beyond competition — it became a space for learning, growth, and real-time decision-making. We are committed to continuing our journey of empowering young innovators through more such enriching events. Bizz-Mantra 2025 was just one chapter in our larger mission —  to cultivate the next generation of entrepreneurs who will lead with vision, integrity, and innovation. "
         },
         image: bizz25, // cover image (optional fallback)
-        images: [bizz25b, bizz25c],
+        images: [ bizz25c , bizz2 , bizz3 , bizz4 , bizz25b],
     }
 ];
 

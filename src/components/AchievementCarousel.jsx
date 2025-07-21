@@ -18,7 +18,7 @@ const AchievementCarousel = ({images}) => {
   };
 
   return (
-   <div className="flex justify-center items-center py-8">
+   <div className="flex justify-center items-center">
   <div className="w-full max-w-4xl">
     <Slider {...settings}>
       {images.map((src, index) => (

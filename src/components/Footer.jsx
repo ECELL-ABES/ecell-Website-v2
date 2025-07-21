@@ -26,7 +26,7 @@ function Footer() {
                                 <img src={Logo} alt="E-cell logo" className="mr-2 w-12" />
                             </div>
                         </NavLink>
-                        <p className="mb-4">Experience financial transformation like never before with Fintec.</p>
+                        <p className="mb-4">Experience Entrepreneurship with us.</p>
                         <div className="flex space-x-2">
                             <a href="https://www.linkedin.com/company/ecell-abes-ec/mycompany/" className="text-[#ffde59] flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 border-2 border-gray-800 transition duration-300 ease-in-out hover:bg-[#ffde59] hover:text-white hover:border-[#ffde59]"><PiLinkedinLogoBold className="text-2xl" /></a>
                             <a

@@ -80,11 +80,11 @@ function Activities() {
                         <h1 className="text-2xl sm:text-5xl font-bold leading-tight">
                             <Fade cascade>
                                 <span>Eureka</span>{' '}
-                                <span style={{ color: '#ffde59' }}>Runner-Up</span>
+                                <span style={{ color: '#ffde59' }}> 1<sup>st</sup> Runner-Up</span>
                             </Fade>
                         </h1>
                         <p className="mt-4 text-zinc-400">
-                            Our team secured the <span style={{ color: '#ffde59' }}>Runner-Up</span> position at
+                            Our team secured the <span style={{ color: '#ffde59' }}>1<sup>st</sup>  Runner-Up</span> position at
                             <span style={{ color: '#ffde59' }}> Eureka 2024</span>, Asia’s largest business model competition
                             organized by IIT Bombay. This achievement reflects the innovation and problem-solving spirit of our students.
                         </p>

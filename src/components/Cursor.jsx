@@ -4,17 +4,19 @@ const Cursor = () => {
   const [size, setSize] = useState(15); // Normal size of the cursor
   const [isClicked, setIsClicked] = useState(false); // Track if the cursor is clicked
   const [isVisible, setIsVisible] = useState(true); // Track cursor visibility
-  let inactivityTimeout;
+  const inactivityTimeout = useRef(null);
 
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
 
     // Function to move the cursor
     const moveCursor = (e) => {
-      clearTimeout(inactivityTimeout); // Reset inactivity timer
+      if (inactivityTimeout.current) clearTimeout(inactivityTimeout.current); // Reset inactivity timer
       setIsVisible(true); // Show cursor on movement
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
+      if (cursor) {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      }
       startInactivityTimer(); // Start the timer again
     };
 
@@ -31,7 +33,8 @@ const Cursor = () => {
     };
 
     const startInactivityTimer = () => {
-      inactivityTimeout = setTimeout(() => {
+      if (inactivityTimeout.current) clearTimeout(inactivityTimeout.current);
+      inactivityTimeout.current = setTimeout(() => {
         setIsVisible(false); // Hide the cursor after 5 seconds of inactivity
       }, 2000);
     };
@@ -46,12 +49,14 @@ const Cursor = () => {
 
     // Clean up event listeners and timeout on unmount
     return () => {
-      clearTimeout(inactivityTimeout);
+      if (inactivityTimeout.current) {
+        clearTimeout(inactivityTimeout.current);
+      }
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [inactivityTimeout]);
+  }, []);
 
   return (
     <div

@@ -6,6 +6,7 @@ import Testimonial from '../components/Testimonial'
 import Networking from '../components/Networking'
 import ScrollProgress from '../components/ScrollProgress'
 import { Fade, Slide } from 'react-awesome-reveal'
+import Mentor from '../components/Mentor'
 import { GiPolarStar } from "react-icons/gi";
 import Idea from '../components/Idea'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -139,7 +140,7 @@ function Home() {
           </Slide>
         </div>
       </div>
-
+      <Mentor/>
       <Activities />
       <Networking />
       <Testimonial />

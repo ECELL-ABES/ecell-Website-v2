@@ -73,9 +73,8 @@ const EventDetail = () => {
         {/* Back Button */}
         <Link
           to="/events"
-          className={`inline-flex mt-10 items-center text-yellow-500 hover:text-yellow-400 mb-8 transition-colors ${
-            isLoaded ? "animate-fadeIn" : "opacity-0"
-          }`}
+          className={`inline-flex mt-10 items-center text-yellow-500 hover:text-yellow-400 mb-8 transition-colors ${isLoaded ? "animate-fadeIn" : "opacity-0"
+            }`}
           style={{ animationDelay: "0.1s" }}
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -86,9 +85,8 @@ const EventDetail = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-8">
           {/* Event Info Block - 5 columns */}
           <div
-            className={`md:col-span-5 bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-xl flex flex-col justify-between h-[300px] hover:border-zinc-700 transition-all duration-300 ${
-              isLoaded ? "animate-slideInLeft" : "opacity-0"
-            }`}
+            className={`md:col-span-5 bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-xl flex flex-col justify-between h-[300px] hover:border-zinc-700 transition-all duration-300 ${isLoaded ? "animate-slideInLeft" : "opacity-0"
+              }`}
             style={{ animationDelay: "0.2s" }}
           >
             <div>
@@ -129,74 +127,67 @@ const EventDetail = () => {
 
           {/* Event Image Block - 7 columns */}
           <div
-            className={`md:col-span-7 bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden shadow-xl h-[300px] hover:shadow-2xl transition-all duration-300 ${
-              isLoaded ? "animate-slideInRight" : "opacity-0"
-            }`}
+            className={`md:col-span-7 bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden shadow-xl h-[300px] hover:shadow-2xl transition-all duration-300 ${isLoaded ? "animate-slideInRight" : "opacity-0"
+              }`}
             style={{ animationDelay: "0.3s" }}
           >
-            {/* <img
-              src={event.image || "/placeholder.svg"}
-              alt={event.title}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            /> */}
             {event.images && event.images.length > 0 ? (
-              <AchievementCarousel images={event.images} />
+              <div className="w-full h-full">
+                <AchievementCarousel images={event.images} />
+              </div>
             ) : (
               <img
                 src={event.image || "/placeholder.svg"}
                 alt={event.title}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
               />
             )}
           </div>
+
         </div>
 
         {/* Event Content */}
         <div
-          className={`bg-zinc-900 border border-zinc-800 rounded-xl shadow-xl overflow-hidden hover:border-zinc-700 transition-all duration-300 ${
-            isLoaded ? "animate-slideInUp" : "opacity-0"
-          }`}
+          className={`bg-zinc-900 border border-zinc-800 rounded-xl shadow-xl overflow-hidden hover:border-zinc-700 transition-all duration-300 ${isLoaded ? "animate-slideInUp" : "opacity-0"
+            }`}
           style={{ animationDelay: "0.4s" }}
         >
           {/* Tabs */}
           <div className="flex overflow-x-auto scrollbar-hide border-b border-zinc-800">
             <button
               onClick={() => setActiveTab("about")}
-              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${
-                activeTab === "about"
+              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${activeTab === "about"
                   ? "text-yellow-500 border-b-2 border-yellow-500"
                   : "text-zinc-400 hover:text-white hover:bg-zinc-800"
-              }`}
+                }`}
             >
               About Event
             </button>
             <button
               onClick={() => setActiveTab("vision")}
-              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${
-                activeTab === "vision"
+              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${activeTab === "vision"
                   ? "text-yellow-500 border-b-2 border-yellow-500"
                   : "text-zinc-400 hover:text-white hover:bg-zinc-800"
-              }`}
+                }`}
             >
               Vision
             </button>
             <button
               onClick={() => setActiveTab("review")}
-              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${
-                activeTab === "review"
+              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${activeTab === "review"
                   ? "text-yellow-500 border-b-2 border-yellow-500"
                   : "text-zinc-400 hover:text-white hover:bg-zinc-800"
-              }`}
+                }`}
             >
               Review
             </button>
             <button
               onClick={() => setActiveTab("conclusion")}
-              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${
-                activeTab === "conclusion"
+              className={`px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-300 ${activeTab === "conclusion"
                   ? "text-yellow-500 border-b-2 border-yellow-500"
                   : "text-zinc-400 hover:text-white hover:bg-zinc-800"
-              }`}
+                }`}
             >
               Conclusion
             </button>

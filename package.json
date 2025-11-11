@@ -46,7 +46,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
-    "vite": "^5.4.14"
+    "vite": "^5.4.21"
   },
   "description": "Welcome to the official repository for the **Entrepreneurship Cell (E-Cell) of ABES Engineering College**. This project hosts the code for the official website of E-Cell ABESEC, which showcases our activities, events, and opportunities for aspiring entrepreneurs.",
   "main": "firebase.js",

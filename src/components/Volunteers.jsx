@@ -44,31 +44,31 @@ const volunteersData = {
   { name: "Ishan Arora", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
 
   ],
-  "2025-2026": [
-  // MARKETING AND SPONSORSHIP
-  { name: "Tanya Mishra", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Suyash Dwivedi", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Prateek Singh", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Arnav Garg", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Kashish Mani Tripathi", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Mallika Rathi", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Parth Srivastava", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Anshika Gupta", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Aditya Choudhary", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Asad Khan", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Shobhit", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Devanshi Srivastava", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Rishi Raj Singh Rajpoot", role: "MARKETING AND SPONSORSHIP" },
-  { name: "Bulbul", role: "MARKETING AND SPONSORSHIP" },
+ "2025-2026": [
+  // MARKETING AND OUTREACH
+  { name: "Tanya Mishra", role: "MARKETING AND OUTREACH" },
+  { name: "Suyash Dwivedi", role: "MARKETING AND OUTREACH" },
+  { name: "Prateek Singh", role: "MARKETING AND OUTREACH" },
+  { name: "Arnav Garg", role: "MARKETING AND OUTREACH" },
+  { name: "Kashish Mani Tripathi", role: "MARKETING AND OUTREACH" },
+  { name: "Mallika Rathi", role: "MARKETING AND OUTREACH" },
+  { name: "Parth Srivastava", role: "MARKETING AND OUTREACH" },
+  { name: "Anshika Gupta", role: "MARKETING AND OUTREACH" },
+  { name: "Aditya Choudhary", role: "MARKETING AND OUTREACH" },
+  { name: "Asad Khan", role: "MARKETING AND OUTREACH" },
+  { name: "Shobhit", role: "MARKETING AND OUTREACH" },
+  { name: "Devanshi Srivastava", role: "MARKETING AND OUTREACH" },
+  { name: "Rishi Raj Singh Rajpoot", role: "MARKETING AND OUTREACH" },
+  { name: "Bulbul", role: "MARKETING AND OUTREACH" },
 
-  // TECHNICAL
-  { name: "Amit Kumar Gupta", role: "TECHNICAL" },
-  { name: "Pratibha Maurya", role: "TECHNICAL" },
-  { name: "Jhanvi", role: "TECHNICAL" },
-  { name: "Harsh Kumar", role: "TECHNICAL" },
-  { name: "Preet Chauhan", role: "TECHNICAL" },
-  { name: "Deevonika", role: "TECHNICAL" },
-  { name: "Deepak", role: "TECHNICAL" },
+  // DIGITAL INFRASTRUCTURE AND DEVELOPMENT
+  { name: "Amit Kumar Gupta", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Pratibha Maurya", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Jhanvi", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Harsh Kumar", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Preet Chauhan", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Deevonika", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
+  { name: "Deepak", role: "DIGITAL INFRASTRUCTURE AND DEVELOPMENT" },
 
   // EVENTS AND PLANNING
   { name: "Suhani Gupta", role: "EVENTS AND PLANNING" },
@@ -84,25 +84,26 @@ const volunteersData = {
   { name: "Ayush Katiyar", role: "EVENTS AND PLANNING" },
   { name: "Sahil Sahu", role: "EVENTS AND PLANNING" },
 
-  // SOCIAL MEDIA
-  { name: "Ritish", role: "SOCIAL MEDIA" },
-  { name: "Anurag Jai Singh", role: "SOCIAL MEDIA" },
-  { name: "Aryan Chaudhary", role: "SOCIAL MEDIA" },
-  { name: "Mahak Khurana", role: "SOCIAL MEDIA" },
-  { name: "Apurv Verma", role: "SOCIAL MEDIA" },
-  { name: "Anvita Shukla", role: "SOCIAL MEDIA" },
-  { name: "Saloni Singh", role: "SOCIAL MEDIA" },
-  { name: "Lakshit", role: "SOCIAL MEDIA" },
-  { name: "Manya", role: "SOCIAL MEDIA" },
+  // DIGITAL AND SOCIAL MEDIA
+{ name: "Ritish", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Anurag Jai Singh", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Aryan Chaudhary", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Mahak Khurana", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Apurv Verma", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Anvita Shukla", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Saloni Singh", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Lakshit", role: "DIGITAL AND SOCIAL MEDIA" },
+{ name: "Manya", role: "DIGITAL AND SOCIAL MEDIA" },
 
-  // VISUAL MEDIA
-  { name: "Aabhas Viswas", role: "VISUAL MEDIA" },
-  { name: "Ashish Kashyap", role: "VISUAL MEDIA" },
-  { name: "Devansh Dev", role: "VISUAL MEDIA" },
-  { name: "Satyam Yadav", role: "VISUAL MEDIA" },
-  { name: "Shivani Srivastava", role: "VISUAL MEDIA" },
-  { name: "Shreya Palak", role: "VISUAL MEDIA" },
-  { name: "Shubham", role: "VISUAL MEDIA" },
+
+  // VISUAL MEDIA AND PRODUCTION
+  { name: "Aabhas Viswas", role: "VISUAL MEDIA AND PRODUCTION" },
+  { name: "Ashish Kashyap", role: "VISUAL MEDIA AND PRODUCTION" },
+  { name: "Devansh Dev", role: "VISUAL MEDIA AND PRODUCTION" },
+  { name: "Satyam Yadav", role: "VISUAL MEDIA AND PRODUCTION" },
+  { name: "Shivani Srivastava", role: "VISUAL MEDIA AND PRODUCTION" },
+  { name: "Shreya Palak", role: "VISUAL MEDIA AND PRODUCTION" },
+  { name: "Shubham", role: "VISUAL MEDIA AND PRODUCTION" },
 ],
 
 };
@@ -122,12 +123,12 @@ const Volunteers = ({ currentTeam }) => {
         >
           <Fade cascade>
             <span className="flex items-center gap-2 text-xl">
-              <GiPolarStar />VOLUNTEERS
+              <GiPolarStar />Team
             </span>
           </Fade>
         </div>
         <h1 className="text-5xl font-bold">
-          Volunteers <span className="text-[#ffed59]">{currentTeam}</span>
+          Team <span className="text-[#ffed59]">{currentTeam}</span>
         </h1>
       </div>
 

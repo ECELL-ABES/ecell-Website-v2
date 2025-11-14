@@ -9,7 +9,7 @@ import { PiLinkedinLogoBold } from "react-icons/pi";
 import { GiPolarStar } from "react-icons/gi";
 
 function Teams() {
-  const [currentTeam, setCurrentTeam] = useState("2024-2025");
+  const [currentTeam, setCurrentTeam] = useState("2025-2026");
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

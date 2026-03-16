@@ -40,6 +40,10 @@ import iitr3 from "../assets/speakerphotoiitreventaudi.webp";
 import iitr4 from "../assets/speakersidephoto.webp";
 import iitr5 from "../assets/WinnerofIdeastorm.webp";
 
+import keshav from "../assets/keshavjha.png"
+import panel from "../assets/panel.png"
+import shrishti from "../assets/shrishti.png"
+ 
 // Sample event data with imported images
 const events = [
   {
@@ -242,7 +246,7 @@ const events = [
     image: SQUIDA, // cover image (optional fallback)
     images: [SQUIDB, SQUIDC, SQUIDWINNER1, SQUIDWINNER2, SQUIDWINNER3],
   },
-{
+  {
     id:12, // Assuming the next ID in your sequence
     title: "IDEASTORM 2026 – Delhi NCR Zonal",
     date: "December 13th, 2025",
@@ -264,6 +268,25 @@ const events = [
     },
     image: ideastorm, 
     images: [iitr1, iitr2, iitr3, iitr4,iitr5], 
+  },
+  {
+    id: 13,
+    title: "The Entrepreneurship Show 4.0",
+    date: "February 21st, 2026",
+    descriptionSections: {
+      about:
+        "The Entrepreneurship Show 4.0 (TES 4.0) is the flagship annual event of the Entrepreneurship Cell of ABES Engineering College (ABESEC). A prestigious full-day gathering of 450–500 students and aspiring entrepreneurs from ABES Engineering College and invited colleges across the region, TES 4.0 is designed to inspire, connect, and empower the next generation of founders. The event brings together celebrated speakers, seasoned panelists, and a vibrant audience to spark conversations that matter — about startups, funding, resilience, and the future of entrepreneurship.",
+      vision:
+        "TES 4.0 channels the spirit of 'INNOVATE • NETWORK • IGNITE • INSPIRE' into a single transformative day. The event is structured around four distinct sub-events crafted to deliver maximum value: \n 1. Speaker Sessions — Keynote addresses from accomplished entrepreneurs including Ashok Agarwal, Srishti Gupta, and Ankit Bansal, offering real-world insights and practical takeaways. \n 2. Business Quiz (B-Quiz) — An interactive Mentimeter-powered quiz featuring live leaderboards and exciting rewards, testing entrepreneurial knowledge in a competitive, fun format. \n 3. Panel Discussion — An expert panel featuring Vishwalok Nath, Alekh Johari, and Gurnandan Singh diving deep into funding rounds, startup challenges, and the path to building successful ventures.",
+      callout:
+        "TES 4.0 is where ideas meet opportunity — a curated arena where students pitch, learn, network, and get one step closer to turning their entrepreneurial dreams into reality.",
+      review:
+        "TES 4.0 opened with an electric energy that defined the tone for the entire day. The speaker sessions featuring Ashok Agarwal, Srishti Gupta, and Ankit Bansal delivered candid, actionable insights that resonated deeply with aspiring student entrepreneurs. The Pitch Ground saw passionate founders compete before a discerning jury, while the B-Quiz on Mentimeter kept the audience on the edge of their seats with live leaderboards. The panel discussion with Vishwalok Nath, Alekh Johari, and Gurnandan Singh offered a nuanced look into the realities of the startup ecosystem — from funding to failure and beyond. A special appearance by Keshav Jha added an unforgettable moment to the event. Participants left energised, connected, and equipped with the mindset to take their next entrepreneurial step.",
+      conclusion:
+        "TES 4.0 cemented its place as one of the most impactful entrepreneurship events in the Delhi NCR student circuit. From the opening ceremony at ABES Engineering College's auditorium to the final prize distribution, every moment was crafted with purpose — to inform, inspire, and ignite. As E-Cell ABESEC continues to grow, TES 4.0 stands as a testament to the power of community, curiosity, and the relentless entrepreneurial spirit. We look forward to making TES 5.0 even bigger, bolder, and more transformative.",
+    },
+    image: keshav,
+    images: [panel, shrishti, keshav],
   },
 ];
 

@@ -16,6 +16,7 @@ import tes3 from '../assets/tes3.0.webp';
 import bizz from '../assets/bizz25.png';
 import squid from '../assets/SQUID.png';
 import zonals from '../assets/bannerimage iitr event.webp'
+import keshav from "../assets/keshavjha.png"
 
 // Utility function to generate a URL-friendly slug from event title
 const createSlug = (title) => title.toLowerCase().replace(/ /g, '-');
@@ -25,8 +26,9 @@ const placeholderImage = "https://via.placeholder.com/300x200?text=No+Image";
 
 // Sample event data
 const events = [
+    { id:13, title:"The Entrepreneurship Show 4.0", date:"February 21st, 2026" , imgSrc: keshav},
     { id:12, title:"IDEASTORM 2026 – Delhi NCR Zonal", date:"December 13th'25 " , imgSrc: zonals},
-     { id:11, title:"SQUID GAME 2025", date:"November 24th,25th,26th'25" , imgSrc: squid},
+    { id:11, title:"SQUID GAME 2025", date:"November 24th,25th,26th'25" , imgSrc: squid},
     { id: 10 , title:"BizzMantra 2025", date: "May 31st '25", imgSrc: bizz },
     { id: 9 , title:"The Entrepreneurship Show 2024", date: "November 30th '24", imgSrc: tes3 },
     { id: 8, title: "Eureka", date: "September 10th '22", imgSrc: erk },

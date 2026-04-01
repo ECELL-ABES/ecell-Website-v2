@@ -28,9 +28,9 @@ function Footer() {
                         </NavLink>
                         <p className="mb-4">Experience Entrepreneurship with us.</p>
                         <div className="flex space-x-2">
-                            <a href="https://www.linkedin.com/company/ecell-abes-ec/mycompany/" className="text-[#ffde59] flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 border-2 border-gray-800 transition duration-300 ease-in-out hover:bg-[#ffde59] hover:text-white hover:border-[#ffde59]"><PiLinkedinLogoBold className="text-2xl" /></a>
+                            <a href="https://www.linkedin.com/company/ecell-abes-ec/mycompany/" target="_blank" className="text-[#ffde59] flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 border-2 border-gray-800 transition duration-300 ease-in-out hover:bg-[#ffde59] hover:text-white hover:border-[#ffde59]"><PiLinkedinLogoBold className="text-2xl" /></a>
                             <a
-                                href="https://www.instagram.com/ecell_abesec/"
+                                href="https://www.instagram.com/ecell_abesec/" target="_blank"
                                 className="text-[#ffde59] flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 border-2 border-gray-800 transition duration-300 ease-in-out hover:bg-[#ffde59] hover:text-white hover:border-[#ffde59]"
                             >
                                 <FaInstagram className="text-2xl" />

@@ -5,7 +5,7 @@ import { GiPolarStar } from "react-icons/gi";
 import ach1 from "../assets/achievements1.webp";
 import ach2 from "../assets/achievements2.jpg"
 import ach3 from "../assets/nec25.webp"
-import au1 from "../assets/aboutUs1.jpg"
+import au1 from "../assets/aboutUs1.webp"
 import au2 from "../assets/aboutUs2.webp"
 import nt25 from "../assets/nationalTechDay25.webp"
 

@@ -62,7 +62,7 @@ const testimonialData = [
     name: "Prabhansh Tripathi",
     role: "Founder",
   },
-]
+];
 
 const ReviewCard = ({ img, name, username, body }) => {
   return (
@@ -72,15 +72,19 @@ const ReviewCard = ({ img, name, username, body }) => {
 
       {/* User Info */}
       <div className="flex items-center mt-auto space-x-3 text-left">
-        <img src={img || "/placeholder.svg"} alt={name} className="w-12 h-12 rounded-full border border-[#ffde59]" />
+        <img
+          src={img || "/placeholder.svg"}
+          alt={name}
+          className="w-12 h-12 rounded-full border border-[#ffde59]"
+        />
         <div>
           <h3 className="text-lg font-semibold text-[#ffde59]">{name}</h3>
           <p className="text-sm text-gray-400">{username}</p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 function Testimonial() {
   // Animation variants
@@ -93,7 +97,7 @@ function Testimonial() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const titleVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -105,40 +109,47 @@ function Testimonial() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   // Split testimonials into two rows for the marquee
-  const halfLength = Math.ceil(testimonialData.length / 2)
-  const firstRow = testimonialData.slice(0, halfLength)
-  const secondRow = testimonialData.slice(halfLength)
+  const halfLength = Math.ceil(testimonialData.length / 2);
+  const firstRow = testimonialData.slice(0, halfLength);
+  const secondRow = testimonialData.slice(halfLength);
 
   return (
     <div className="w-full bg-black py-16 relative overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-radial from-[#ffde5920] via-transparent to-transparent opacity-20"></div>
-
       {/* Testimonials Section Header */}
       <div
-        className="flex flex-col items-center mb-16 relative z-10"
+        className="flex flex-col items-center mb-16 relative z-0 mt-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={containerVariants}
       >
+       {" "}
         <div
           variants={titleVariants}
-          className="rounded-full px-4 py-1 mb-4 w-fit bg-[#141412] border border-[#26250F]"
+          className="rounded-full px-4 py-1 mb-4 w-fit bg-[#141412] border border-[#26250F] "
         >
+          {" "}
           <span className="flex items-center gap-2 text-[#ffde59]">
-            <GiPolarStar />
-            TESTIMONIALS
+             <GiPolarStar /> TESTIMONIALS {" "}
           </span>
+          {" "}
         </div>
-        <h2 variants={titleVariants} className="text-4xl sm:text-5xl font-semibold text-center text-white">
-          Testimonials <span className="text-[#ffde59]">About Us</span>
+        {" "}
+        <h2
+          variants={titleVariants}
+          className="text-4xl sm:text-5xl font-semibold text-center text-white"
+        >
+             Testimonials{" "}
+          <span className="text-[#ffde59]">About Us</span>  {" "}
         </h2>
-      </div>
-
+        {" "}
+      </div>{" "}
+      correct this
       {/* Marquee Container */}
       <div className="relative w-full overflow-hidden">
         {/* First Row (left to right) */}
@@ -176,7 +187,7 @@ function Testimonial() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-black to-transparent z-10"></div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Testimonial
+export default Testimonial;

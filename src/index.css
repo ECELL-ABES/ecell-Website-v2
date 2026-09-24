@@ -26,3 +26,421 @@ button {
     display: none;
     cursor: none;
 }
+
+
+/* =========================================================
+   E-CELL HERO
+   ========================================================= */
+
+.hero-section {
+    position: relative;
+    isolation: isolate;
+
+    /* Soft overall gold atmosphere */
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(255, 222, 89, 0.12) 0%,
+            rgba(255, 222, 89, 0.06) 25%,
+            rgba(255, 222, 89, 0.025) 45%,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   AMBIENT GOLD LIGHT
+   ========================================================= */
+
+.hero-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 222, 89, 0.07);
+
+    filter: blur(120px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation: ambientGlow 10s ease-in-out infinite alternate;
+}
+
+
+/* Left glow */
+
+.hero-glow-1 {
+    top: 10%;
+    left: -10%;
+}
+
+
+/* Right glow */
+
+.hero-glow-2 {
+    top: 5%;
+    right: -10%;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes ambientGlow {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(30px, 20px) scale(1.1);
+        opacity: 0.6;
+    }
+}
+
+
+/* =========================================================
+   SMOOTH BOTTOM FADE
+   ========================================================= */
+
+.hero-section::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 180px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.7),
+        #000000
+    );
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ENTREPRENEURSHIP CELL GOLD GRADIENT
+   ========================================================= */
+
+.hero-title {
+    background: linear-gradient(
+        90deg,
+        #ffde59,
+        #fff1a8,
+        #ffde59
+    );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: goldShine 4s ease-in-out infinite;
+}
+
+
+@keyframes goldShine {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.hero-button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    background-color: #ffe77a !important;
+
+    box-shadow:
+        0 8px 20px rgba(255, 222, 89, 0.25),
+        0 0 25px rgba(255, 222, 89, 0.2);
+}
+
+
+.hero-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   WIDE NETWORK
+   ========================================================= */
+
+.hero-network {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 700px;
+    height: 400px;
+
+    transform: translate(-50%, -50%);
+
+    opacity: 0.35;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   NETWORK DOTS
+   ========================================================= */
+
+.network-dot {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background: #ffde59;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px rgba(255, 222, 89, 0.8),
+        0 0 20px rgba(255, 222, 89, 0.3);
+
+    animation: dotPulse 3s ease-in-out infinite;
+}
+
+
+/* Different positions across the Hero */
+
+.dot-1 {
+    top: 55px;
+    left: 80px;
+}
+
+.dot-2 {
+    top: 130px;
+    left: 210px;
+
+    animation-delay: 0.5s;
+}
+
+.dot-3 {
+    top: 80px;
+    right: 150px;
+
+    animation-delay: 1s;
+}
+
+.dot-4 {
+    bottom: 90px;
+    left: 170px;
+
+    animation-delay: 1.5s;
+}
+
+.dot-5 {
+    bottom: 60px;
+    right: 100px;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: scale(1.6);
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================================================
+   NETWORK LINES
+   ========================================================= */
+
+.network-line {
+    position: absolute;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 222, 89, 0.4),
+        transparent
+    );
+
+    transform-origin: left center;
+
+    animation: lineGlow 4s ease-in-out infinite;
+}
+
+
+.line-1 {
+    width: 160px;
+
+    top: 75px;
+    left: 80px;
+
+    transform: rotate(25deg);
+}
+
+
+.line-2 {
+    width: 150px;
+
+    top: 135px;
+    left: 210px;
+
+    transform: rotate(-20deg);
+}
+
+
+.line-3 {
+    width: 140px;
+
+    top: 140px;
+    left: 210px;
+
+    transform: rotate(25deg);
+}
+
+
+.line-4 {
+    width: 160px;
+
+    top: 170px;
+    left: 360px;
+
+    transform: rotate(-25deg);
+}
+
+
+@keyframes lineGlow {
+
+    0%,
+    100% {
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 0.55;
+    }
+}
+
+
+/* =========================================================
+   FLOATING STARS
+   ========================================================= */
+
+.network-star {
+    position: absolute;
+
+    color: #ffde59;
+
+    font-size: 16px;
+
+    animation: starFloat 5s ease-in-out infinite;
+}
+
+
+.star-1 {
+    top: 35px;
+    right: 50px;
+}
+
+
+.star-2 {
+    bottom: 35px;
+    left: 60px;
+
+    font-size: 11px;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes starFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(20deg);
+        opacity: 0.8;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-network {
+        width: 500px;
+        height: 350px;
+
+        opacity: 0.15;
+    }
+
+    .hero-glow {
+        width: 300px;
+        height: 300px;
+
+        filter: blur(90px);
+    }
+
+    .hero-section::after {
+        height: 120px;
+    }
+}

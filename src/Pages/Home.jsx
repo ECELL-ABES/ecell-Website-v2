@@ -17,19 +17,54 @@ function Home() {
   return (
     <div>
       {/* <ScrollProgress /> */}
-      <div className=" bg-black text-white flex flex-col" style={{ minHeight: '80vh' }}>
-        <div className="flex-grow flex flex-col justify-center items-center text-center px-4">
+
+      <div
+  className="hero-section bg-black text-white flex flex-col relative overflow-visible"
+  style={{ minHeight: '80vh' }}
+>
+{/* Subtle animated background */}
+<div className="hero-glow hero-glow-1"></div>
+<div className="hero-glow hero-glow-2"></div>
+
+<div className="hero-network">
+  <span className="network-dot dot-1"></span>
+  <span className="network-dot dot-2"></span>
+  <span className="network-dot dot-3"></span>
+  <span className="network-dot dot-4"></span>
+  <span className="network-dot dot-5"></span>
+    {/* <span className="network-dot dot-5"></span> */}
+
+
+  <span className="network-line line-1"></span>
+  <span className="network-line line-2"></span>
+  <span className="network-line line-3"></span>
+  <span className="network-line line-4"></span>
+
+  <span className="network-star star-1">✦</span>
+<span className="network-star star-2">✦</span>
+<span className="network-star star-3">✦</span>
+<span className="network-star star-4">✦</span>
+<span className="network-star star-5">✦</span>
+<span className="network-star star-6">✦</span>
+<span className="network-star star-7">✦</span>
+<span className="network-star star-8">✦</span>
+
+</div>
+
+        <div className="flex-grow flex flex-col justify-center items-center text-center px-4 relative z-10">
           <div style={{ backgroundColor: '#141412', color: '#FFDE59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4 mt-10">
             <Fade cascade>
               <span className='flex items-center gap-2 '><GiPolarStar /> From Ideas to Imprint</span>
             </Fade>
           </div>
-          <Fade cascade="true">
+          <Fade cascade="true" duration={1500} damping={0.3}>
             <h1 className="text-4xl md:text-6xl font-bold mb-2">
-              <span style={{ color: '#FFDE59' }}>Welcome</span> <span>To</span>
+              <span style={{ color: '#ffdb4b' }}>Welcome</span> <span>To</span>
             </h1>
-            <h2 style={{ color: '#ffde59' }} className="text-4xl md:text-6xl font-bold mb-4">Entrepreneurship Cell</h2>
-            <p className="text-zinc-400 mb-8">ABES Engineering College, Ghaziabad</p>
+<h2 className="hero-title text-4xl md:text-6xl font-bold mb-4">
+  Entrepreneurship Cell
+</h2>            <p className="text-zinc-400 mb-8">ABES Engineering College, Ghaziabad</p>
+            
             <form
               onSubmit={e => {
                 e.preventDefault();
@@ -47,12 +82,12 @@ function Home() {
                 className="p-3 text-white focus:outline-none sm:w-[20rem]"
               />
               <button
-                type="submit"
-                style={{ backgroundColor: '#ffde59' }}
-                className="text-black font-semibold px-5 py-1 sm:py-2 rounded-lg"
-              >
-                Let's Connect
-              </button>
+  type="submit"
+  style={{ backgroundColor: '#ffde59' }}
+  className="hero-button text-black font-semibold px-5 py-1 sm:py-2 rounded-lg"
+>
+  Let's Connect
+</button>
             </form>
 
           </Fade>
@@ -151,3 +186,4 @@ function Home() {
 }
 
 export default Home
+

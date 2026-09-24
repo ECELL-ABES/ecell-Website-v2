@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import axios from "axios";
 import { GiPolarStar } from "react-icons/gi";
 import { Fade } from "react-awesome-reveal";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -18,6 +19,14 @@ const customIcon = new L.Icon({
   popupAnchor: [0, -36],
 });
 
+const getApiUrl = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (!envUrl) {
+    return "http://localhost:8000/contactus";
+  }
+  return envUrl.endsWith("/contactus") ? envUrl : `${envUrl.replace(/\/+$/, "")}/contactus`;
+};
+
 function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,16 +34,95 @@ function ContactUs() {
     message: "",
   });
 
-  // eslint-disable-next-line no-unused-vars
-  const [formStatus, setFormStatus] = useState(""); // To display submission status
+  const [errors, setErrors] = useState({});
+  const [formStatus, setFormStatus] = useState("idle"); // "idle" | "submitting" | "success" | "error"
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (errors[name]) {
+      setErrors((prev) => {
+        const nextErrors = { ...prev };
+        delete nextErrors[name];
+        return nextErrors;
+      });
+    }
   };
 
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
-  }, []);
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault();
+
+      if (formStatus === "submitting") {
+        return;
+      }
+
+      const trimmedName = formData.name.trim();
+      const trimmedEmail = formData.email.trim();
+      const trimmedMessage = formData.message.trim();
+      const validationErrors = {};
+
+      if (!trimmedName) {
+        validationErrors.name = "Name is required.";
+      }
+
+      if (!trimmedEmail) {
+        validationErrors.email = "Email is required.";
+      } else {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(trimmedEmail)) {
+          validationErrors.email = "Please enter a valid email address.";
+        }
+      }
+
+      if (!trimmedMessage) {
+        validationErrors.message = "Message is required.";
+      }
+
+      if (Object.keys(validationErrors).length > 0) {
+        setErrors(validationErrors);
+        return;
+      }
+
+      setErrors({});
+      setFormStatus("submitting");
+      setStatusMessage("");
+
+      try {
+        const payload = {
+          name: trimmedName,
+          email: trimmedEmail,
+          message: trimmedMessage,
+        };
+
+        const response = await axios.post(getApiUrl(), payload);
+
+        if (response.status >= 200 && response.status < 300) {
+          setFormStatus("success");
+          setStatusMessage(response.data?.message || "Message received and email sent!");
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+        } else {
+          setFormStatus("error");
+          setStatusMessage(response.data?.message || "Failed to send message. Please try again.");
+        }
+      } catch (error) {
+        setFormStatus("error");
+        const serverErrorMessage =
+          error.response?.data?.message ||
+          (error.message === "Network Error"
+            ? "Network error. Unable to reach the server. Please try again."
+            : "Failed to send email. Please try again.");
+        setStatusMessage(serverErrorMessage);
+      }
+    },
+    [formData, formStatus]
+  );
 
   const position = [28.6341, 77.4456]; // Coordinates for ABES Engineering College
 
@@ -79,7 +167,7 @@ function ContactUs() {
 
           {/* Form */}
           <div className="w-full md:max-w-md bg-gray-800/90 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700/80">
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} noValidate className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col">
                   <label htmlFor="name" className="text-sm font-medium text-gray-300 mb-2">
@@ -92,8 +180,25 @@ function ContactUs() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your name"
-                    className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition duration-200"
+                    required
+                    aria-required="true"
+                    aria-invalid={Boolean(errors.name)}
+                    aria-describedby={errors.name ? "name-error" : undefined}
+                    className={`w-full p-3 rounded-lg bg-gray-900 text-white border ${
+                      errors.name
+                        ? "border-red-500 focus:ring-2 focus:ring-red-400"
+                        : "border-gray-700 focus:ring-2 focus:ring-yellow-400"
+                    } focus:outline-none transition duration-200`}
                   />
+                  {errors.name && (
+                    <span
+                      id="name-error"
+                      role="alert"
+                      className="text-red-400 text-xs mt-1 block"
+                    >
+                      {errors.name}
+                    </span>
+                  )}
                 </div>
                 <div className="flex flex-col">
                   <label htmlFor="email" className="text-sm font-medium text-gray-300 mb-2">
@@ -106,8 +211,25 @@ function ContactUs() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
-                    className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition duration-200"
+                    required
+                    aria-required="true"
+                    aria-invalid={Boolean(errors.email)}
+                    aria-describedby={errors.email ? "email-error" : undefined}
+                    className={`w-full p-3 rounded-lg bg-gray-900 text-white border ${
+                      errors.email
+                        ? "border-red-500 focus:ring-2 focus:ring-red-400"
+                        : "border-gray-700 focus:ring-2 focus:ring-yellow-400"
+                    } focus:outline-none transition duration-200`}
                   />
+                  {errors.email && (
+                    <span
+                      id="email-error"
+                      role="alert"
+                      className="text-red-400 text-xs mt-1 block"
+                    >
+                      {errors.email}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="flex flex-col">
@@ -120,19 +242,82 @@ function ContactUs() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Write your message here..."
-                  className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400 focus:outline-none h-32 transition duration-200 resize-none"
+                  required
+                  aria-required="true"
+                  aria-invalid={Boolean(errors.message)}
+                  aria-describedby={errors.message ? "message-error" : undefined}
+                  className={`w-full p-3 rounded-lg bg-gray-900 text-white border ${
+                    errors.message
+                      ? "border-red-500 focus:ring-2 focus:ring-red-400"
+                      : "border-gray-700 focus:ring-2 focus:ring-yellow-400"
+                    } focus:outline-none h-32 transition duration-200 resize-none`}
                 ></textarea>
+                {errors.message && (
+                  <span
+                    id="message-error"
+                    role="alert"
+                    className="text-red-400 text-xs mt-1 block"
+                  >
+                    {errors.message}
+                  </span>
+                )}
               </div>
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-600 transition duration-300 ease-in-out shadow-md hover:shadow-yellow-500/20"
+                disabled={formStatus === "submitting"}
+                aria-busy={formStatus === "submitting"}
+                className="w-full py-3.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-600 transition duration-300 ease-in-out shadow-md hover:shadow-yellow-500/20 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
-                Send Message
+                {formStatus === "submitting" ? (
+                  <>
+                    <svg
+                      className="animate-spin h-5 w-5 text-black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    <span>Sending Message...</span>
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </button>
             </form>
 
-            {formStatus && (
-              <div className="mt-4 text-green-500 text-center font-medium">{formStatus}</div>
+            {/* Submission Status Feedback */}
+            {formStatus === "success" && (
+              <div
+                role="status"
+                aria-live="polite"
+                className="mt-4 p-3 rounded-lg bg-green-950/60 border border-green-500 text-green-400 text-center text-sm font-medium"
+              >
+                {statusMessage || "Message received and email sent!"}
+              </div>
+            )}
+
+            {formStatus === "error" && (
+              <div
+                role="alert"
+                aria-live="assertive"
+                className="mt-4 p-3 rounded-lg bg-red-950/60 border border-red-500 text-red-400 text-center text-sm font-medium"
+              >
+                {statusMessage || "Failed to send email. Please try again."}
+              </div>
             )}
           </div>
         </div>

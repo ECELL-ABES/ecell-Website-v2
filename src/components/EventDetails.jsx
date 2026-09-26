@@ -50,18 +50,19 @@ const EventDetail = () => {
   };
 
   const handleShare = () => {
+    const shareUrl = window.location.origin + window.location.pathname;
     if (navigator.share) {
       navigator
         .share({
           title: event.title,
           text: `Check out this event: ${event.title}`,
-          url: window.location.href,
+          url: shareUrl,
         })
         .catch((error) => console.log("Error sharing", error));
     } else {
       // Fallback for browsers that don't support the Web Share API
       navigator.clipboard
-        .writeText(window.location.href)
+        .writeText(shareUrl)
         .then(() => alert("Link copied to clipboard!"))
         .catch((err) => console.error("Could not copy text: ", err));
     }

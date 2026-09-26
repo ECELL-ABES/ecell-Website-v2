@@ -4,19 +4,7 @@ import { Slide, Fade } from 'react-awesome-reveal';
 import { GiPolarStar } from "react-icons/gi";
 import Idea from './Idea';
 
-import TEC from "../assets/tes.png";
-import GOD from "../assets/god.webp";
-import Tech from "../assets/techpravaah.webp";
-import At from "../assets/at.webp";
-import fc from "../assets/fc.webp";
-import bid from "../assets/bid.webp"
-import nv from '../assets/nv.webp';  
-import erk from '../assets/eureka.webp';
-import tes3 from '../assets/tes3.0.webp';
-import bizz from '../assets/bizz25.png';
-import squid from '../assets/SQUID.png';
-import zonals from '../assets/bannerimage iitr event.webp'
-import keshav from "../assets/keshavjha.png"
+import events from './EventsData';
 
 // Utility function to generate a URL-friendly slug from event title
 const createSlug = (title) => title.toLowerCase().replace(/ /g, '-');
@@ -24,27 +12,10 @@ const createSlug = (title) => title.toLowerCase().replace(/ /g, '-');
 // Placeholder image for events with missing images
 const placeholderImage = "https://via.placeholder.com/300x200?text=No+Image";
 
-// Sample event data
-const events = [
-    { id:13, title:"The Entrepreneurship Show 4.0", date:"February 21st, 2026" , imgSrc: keshav},
-    { id:12, title:"IDEASTORM 2026 – Delhi NCR Zonal", date:"December 13th'25 " , imgSrc: zonals},
-    { id:11, title:"SQUID GAME 2025", date:"November 24th,25th,26th'25" , imgSrc: squid},
-    { id: 10 , title:"BizzMantra 2025", date: "May 31st '25", imgSrc: bizz },
-    { id: 9 , title:"The Entrepreneurship Show 2024", date: "November 30th '24", imgSrc: tes3 },
-    { id: 8, title: "Eureka", date: "September 10th '22", imgSrc: erk },
-    { id: 1, title: "The Entrepreneurship Show 2023", date: "February 27th '23", imgSrc: TEC },
-    { id: 2, title: "Navy Visit-2023", date: "March 15th '23", imgSrc: nv },
-    { id: 3, title: "FOUNDER'S CAP TRAINING", date: "April 10th '22", imgSrc: fc },
-    { id: 4, title: "Game of Drones", date: "November 18th '22", imgSrc: GOD },
-    { id: 5, title: "E-SUMMIT (TECHPRAVAAH)", date: "November 19th '22", imgSrc: Tech },
-    { id: 6, title: "BIDWISER (THE MOCK IPL AUCTION)", date: "Jan 18th '24", imgSrc: bid },
-    { id: 7, title: "ACHIEVER’S TALK", date: "November 18th '22", imgSrc: At },
-];
-
 // EventCard Component: Displays individual event information
-const EventCard = ({ id, title, date, imgSrc }) => {
+const EventCard = ({ title, date, image }) => {
     const slug = createSlug(title); // Generate slug from title
-    const displayImage = imgSrc || placeholderImage; // Use placeholder image if imgSrc is empty
+    const displayImage = image || placeholderImage; // Use placeholder image if image is empty
 
     return (
         <Slide direction="down" cascade>
@@ -110,7 +81,7 @@ const EventSection = () => (
         {/* Events Grid */}
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-xl=">
             {events.map(event => (
-                <EventCard key={event.id} id={event.id} title={event.title} date={event.date} imgSrc={event.imgSrc} />
+                <EventCard key={event.id} id={event.id} title={event.title} date={event.date} image={event.image} />
             ))}
         </div>
 

@@ -63,37 +63,36 @@ const Navbar = () => {
         height: '3.75rem',
       }}
     >
-      <div className="container mx-auto px-[2rem] flex justify-between items-center h-full">
-        <Link to="/" className="flex-shrink-0">
-          <div className="w-20">
-            <img src={Logo} alt="Logo" />
-          </div>
+      <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center h-full">
+        <Link to="/" className="flex-shrink-0 flex items-center">
+          <img src={Logo} alt="E-Cell ABESEC Logo" className="h-7 sm:h-8 w-auto object-contain" />
         </Link>
-        <div className={`lg:flex lg:items-center lg:space-x-20 ${isOpen ? 'block bg-black p-4 rounded-md absolute top-full left-0 right-0 lg:relative lg:bg-transparent lg:p-0' : 'hidden'} lg:block`}>
+        <div className={`lg:flex lg:items-center lg:space-x-10 ${isOpen ? 'flex flex-col gap-1 absolute top-[calc(100%+8px)] left-0 right-0 mx-auto w-[95vw] md:w-[80vw] rounded-2xl border border-[#322d22] p-4 lg:relative lg:bg-transparent lg:p-0 lg:border-none lg:flex-row lg:gap-0' : 'hidden'} lg:block`}
+          style={isOpen ? { backgroundColor: 'rgba(10,10,10,0.92)', backdropFilter: 'blur(16px)', boxShadow: '0 8px 32px rgba(0,0,0,0.5)' } : {}}       >
           <Link
             to="/"
-            className="text-11 block mt-4 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200"
+            className="text-sm font-medium block py-2 px-3 lg:py-0 lg:px-0 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200 rounded-lg lg:rounded-none hover:bg-[#ffde59]/5 lg:hover:bg-transparent"
             onClick={closeNav}
           >
             Home
           </Link>
           <Link
             to="/teams"
-            className="text-11 block mt-4 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200"
+            className="text-sm font-medium block py-2 px-3 lg:py-0 lg:px-0 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200 rounded-lg lg:rounded-none hover:bg-[#ffde59]/5 lg:hover:bg-transparent"
             onClick={closeNav}
           >
             Teams
           </Link>
           <Link
             to="/events"
-            className="text-11 block mt-4 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200"
+            className="text-sm font-medium block py-2 px-3 lg:py-0 lg:px-0 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200 rounded-lg lg:rounded-none hover:bg-[#ffde59]/5 lg:hover:bg-transparent"
             onClick={closeNav}
           >
             Events
           </Link>
           <Link
             to="/contactus"
-            className="text-11 block mt-4 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200"
+            className="text-sm font-medium block py-2 px-3 lg:py-0 lg:px-0 lg:mt-0 text-white hover:text-[#ffde59] transition-colors duration-200 rounded-lg lg:rounded-none hover:bg-[#ffde59]/5 lg:hover:bg-transparent"
             onClick={closeNav}
           >
             Contact Us

@@ -421,26 +421,53 @@ button {
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================================= */
 
-@media (max-width: 768px) {
-
+/* Tablets (iPad, small laptops: 641px - 1024px) */
+@media (max-width: 1024px) {
     .hero-network {
-        width: 500px;
-        height: 350px;
-
-        opacity: 0.15;
+        transform: translate(-50%, -50%) scale(0.85);
+        opacity: 0.28;
     }
 
     .hero-glow {
-        width: 300px;
-        height: 300px;
-
-        filter: blur(90px);
+        width: 380px;
+        height: 380px;
+        filter: blur(95px);
     }
 
     .hero-section::after {
         height: 120px;
+    }
+}
+
+/* Mobile Devices (Smartphones: 640px and below) */
+@media (max-width: 640px) {
+    .hero-network {
+        /* Proportional scale down keeps dots and lines connected */
+        transform: translate(-50%, -50%) scale(0.55);
+        opacity: 0.22;
+    }
+
+    .hero-glow {
+        width: 240px;
+        height: 240px;
+        filter: blur(65px);
+    }
+
+    .hero-glow-1 {
+        top: 0%;
+        left: -20%;
+    }
+
+    .hero-glow-2 {
+        top: 15%;
+        right: -20%;
+    }
+
+    /* Shorter fade on mobile so it doesn't cover the buttons */
+    .hero-section::after {
+        height: 70px;
     }
 }

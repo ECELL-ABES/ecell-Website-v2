@@ -52,15 +52,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`transition-transform duration-500 ease-in-out py-4 rounded-[70rem] md:w-[80vw] w-[98vw] mx-auto fixed top-3 left-1/2 transform -translate-x-1/2 border-[1px] z-10 bg-black ${
+      className={`transition-transform duration-500 ease-in-out py-2 rounded-full md:w-[80vw] w-[95vw] mx-auto fixed top-3 left-1/2 transform -translate-x-1/2 border-[1px] z-50 bg-black ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
       style={{
         border: '1px solid #322d22',
-        boxShadow: '20px -10px 100px #282410',
-        backdropFilter: 'blur(10px)',
-        backgroundColor: 'rgba(1, 0, 0, 0.6)',
-        height: '5rem',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 222, 89, 0.05)',
+        backdropFilter: 'blur(12px)',
+        backgroundColor: 'rgba(10, 10, 10, 0.75)',
+        height: '3.75rem',
       }}
     >
       <div className="container mx-auto px-[2rem] flex justify-between items-center h-full">

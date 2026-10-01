@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+
 body {
     cursor: none;
-    background-color: black;
+    background-color: #000000;
     overflow-x: hidden;
 }
 
@@ -14,7 +20,6 @@ input,
 textarea,
 button {
     cursor: none;
-    /* Ensure the cursor doesn't change */
 }
 
 * {
@@ -22,95 +27,94 @@ button {
     padding: 0;
     font-family: "Inter";
 }
-.slick-prev:before,.slick-next:before{
+
+
+/* =========================================================
+   SLICK SLIDER
+   ========================================================= */
+
+.slick-prev:before,
+.slick-next:before {
     display: none;
     cursor: none;
 }
 
 
 /* =========================================================
-   E-CELL HERO
+   HERO SECTION
    ========================================================= */
 
 .hero-section {
     position: relative;
-    isolation: isolate;
+    overflow: hidden;
 
-    /* Soft overall gold atmosphere */
+    /*
+      Main glow:
+      - centered around the Let's Connect area
+      - stronger in the middle
+      - spreads softly downward
+      - gradually disappears into black
+    */
+
     background:
         radial-gradient(
-            ellipse at 50% 45%,
-            rgba(255, 222, 89, 0.12) 0%,
-            rgba(255, 222, 89, 0.06) 25%,
-            rgba(255, 222, 89, 0.025) 45%,
-            transparent 70%
-        );
+            ellipse 55% 75% at 50% 66%,
+            rgba(255, 222, 89, 0.22) 0%,
+            rgba(255, 222, 89, 0.18) 15%,
+            rgba(255, 222, 89, 0.13) 30%,
+            rgba(255, 222, 89, 0.085) 45%,
+            rgba(255, 222, 89, 0.045) 60%,
+            rgba(255, 222, 89, 0.018) 74%,
+            rgba(255, 222, 89, 0.005) 86%,
+            rgba(0, 0, 0, 0) 100%
+        ),
+        #000000;
 }
 
 
-/* =========================================================
-   AMBIENT GOLD LIGHT
-   ========================================================= */
+/*
+   Extra wide soft glow.
 
-.hero-glow {
+   This makes the yellow light feel blended into
+   the whole background instead of looking like
+   a small circular spotlight.
+*/
+
+.hero-section::before {
+    content: "";
+
     position: absolute;
 
-    width: 500px;
-    height: 500px;
+    left: 50%;
+    top: 65%;
 
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
 
-    background: rgba(255, 222, 89, 0.07);
+    transform: translate(-50%, -50%);
 
-    filter: blur(120px);
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 222, 89, 0.055) 0%,
+            rgba(255, 222, 89, 0.035) 28%,
+            rgba(255, 222, 89, 0.018) 50%,
+            rgba(255, 222, 89, 0.006) 68%,
+            transparent 82%
+        );
 
     pointer-events: none;
-
-    z-index: -1;
-
-    animation: ambientGlow 10s ease-in-out infinite alternate;
+    z-index: 0;
 }
 
 
-/* Left glow */
+/*
+   Very gentle bottom blending.
 
-.hero-glow-1 {
-    top: 10%;
-    left: -10%;
-}
-
-
-/* Right glow */
-
-.hero-glow-2 {
-    top: 5%;
-    right: -10%;
-
-    animation-delay: 2s;
-}
-
-
-@keyframes ambientGlow {
-
-    0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.5;
-    }
-
-    50% {
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translate(30px, 20px) scale(1.1);
-        opacity: 0.6;
-    }
-}
-
-
-/* =========================================================
-   SMOOTH BOTTOM FADE
-   ========================================================= */
+   There is NO hard transition here.
+   The glow slowly becomes black toward
+   the bottom of the hero.
+*/
 
 .hero-section::after {
     content: "";
@@ -121,62 +125,43 @@ button {
     right: 0;
     bottom: 0;
 
-    height: 180px;
+    height: 45%;
 
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgba(0, 0, 0, 0.7),
-        #000000
-    );
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.03) 25%,
+            rgba(0, 0, 0, 0.12) 50%,
+            rgba(0, 0, 0, 0.35) 72%,
+            rgba(0, 0, 0, 0.70) 90%,
+            #000000 100%
+        );
 
     pointer-events: none;
+    z-index: 1;
+}
 
+
+/* Keep hero content above background */
+
+.hero-section > div {
+    position: relative;
     z-index: 2;
 }
 
 
 /* =========================================================
-   ENTREPRENEURSHIP CELL GOLD GRADIENT
+   ENTREPRENEURSHIP CELL TITLE
    ========================================================= */
 
 .hero-title {
-    background: linear-gradient(
-        90deg,
-        #ffde59,
-        #fff1a8,
-        #ffde59
-    );
-
-    background-size: 200% auto;
-
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    animation: goldShine 4s ease-in-out infinite;
-}
-
-
-@keyframes goldShine {
-
-    0% {
-        background-position: 0% center;
-    }
-
-    50% {
-        background-position: 100% center;
-    }
-
-    100% {
-        background-position: 0% center;
-    }
+    color: #ffde59;
 }
 
 
 /* =========================================================
-   BUTTON
+   HERO BUTTON
    ========================================================= */
 
 .hero-button {
@@ -186,7 +171,6 @@ button {
         background-color 0.25s ease;
 }
 
-
 .hero-button:hover {
     transform: translateY(-3px);
 
@@ -194,9 +178,8 @@ button {
 
     box-shadow:
         0 8px 20px rgba(255, 222, 89, 0.25),
-        0 0 25px rgba(255, 222, 89, 0.2);
+        0 0 25px rgba(255, 222, 89, 0.20);
 }
-
 
 .hero-button:active {
     transform: translateY(0);
@@ -204,270 +187,46 @@ button {
 
 
 /* =========================================================
-   WIDE NETWORK
+   TABLET
    ========================================================= */
 
-.hero-network {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    width: 700px;
-    height: 400px;
-
-    transform: translate(-50%, -50%);
-
-    opacity: 0.35;
-
-    pointer-events: none;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   NETWORK DOTS
-   ========================================================= */
-
-.network-dot {
-    position: absolute;
-
-    width: 6px;
-    height: 6px;
-
-    background: #ffde59;
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 10px rgba(255, 222, 89, 0.8),
-        0 0 20px rgba(255, 222, 89, 0.3);
-
-    animation: dotPulse 3s ease-in-out infinite;
-}
-
-
-/* Different positions across the Hero */
-
-.dot-1 {
-    top: 55px;
-    left: 80px;
-}
-
-.dot-2 {
-    top: 130px;
-    left: 210px;
-
-    animation-delay: 0.5s;
-}
-
-.dot-3 {
-    top: 80px;
-    right: 150px;
-
-    animation-delay: 1s;
-}
-
-.dot-4 {
-    bottom: 90px;
-    left: 170px;
-
-    animation-delay: 1.5s;
-}
-
-.dot-5 {
-    bottom: 60px;
-    right: 100px;
-
-    animation-delay: 2s;
-}
-
-
-@keyframes dotPulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.35;
-    }
-
-    50% {
-        transform: scale(1.6);
-        opacity: 0.9;
-    }
-}
-
-
-/* =========================================================
-   NETWORK LINES
-   ========================================================= */
-
-.network-line {
-    position: absolute;
-
-    height: 1px;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 222, 89, 0.4),
-        transparent
-    );
-
-    transform-origin: left center;
-
-    animation: lineGlow 4s ease-in-out infinite;
-}
-
-
-.line-1 {
-    width: 160px;
-
-    top: 75px;
-    left: 80px;
-
-    transform: rotate(25deg);
-}
-
-
-.line-2 {
-    width: 150px;
-
-    top: 135px;
-    left: 210px;
-
-    transform: rotate(-20deg);
-}
-
-
-.line-3 {
-    width: 140px;
-
-    top: 140px;
-    left: 210px;
-
-    transform: rotate(25deg);
-}
-
-
-.line-4 {
-    width: 160px;
-
-    top: 170px;
-    left: 360px;
-
-    transform: rotate(-25deg);
-}
-
-
-@keyframes lineGlow {
-
-    0%,
-    100% {
-        opacity: 0.15;
-    }
-
-    50% {
-        opacity: 0.55;
-    }
-}
-
-
-/* =========================================================
-   FLOATING STARS
-   ========================================================= */
-
-.network-star {
-    position: absolute;
-
-    color: #ffde59;
-
-    font-size: 16px;
-
-    animation: starFloat 5s ease-in-out infinite;
-}
-
-
-.star-1 {
-    top: 35px;
-    right: 50px;
-}
-
-
-.star-2 {
-    bottom: 35px;
-    left: 60px;
-
-    font-size: 11px;
-
-    animation-delay: 2s;
-}
-
-
-@keyframes starFloat {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.3;
-    }
-
-    50% {
-        transform: translateY(-12px) rotate(20deg);
-        opacity: 0.8;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE DESIGN (MOBILE & TABLET)
-   ========================================================= */
-
-/* Tablets (iPad, small laptops: 641px - 1024px) */
 @media (max-width: 1024px) {
-    .hero-network {
-        transform: translate(-50%, -50%) scale(0.85);
-        opacity: 0.28;
+
+    .hero-section {
+        background:
+            radial-gradient(
+                ellipse 65% 72% at 50% 66%,
+                rgba(255, 222, 89, 0.21) 0%,
+                rgba(255, 222, 89, 0.16) 18%,
+                rgba(255, 222, 89, 0.10) 38%,
+                rgba(255, 222, 89, 0.05) 58%,
+                rgba(255, 222, 89, 0.015) 78%,
+                transparent 100%
+            ),
+            #000000;
     }
 
-    .hero-glow {
-        width: 380px;
-        height: 380px;
-        filter: blur(95px);
-    }
-
-    .hero-section::after {
-        height: 120px;
-    }
 }
 
-/* Mobile Devices (Smartphones: 640px and below) */
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 640px) {
-    .hero-network {
-        /* Proportional scale down keeps dots and lines connected */
-        transform: translate(-50%, -50%) scale(0.55);
-        opacity: 0.22;
+
+    .hero-section {
+        background:
+            radial-gradient(
+                ellipse 85% 70% at 50% 66%,
+                rgba(255, 222, 89, 0.19) 0%,
+                rgba(255, 222, 89, 0.14) 18%,
+                rgba(255, 222, 89, 0.085) 38%,
+                rgba(255, 222, 89, 0.04) 58%,
+                rgba(255, 222, 89, 0.012) 78%,
+                transparent 100%
+            ),
+            #000000;
     }
 
-    .hero-glow {
-        width: 240px;
-        height: 240px;
-        filter: blur(65px);
-    }
-
-    .hero-glow-1 {
-        top: 0%;
-        left: -20%;
-    }
-
-    .hero-glow-2 {
-        top: 15%;
-        right: -20%;
-    }
-
-    /* Shorter fade on mobile so it doesn't cover the buttons */
-    .hero-section::after {
-        height: 70px;
-    }
 }

@@ -11,7 +11,7 @@ const Mentor = () => {
                 <div style={{ backgroundColor: '#141412', color: '#ffde59', border: '1px solid #26250F' }} className="rounded-full px-4 py-1 mb-4 w-fit m-auto">
                     <Fade cascade>
                         <span className="flex items-center gap-2">
-                            <GiPolarStar /> Mentor’s Message
+                            Mentor’s Message
                         </span>
                     </Fade>
                 </div>

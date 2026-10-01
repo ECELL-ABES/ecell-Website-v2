@@ -135,7 +135,7 @@ function Testimonial() {
         >
           {" "}
           <span className="flex items-center gap-2 text-[#ffde59]">
-             <GiPolarStar /> TESTIMONIALS {" "}
+              TESTIMONIALS {" "}
           </span>
           {" "}
         </div>

@@ -1,6 +1,6 @@
 import { FaLinkedin, FaInstagram, FaYoutube, FaTwitter, FaFacebook } from "react-icons/fa";
 
-export default function SocialSidebar() {
+export default function SocialSidebar(){
   return (
     <div className="fixed top-1/3 right-4 z-50">
       

@@ -111,7 +111,7 @@ function Networking() {
           >
             <Fade cascade>
               <span className="flex items-center gap-2">
-                <GiPolarStar />
+                
                 NETWORKING
               </span>
             </Fade>

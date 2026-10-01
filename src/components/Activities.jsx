@@ -31,7 +31,7 @@ function Activities() {
                     <div className="flex flex-col justify-center">
                         <div style={{ backgroundColor: '#141412', color: '#ffde59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4 w-fit">
                             <Fade cascade>
-                                <span className='flex items-center gap-2'><GiPolarStar />NATIONAL RECOGNITION</span>
+                                <span >NATIONAL RECOGNITION</span>
                             </Fade>
                         </div>
                         <h1 className="text-2xl sm:text-5xl font-bold leading-tight">
@@ -73,7 +73,7 @@ function Activities() {
                         >
                             <Fade cascade>
                                 <span className="flex items-center gap-2">
-                                    <GiPolarStar /> INNOVATION RECOGNIZED
+                                     INNOVATION RECOGNIZED
                                 </span>
                             </Fade>
                         </div>
@@ -99,7 +99,7 @@ function Activities() {
                     <div className="flex flex-col justify-center">
                         <div style={{ backgroundColor: '#141412', color: '#ffde59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4 w-fit">
                             <Fade cascade>
-                                <span className='flex items-center gap-2'><GiPolarStar />REAL WORLD EXPOSURE</span>
+                                <span className='flex items-center gap-2'>REAL WORLD EXPOSURE</span>
                             </Fade>
                         </div>
                         <h1 className="text-2xl sm:text-5xl font-bold leading-tight">
@@ -146,7 +146,7 @@ function Activities() {
                     <div className="flex flex-col justify-center">
                         <div style={{ backgroundColor: '#141412', color: '#ffde59', border: '1px solid #26250F' }} className=" rounded-full px-4 py-1 mb-4 w-fit">
                             <Fade cascade>
-                                <span className='flex items-center gap-2'><GiPolarStar />ENGAGING EVENTS</span>
+                                <span className='flex items-center gap-2'>ENGAGING EVENTS</span>
                             </Fade>
                         </div>
                         <h2 className="text-2xl sm:text-5xl font-bold leading-tight">

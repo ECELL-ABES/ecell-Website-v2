@@ -23,7 +23,7 @@ function Footer() {
                     <div>
                         <NavLink to='/'>
                             <div className="flex items-center mb-4">
-                                <img src={Logo} alt="E-cell logo" className="mr-2 w-12" />
+                                <img src={Logo} alt="E-cell logo" className="h-12 w-auto object-contain" />
                             </div>
                         </NavLink>
                         <p className="mb-4">Experience Entrepreneurship with us.</p>

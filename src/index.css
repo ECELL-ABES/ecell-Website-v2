@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+
 body {
     cursor: none;
-    background-color: black;
+    background-color: #000000;
     overflow-x: hidden;
 }
 
@@ -14,7 +20,6 @@ input,
 textarea,
 button {
     cursor: none;
-    /* Ensure the cursor doesn't change */
 }
 
 * {
@@ -22,7 +27,206 @@ button {
     padding: 0;
     font-family: "Inter";
 }
-.slick-prev:before,.slick-next:before{
+
+
+/* =========================================================
+   SLICK SLIDER
+   ========================================================= */
+
+.slick-prev:before,
+.slick-next:before {
     display: none;
     cursor: none;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+
+    /*
+      Main glow:
+      - centered around the Let's Connect area
+      - stronger in the middle
+      - spreads softly downward
+      - gradually disappears into black
+    */
+
+    background:
+        radial-gradient(
+            ellipse 55% 75% at 50% 66%,
+            rgba(255, 222, 89, 0.22) 0%,
+            rgba(255, 222, 89, 0.18) 15%,
+            rgba(255, 222, 89, 0.13) 30%,
+            rgba(255, 222, 89, 0.085) 45%,
+            rgba(255, 222, 89, 0.045) 60%,
+            rgba(255, 222, 89, 0.018) 74%,
+            rgba(255, 222, 89, 0.005) 86%,
+            rgba(0, 0, 0, 0) 100%
+        ),
+        #000000;
+}
+
+
+/*
+   Extra wide soft glow.
+
+   This makes the yellow light feel blended into
+   the whole background instead of looking like
+   a small circular spotlight.
+*/
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 65%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 222, 89, 0.055) 0%,
+            rgba(255, 222, 89, 0.035) 28%,
+            rgba(255, 222, 89, 0.018) 50%,
+            rgba(255, 222, 89, 0.006) 68%,
+            transparent 82%
+        );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/*
+   Very gentle bottom blending.
+
+   There is NO hard transition here.
+   The glow slowly becomes black toward
+   the bottom of the hero.
+*/
+
+.hero-section::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 45%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.03) 25%,
+            rgba(0, 0, 0, 0.12) 50%,
+            rgba(0, 0, 0, 0.35) 72%,
+            rgba(0, 0, 0, 0.70) 90%,
+            #000000 100%
+        );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* Keep hero content above background */
+
+.hero-section > div {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ENTREPRENEURSHIP CELL TITLE
+   ========================================================= */
+
+.hero-title {
+    color: #ffde59;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.hero-button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    background-color: #ffe77a !important;
+
+    box-shadow:
+        0 8px 20px rgba(255, 222, 89, 0.25),
+        0 0 25px rgba(255, 222, 89, 0.20);
+}
+
+.hero-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-section {
+        background:
+            radial-gradient(
+                ellipse 65% 72% at 50% 66%,
+                rgba(255, 222, 89, 0.21) 0%,
+                rgba(255, 222, 89, 0.16) 18%,
+                rgba(255, 222, 89, 0.10) 38%,
+                rgba(255, 222, 89, 0.05) 58%,
+                rgba(255, 222, 89, 0.015) 78%,
+                transparent 100%
+            ),
+            #000000;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .hero-section {
+        background:
+            radial-gradient(
+                ellipse 85% 70% at 50% 66%,
+                rgba(255, 222, 89, 0.19) 0%,
+                rgba(255, 222, 89, 0.14) 18%,
+                rgba(255, 222, 89, 0.085) 38%,
+                rgba(255, 222, 89, 0.04) 58%,
+                rgba(255, 222, 89, 0.012) 78%,
+                transparent 100%
+            ),
+            #000000;
+    }
+
 }

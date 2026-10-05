@@ -4,6 +4,7 @@ import Networking from '../components/Networking'
 import { Fade, Slide } from 'react-awesome-reveal'
 import Mentor from '../components/Mentor'
 import Idea from '../components/Idea'
+import heroBg from '../assets/nec25.webp'
 
 function Home() {
   return (
@@ -15,10 +16,21 @@ function Home() {
 
       <div
         className="hero-section bg-black text-white flex flex-col relative overflow-visible"
-        style={{ minHeight: '80vh' }}
+        style={{ minHeight: '74vh' }}
       >
 
-        <div className="flex-grow flex flex-col justify-center items-center text-center px-4 relative z-10">
+        {/* Background Image */}
+        <img
+          src={heroBg}
+          alt=""
+          aria-hidden="true"
+          className="hero-bg-image"
+        />
+
+        {/* Dark overlay on top of the image */}
+        <div className="hero-bg-overlay" />
+
+        <div className="flex-grow flex flex-col justify-center items-center text-center px-4 pt-4 pb-10 relative z-10">
 
           {/* Hero Badge */}
           <div
@@ -35,7 +47,7 @@ function Home() {
           </div>
 
           {/* Hero Content */}
-          <Fade cascade="true" duration={1500} damping={0.3}>
+          <Fade triggerOnce duration={600}>
 
             {/* Welcome Heading */}
             <h1 className="text-4xl md:text-6xl font-bold mb-2">
@@ -106,7 +118,7 @@ function Home() {
           ABOUT SECTION
       ========================= */}
 
-      <div className="text-white py-12 px-4">
+      <div className="text-white pt-4 pb-12 px-4">
 
         <div className="text-center mb-8">
 

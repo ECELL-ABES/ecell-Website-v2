@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+
 body {
     cursor: none;
-    background-color: black;
+    background-color: #000000;
     overflow-x: hidden;
 }
 
@@ -14,7 +20,6 @@ input,
 textarea,
 button {
     cursor: none;
-    /* Ensure the cursor doesn't change */
 }
 
 * {
@@ -22,7 +27,244 @@ button {
     padding: 0;
     font-family: "Inter";
 }
-.slick-prev:before,.slick-next:before{
+
+
+/* =========================================================
+   SLICK SLIDER
+   ========================================================= */
+
+.slick-prev:before,
+.slick-next:before {
     display: none;
     cursor: none;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background: #000000;
+}
+
+
+/*
+   Background image – covers the entire hero area.
+   Positioned behind everything else.
+*/
+
+.hero-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.36;
+    filter: brightness(0.70) contrast(1.18) grayscale(15%);
+}
+
+
+/*
+   Dark overlay on top of the background image.
+   Blends the photo deeply into the background with:
+   1. A warm golden radiant glow centered behind heading & form
+   2. A smooth top fade to black for the navbar
+   3. A dark vignette transitioning the outer edges into solid black
+*/
+
+.hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        /* Vibrant golden/amber ambient glow in the center and lower hero */
+        radial-gradient(
+            ellipse 65% 70% at 50% 52%,
+            rgba(255, 215, 60, 0.30) 0%,
+            rgba(255, 195, 35, 0.18) 25%,
+            rgba(220, 150, 15, 0.07) 50%,
+            rgba(180, 110, 0, 0.02) 70%,
+            transparent 85%
+        ),
+        /* Top gradient to blend with the navbar and black background */
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.2) 15%,
+            transparent 35%
+        ),
+        /* Vignette: edges darken all around to solid black */
+        radial-gradient(
+            ellipse 85% 80% at 50% 50%,
+            transparent 30%,
+            rgba(0, 0, 0, 0.35) 55%,
+            rgba(0, 0, 0, 0.75) 80%,
+            #000000 98%
+        );
+}
+
+
+/*
+   Extra wide soft golden glow to spread the warmth smoothly across the center.
+*/
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 55%;
+
+    width: 110%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 222, 89, 0.09) 0%,
+            rgba(255, 210, 50, 0.05) 28%,
+            rgba(255, 200, 30, 0.02) 50%,
+            rgba(255, 190, 20, 0.006) 68%,
+            transparent 82%
+        );
+
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+/*
+   Bottom fade to black.
+   Gentle and compact at the very bottom edge so the photo and warm glow
+   utilize the space instead of cutting off early into a large blank void.
+*/
+
+.hero-section::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 20%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.25) 30%,
+            rgba(0, 0, 0, 0.70) 70%,
+            #000000 100%
+        );
+
+    pointer-events: none;
+    z-index: 3;
+}
+
+
+/* Keep hero content above all background layers */
+
+.hero-section > div {
+    position: relative;
+    z-index: 4;
+}
+
+
+/* =========================================================
+   ENTREPRENEURSHIP CELL TITLE
+   ========================================================= */
+
+.hero-title {
+    color: #ffde59;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.hero-button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    background-color: #ffe77a !important;
+
+    box-shadow:
+        0 8px 20px rgba(255, 222, 89, 0.25),
+        0 0 25px rgba(255, 222, 89, 0.20);
+}
+
+.hero-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-bg-overlay {
+        background:
+            radial-gradient(
+                ellipse 70% 70% at 50% 65%,
+                rgba(255, 222, 89, 0.12) 0%,
+                rgba(255, 222, 89, 0.06) 30%,
+                rgba(0, 0, 0, 0) 70%
+            ),
+            radial-gradient(
+                ellipse 80% 80% at 50% 50%,
+                rgba(0, 0, 0, 0.40) 0%,
+                rgba(0, 0, 0, 0.60) 40%,
+                rgba(0, 0, 0, 0.80) 70%,
+                rgba(0, 0, 0, 0.92) 100%
+            );
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .hero-bg-overlay {
+        background:
+            radial-gradient(
+                ellipse 90% 70% at 50% 65%,
+                rgba(255, 222, 89, 0.10) 0%,
+                rgba(255, 222, 89, 0.05) 30%,
+                rgba(0, 0, 0, 0) 70%
+            ),
+            radial-gradient(
+                ellipse 80% 80% at 50% 50%,
+                rgba(0, 0, 0, 0.45) 0%,
+                rgba(0, 0, 0, 0.65) 40%,
+                rgba(0, 0, 0, 0.82) 70%,
+                rgba(0, 0, 0, 0.95) 100%
+            );
+    }
+
 }
